@@ -1,0 +1,191 @@
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: rgba(3, 0, 20, 0.7);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    padding: var(--spacing-md) 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-shadow: 0 0 20px rgba(112, 66, 248, 0.3);
+}
+
+.nav-links {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        gap: var(--spacing-lg);
+    }
+}
+
+.nav-link {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--color-text);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Hero */
+.hero {
+    padding-top: 10rem;
+    padding-bottom: 6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .hero-content {
+        grid-template-columns: 1.2fr 0.8fr;
+    }
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: var(--spacing-lg);
+    letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+    .hero-text h1 {
+        font-size: 4.5rem;
+    }
+}
+
+.hero-text p {
+    font-size: 1.125rem;
+
+    .form-label {
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 500;
+        margin-bottom: var(--spacing-xs);
+        color: var(--color-text-secondary);
+    }
+
+    .form-input {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: var(--radius-md);
+        color: var(--color-text);
+        font-family: inherit;
+        transition: all var(--transition-fast);
+    }
+
+    .form-input:focus {
+        outline: none;
+        border-color: var(--color-primary);
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 0 0 2px rgba(112, 66, 248, 0.2);
+    }
+
+    .hero-stats {
+        display: flex;
+        gap: var(--spacing-xl);
+        margin-top: var(--spacing-2xl);
+        padding-top: var(--spacing-xl);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .stat-item h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--color-text);
+        text-shadow: 0 0 20px rgba(112, 66, 248, 0.3);
+    }
+
+    .stat-item p {
+        font-size: 0.875rem;
+        color: var(--color-text-secondary);
+    }
+
+    /* Features Section */
+    .features-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        margin-top: var(--spacing-2xl);
+    }
+
+    @media (min-width: 768px) {
+        .features-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .feature-card {
+        background: var(--glass-bg);
+        border: var(--glass-border);
+        backdrop-filter: var(--glass-backdrop);
+        border-radius: var(--radius-lg);
+        padding: var(--spacing-xl);
+        transition: all var(--transition-normal);
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--color-primary);
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 10px 40px -10px rgba(112, 66, 248, 0.2);
+    }
+
+    .feature-icon {
+        width: 48px;
+        height: 48px;
+        background: rgba(112, 66, 248, 0.1);
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-primary);
+        margin-bottom: var(--spacing-lg);
+        box-shadow: 0 0 20px rgba(112, 66, 248, 0.2);
+    }
+
+    .feature-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .feature-desc {
+        color: var(--color-text-secondary);
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
