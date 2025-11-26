@@ -57,9 +57,13 @@ export default function Background() {
                 {lightningActive && (
                     <motion.div
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: [0, 1, 0.5, 1, 0] }}
+                        animate={{ opacity: [0, 0.08, 0.02, 0.06, 0] }}
                         exit={{ opacity: 0 }}
-                        transition={{ duration: 0.2 }}
+                        transition={{
+                            duration: 0.4,
+                            times: [0, 0.15, 0.35, 0.6, 1],
+                            ease: "easeOut"
+                        }}
                         style={{
                             position: 'absolute',
                             top: 0,
@@ -77,20 +81,6 @@ export default function Background() {
                 )}
             </AnimatePresence>
 
-            {/* Film Grain Overlay */}
-            <div style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                backgroundImage: 'url(/assets/film-grain.png)',
-                opacity: 0.07,
-                mixBlendMode: 'overlay',
-                pointerEvents: 'none',
-                animation: 'grain 8s steps(10) infinite',
-            }} />
-
             <style>{`
         @keyframes float {
           0% { transform: translate(0, 0) rotate(0deg); }
@@ -98,18 +88,7 @@ export default function Background() {
           66% { transform: translate(-20px, 20px) rotate(-5deg); }
           100% { transform: translate(0, 0) rotate(0deg); }
         }
-        @keyframes grain {
-          0%, 100% { transform: translate(0, 0); }
-          10% { transform: translate(-5%, -10%); }
-          20% { transform: translate(-15%, 5%); }
-          30% { transform: translate(7%, -25%); }
-          40% { transform: translate(-5%, 25%); }
-          50% { transform: translate(-15%, 10%); }
-          60% { transform: translate(15%, 0%); }
-          70% { transform: translate(0%, 15%); }
-          80% { transform: translate(3%, 35%); }
-          90% { transform: translate(-10%, 10%); }
-        }
+
       `}</style>
         </div>
     );
