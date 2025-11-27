@@ -4,17 +4,26 @@ import { motion } from 'framer-motion';
 export default function Features() {
   const features = [
     {
-      title: "Instant Lead Response",
-      desc: "Never miss a potential customer. Revolt responds to every inquiry within seconds, 24/7/365.",
+      title: "Connect",
+      desc: "Seamless CRM integration built for your business. We custom-tailor connections with Salesforce, HubSpot, and 500+ platforms. White-glove setup completed in 10–14 days with zero downtime.",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M17 21V13.5M17 13.5L21 11.5M17 13.5L13 11.5M17 21V13.5M17 21L21 19M17 21L13 19M7 3V10.5M7 10.5L11 12.5M7 10.5L3 12.5M7 3V10.5M7 3L11 5M7 3L3 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       )
     },
     {
-      title: "Smart Scheduling",
-      desc: "Revolt integrates with your calendar to book appointments directly, avoiding the back-and-forth.",
+      title: "Call",
+      desc: "AI calls leads in under 60 seconds with human-like conversation, handles objections, and qualifies prospects 24/7.",
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      )
+    },
+    {
+      title: "Convert",
+      desc: "Qualified meetings automatically book on your calendar with SMS/email confirmations and follow-up sequences.",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -25,11 +34,11 @@ export default function Features() {
       )
     },
     {
-      title: "CRM Integration",
-      desc: "Seamlessly syncs with your existing tools. ServiceTitan, Housecall Pro, and more.",
+      title: "Analytics",
+      desc: "Real-time reporting on call outcomes, conversion rates, and pipeline performance with full call recordings.",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17 21V13.5M17 13.5L21 11.5M17 13.5L13 11.5M17 21V13.5M17 21L21 19M17 21L13 19M7 3V10.5M7 10.5L11 12.5M7 10.5L3 12.5M7 3V10.5M7 3L11 5M7 3L3 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M18 20V10M12 20V4M6 20V14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       )
     }

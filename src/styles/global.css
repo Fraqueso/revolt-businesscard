@@ -20,10 +20,14 @@ html {
 
 body {
     min-height: 100vh;
-    background-image:
-        radial-gradient(circle at 15% 50%, rgba(112, 66, 248, 0.08), transparent 25%),
-        radial-gradient(circle at 85% 30%, rgba(0, 212, 255, 0.08), transparent 25%);
-    background-attachment: fixed;
+    /* Background handled by Canvas */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    background: rgba(112, 66, 248, 0.3);
+    color: white;
 }
 
 a {
