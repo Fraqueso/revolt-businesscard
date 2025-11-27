@@ -8,7 +8,7 @@ export default function Hero() {
     const [showCaptcha, setShowCaptcha] = useState(false);
     const [captchaToken, setCaptchaToken] = useState(null);
     const recaptchaRef = useRef(null);
-    const texts = ["Contractors", "Law Firms", "Medspas", "Luxury Real Estate", "Roofers", "Car Dealerships"];
+    const texts = ["Converts Leads", "Books Appointments", "Answers Calls", "Qualifies Prospects", "Follows Up", "Never Sleeps"];
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -45,7 +45,7 @@ export default function Hero() {
                         pointerEvents: 'none'
                     }} />
                     <h1>
-                        The AI Employee for <br />
+                        The AI Sales Agent That <br />
                         <span style={{ display: 'inline-flex', height: '1.2em', overflow: 'hidden', verticalAlign: 'bottom', position: 'relative' }}>
                             <motion.div
                                 animate={{ y: `-${textIndex * 100}%` }}
@@ -69,8 +69,8 @@ export default function Hero() {
                         </span>
                     </h1>
                     <p>
-                        Revolt answers calls, schedules appointments, and manages your leads 24/7.
-                        Stop missing business and start growing with the first AI designed for the trades.
+                        Automatically convert hot inbound leads into qualified appointments and answer every call 24/7.
+                        Your AI-powered revenue engine that never sleeps, never misses a lead, and never burns out.
                     </p>
 
                     <div className="hero-stats">
