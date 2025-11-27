@@ -70,6 +70,8 @@ export default function DualProblem() {
                         <h3 className="dual-problem-title">Quality Without Speed</h3>
                         <p className="dual-problem-desc">
                             Human reps sound great, but they can't call 100 leads in 5 minutes.
+                            <br />
+                            <br />
                         </p>
                         <div className="dual-problem-result">Result: High Conversion, Low Volume</div>
                     </motion.div>

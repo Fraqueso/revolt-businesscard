@@ -7,12 +7,11 @@ import ComparisonTable from '../components/ComparisonTable';
 import Stats from '../components/Stats';
 import TechnicalFeatures from '../components/TechnicalFeatures';
 import SocialProof from '../components/SocialProof';
-import VoltageField from '../components/VoltageField';
+// VoltageField removed from here as it is now global in App.jsx
 
 export default function Home() {
     return (
         <>
-            <VoltageField />
             <Hero />
             <DualProblem />
             <AudioComparison />

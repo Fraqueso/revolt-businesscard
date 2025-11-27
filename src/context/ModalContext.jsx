@@ -9,9 +9,14 @@ export function useModal() {
 export function ModalProvider({ children }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [heroFormRef, setHeroFormRef] = useState(null);
+    const [pageKey, setPageKey] = useState(0);
 
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
+
+    const refreshPage = () => {
+        setPageKey(prev => prev + 1);
+    };
 
     const scrollToHero = () => {
         closeModal();
@@ -35,7 +40,7 @@ export function ModalProvider({ children }) {
     };
 
     return (
-        <ModalContext.Provider value={{ isModalOpen, openModal, closeModal, scrollToHero, registerHeroForm }}>
+        <ModalContext.Provider value={{ isModalOpen, openModal, closeModal, scrollToHero, registerHeroForm, pageKey, refreshPage }}>
             {children}
         </ModalContext.Provider>
     );

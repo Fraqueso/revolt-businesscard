@@ -1,9 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useModal } from '../context/ModalContext';
 
 export default function Header() {
-    const { scrollToHero } = useModal();
+    const { scrollToHero, refreshPage } = useModal();
+    const location = useLocation();
+
+    const handleNavClick = (path) => {
+        window.scrollTo(0, 0);
+        // Only force refresh if staying on same page to restart animations
+        // Otherwise, the route change itself will handle the remount
+        if (location.pathname === path) {
+            refreshPage();
+        }
+    };
 
     return (
         <header style={{
@@ -24,7 +34,7 @@ export default function Header() {
                     height: '80px'
                 }}>
                     {/* Logo */}
-                    <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <Link to="/" onClick={() => handleNavClick('/')} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                         <div style={{
                             width: '40px',
                             height: '40px',
@@ -49,9 +59,9 @@ export default function Header() {
 
                     {/* Navigation */}
                     <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-                        <Link to="/integrations" className="nav-link">Integrations</Link>
-                        <Link to="/journey-map" className="nav-link">Journey Map</Link>
-                        <Link to="/simulator" className="nav-link">Simulator</Link>
+                        <Link to="/integrations" className="nav-link" onClick={() => handleNavClick('/integrations')}>Integrations</Link>
+                        <Link to="/journey-map" className="nav-link" onClick={() => handleNavClick('/journey-map')}>Journey Map</Link>
+                        <Link to="/simulator" className="nav-link" onClick={() => handleNavClick('/simulator')}>Simulator</Link>
 
                         <button
                             onClick={scrollToHero}
