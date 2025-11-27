@@ -8,7 +8,7 @@ export default function Hero() {
     const [showCaptcha, setShowCaptcha] = useState(false);
     const [captchaToken, setCaptchaToken] = useState(null);
     const recaptchaRef = useRef(null);
-    const texts = ["Service Businesses", "HVAC Pros", "Plumbers", "Electricians"];
+    const texts = ["Contractors", "Law Firms", "Medspas", "Luxury Real Estate", "Roofers", "Car Dealerships"];
 
     useEffect(() => {
         const interval = setInterval(() => {
