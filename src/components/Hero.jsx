@@ -34,16 +34,16 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
-                            style={{ backgroundColor: 'transparent' }}
+                            style={{ backgroundColor: 'transparent', willChange: 'transform' }}
                         >
-                            You Can't Answer Every Call. <br />
-                            <span className="text-gradient">Revolt Can.</span>
+                            <span style={{ display: 'inline-block' }}>You Can't Answer Every Call.</span>
+                            <span className="text-gradient" style={{ display: 'block', marginTop: '0.2em' }}>Revolt Can.</span>
                         </motion.h1>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
-                            style={{ backgroundColor: 'transparent' }}
+                            style={{ backgroundColor: 'transparent', willChange: 'transform' }}
                         >
                             Revolt is the first conversational AI built for speed-to-lead. It calls your leads in under 60 seconds, handles objections like a top performer, and books appointments 24/7.
                         </motion.p>
@@ -85,7 +85,7 @@ export default function Hero() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                         className="hero-form hero-form-container"
-                        style={{ willChange: 'transform' }}
+                        style={{ willChange: 'transform', marginTop: '2.5rem' }}
                     >
                         <h3 style={{ fontSize: '1.5rem', fontWeight: '700', marginBottom: '1.5rem', textAlign: 'center' }}>
                             Talk To Revolt
@@ -113,10 +113,10 @@ export default function Hero() {
                                     style={{ marginTop: '0.25rem' }} 
                                 />
                                 <div style={{ display: 'flex', flexDirection: 'column' }}>
-                                    <label htmlFor="consent" style={{ fontSize: '0.8rem', color: 'var(--color-text-secondary)', lineHeight: '1.4' }}>
+                                    <label htmlFor="consent" style={{ fontSize: '0.75rem', color: 'var(--color-text-secondary)', lineHeight: '1.2', whiteSpace: 'nowrap' }}>
                                         I agree to allow Revolt to call this phone number
                                     </label>
-                                    <p style={{ fontSize: '0.75rem', color: 'var(--color-text-secondary)', marginTop: '0.25rem', opacity: 0.8 }}>
+                                    <p style={{ fontSize: '0.7rem', color: 'var(--color-text-secondary)', marginTop: '0.2rem', opacity: 0.8, whiteSpace: 'nowrap' }}>
                                         We'll call you to demonstrate Revolt with a real call
                                     </p>
                                 </div>
