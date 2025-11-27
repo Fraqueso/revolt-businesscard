@@ -34,6 +34,7 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
+                            style={{ backgroundColor: 'transparent' }}
                         >
                             You Can't Answer Every Call. <br />
                             <span className="text-gradient">Revolt Can.</span>
@@ -42,6 +43,7 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
+                            style={{ backgroundColor: 'transparent' }}
                         >
                             Revolt is the first conversational AI built for speed-to-lead. It calls your leads in under 60 seconds, handles objections like a top performer, and books appointments 24/7.
                         </motion.p>
@@ -50,7 +52,7 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.4 }}
-                            style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}
+                            style={{ display: 'flex', gap: '1rem', alignItems: 'center', backgroundColor: 'transparent' }}
                         >
                             <button onClick={openModal} className="btn btn-primary" style={{ fontSize: '1.2rem', padding: '1rem 2.5rem' }}>
                                 Hear The Difference
@@ -83,6 +85,7 @@ export default function Hero() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                         className="hero-form hero-form-container"
+                        style={{ willChange: 'transform' }}
                     >
                         <h3 style={{ fontSize: '1.5rem', fontWeight: '700', marginBottom: '1.5rem', textAlign: 'center' }}>
                             Talk To Revolt

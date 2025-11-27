@@ -107,18 +107,22 @@ function Particles({ count = 2000 }) {
 export default function VoltageField() {
     return (
         <div style={{
-            position: 'absolute',
+            position: 'fixed',
             top: 0,
             left: 0,
             width: '100%',
             height: '100%',
-            zIndex: -1,
+            zIndex: -5,
             opacity: 0.6,
             pointerEvents: 'none', // Let clicks pass through to content
             maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)', // Feathering effect
             WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)' // Webkit support
         }}>
-            <Canvas camera={{ position: [0, 0, 10], fov: 75 }} dpr={[1, 2]}>
+            <Canvas 
+                camera={{ position: [0, 0, 10], fov: 75 }} 
+                dpr={[1, 2]}
+                events={null}
+            >
                 <ambientLight intensity={0.5} />
                 <pointLight position={[10, 10, 10]} color="#7042f8" intensity={1} />
                 <pointLight position={[-10, -10, -10]} color="#00ffff" intensity={1} />

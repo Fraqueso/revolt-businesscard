@@ -12,7 +12,7 @@ export default function DualProblem() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    style={{ textAlign: 'center', marginBottom: '5rem' }}
+                    style={{ textAlign: 'center', marginBottom: '5rem', backgroundColor: 'transparent' }}
                 >
                     <h2 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '1rem' }}>
                         The <span className="text-gradient">Dual Problem</span> of Modern Sales
@@ -29,6 +29,7 @@ export default function DualProblem() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         className="dual-problem-left"
+                        style={{ willChange: 'transform' }}
                     >
                         <div className="dual-problem-icon">⚡</div>
                         <h3 className="dual-problem-title">Speed Without Quality</h3>
@@ -45,6 +46,7 @@ export default function DualProblem() {
                         viewport={{ once: true }}
                         transition={{ delay: 0.4 }}
                         className="dual-problem-center"
+                        style={{ willChange: 'transform' }}
                     >
                         <h3 className="dual-center-title">
                             You Need BOTH.<br />That's Revolt.
@@ -62,6 +64,7 @@ export default function DualProblem() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         className="dual-problem-right"
+                        style={{ willChange: 'transform' }}
                     >
                         <div className="dual-problem-icon">🧠</div>
                         <h3 className="dual-problem-title">Quality Without Speed</h3>

@@ -10,7 +10,7 @@
 
 html {
     font-family: var(--font-sans);
-    background-color: var(--color-bg);
+    background: linear-gradient(to bottom, #030014 0%, #0f0529 100%) fixed; /* Match index.html */
     color: var(--color-text);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -20,7 +20,7 @@ html {
 
 body {
     min-height: 100vh;
-    /* Background handled by Canvas */
+    background-color: transparent; /* Allow negative z-index elements (dots) to show */
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
