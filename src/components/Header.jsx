@@ -1,29 +1,70 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useModal } from '../context/ModalContext';
 
 export default function Header() {
+    const { scrollToHero } = useModal();
+
     return (
-        <header className="header">
-            <div className="container header-content">
-                <Link to="/" className="logo">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M2 17L12 22L22 17" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M2 12L12 17L22 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                    Revolt
-                </Link>
+        <header style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            zIndex: 100,
+            background: 'rgba(3, 0, 20, 0.8)',
+            backdropFilter: 'blur(10px)',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.05)'
+        }}>
+            <div className="container">
+                <div style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    height: '80px'
+                }}>
+                    {/* Logo */}
+                    <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <div style={{
+                            width: '40px',
+                            height: '40px',
+                            background: 'var(--gradient-primary)',
+                            borderRadius: '8px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            fontSize: '1.5rem'
+                        }}>
+                            ⚡
+                        </div>
+                        <span style={{
+                            fontSize: '1.5rem',
+                            fontWeight: '800',
+                            color: 'white',
+                            letterSpacing: '-0.02em'
+                        }}>
+                            Revolt
+                        </span>
+                    </Link>
 
-                <nav className="nav-links">
-                    <Link to="/" className="nav-link">Features</Link>
-                    <Link to="/integrations" className="nav-link">Integrations</Link>
-                    <Link to="/journey-map" className="nav-link">Journey Map</Link>
-                    <Link to="/simulator" className="nav-link">Simulator</Link>
-                </nav>
+                    {/* Navigation */}
+                    <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+                        <Link to="/integrations" className="nav-link">Integrations</Link>
+                        <Link to="/journey-map" className="nav-link">Journey Map</Link>
+                        <Link to="/simulator" className="nav-link">Simulator</Link>
 
-                <button className="btn btn-primary">
-                    Talk to AI
-                </button>
+                        <button
+                            onClick={scrollToHero}
+                            className="btn btn-primary"
+                            style={{
+                                padding: '0.5rem 1.5rem',
+                                fontSize: '0.9rem'
+                            }}
+                        >
+                            Talk to AI
+                        </button>
+                    </nav>
+                </div>
             </div>
         </header>
     );

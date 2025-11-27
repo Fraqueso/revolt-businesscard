@@ -1,6 +1,10 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { useModal } from '../context/ModalContext';
 
 export default function JourneyMap() {
+    const { openModal } = useModal();
+
     return (
         <div className="page-content" style={{ paddingTop: '8rem', paddingBottom: '4rem' }}>
             <div className="container">
@@ -8,8 +12,8 @@ export default function JourneyMap() {
                     <h1 style={{ fontSize: '3rem', fontWeight: '700', marginBottom: '1rem' }}>
                         Speed-to-Lead <span className="text-gradient">Journey Map</span>
                     </h1>
-                    <p style={{ color: 'var(--color-text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
-                        Visualize where your leads are dropping off in your sales funnel.
+                    <p style={{ color: 'var(--color-text-secondary)', maxWidth: '800px', margin: '0 auto', fontSize: '1.2rem' }}>
+                        Most businesses lose 60% of leads before a conversation even starts. Here's where they're falling out of your funnel—and how Revolt fixes it.
                     </p>
                 </div>
 
@@ -57,7 +61,7 @@ export default function JourneyMap() {
                     <p style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>
                         Most businesses lose 60% of leads before a conversation even starts.
                     </p>
-                    <button className="btn btn-primary">
+                    <button onClick={openModal} className="btn btn-primary">
                         Fix your funnel with Revolt
                     </button>
                 </div>

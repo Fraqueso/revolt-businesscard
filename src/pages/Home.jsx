@@ -1,7 +1,12 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import Features from '../components/Features';
-import SpeedToLead from '../components/SpeedToLead';
+import DualProblem from '../components/DualProblem';
+import AudioComparison from '../components/AudioComparison';
+import BuildProcess from '../components/BuildProcess';
+import ComparisonTable from '../components/ComparisonTable';
+import Stats from '../components/Stats';
+import TechnicalFeatures from '../components/TechnicalFeatures';
+import SocialProof from '../components/SocialProof';
 import VoltageField from '../components/VoltageField';
 
 export default function Home() {
@@ -9,8 +14,13 @@ export default function Home() {
         <>
             <VoltageField />
             <Hero />
-            <SpeedToLead />
-            <Features />
+            <DualProblem />
+            <AudioComparison />
+            <BuildProcess />
+            <ComparisonTable />
+            <Stats />
+            <TechnicalFeatures />
+            <SocialProof />
         </>
     );
 }

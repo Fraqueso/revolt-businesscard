@@ -21,8 +21,8 @@ export default function Simulator() {
                     <h1 style={{ fontSize: '3rem', fontWeight: '700', marginBottom: '1rem' }}>
                         Speed-to-Lead <span className="text-gradient">Impact Calculator</span>
                     </h1>
-                    <p style={{ color: 'var(--color-text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
-                        See how much revenue you're losing by not responding instantly.
+                    <p style={{ color: 'var(--color-text-secondary)', maxWidth: '700px', margin: '0 auto', fontSize: '1.2rem' }}>
+                        See exactly how much revenue slow response times are costing you every single month.
                     </p>
                 </div>
 

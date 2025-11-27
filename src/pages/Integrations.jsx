@@ -67,7 +67,7 @@ export default function Integrations() {
                     style={{ textAlign: 'center', marginBottom: '4rem' }}
                 >
                     <h1 style={{ fontSize: '3.5rem', fontWeight: '700', marginBottom: '1.5rem' }}>
-                        Example Calls and <span className="text-gradient">Key Features</span>
+                        See Revolt Handling <span className="text-gradient">Real Conversations</span>
                     </h1>
                 </motion.div>
 
