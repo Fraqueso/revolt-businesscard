@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useModal } from '../context/ModalContext';
 
 export default function Header() {
-    const { scrollToHero, refreshPage } = useModal();
+    const { scrollToHero, refreshPage, setShouldScrollToHero } = useModal();
     const location = useLocation();
+    const navigate = useNavigate();
 
     const handleNavClick = (path) => {
         window.scrollTo(0, 0);
@@ -12,6 +13,15 @@ export default function Header() {
         // Otherwise, the route change itself will handle the remount
         if (location.pathname === path) {
             refreshPage();
+        }
+    };
+
+    const handleTalkToAIClick = () => {
+        if (location.pathname === '/') {
+            scrollToHero();
+        } else {
+            setShouldScrollToHero(true);
+            navigate('/');
         }
     };
 
@@ -64,7 +74,7 @@ export default function Header() {
                         <Link to="/simulator" className="nav-link" onClick={() => handleNavClick('/simulator')}>Simulator</Link>
 
                         <button
-                            onClick={scrollToHero}
+                            onClick={handleTalkToAIClick}
                             className="btn btn-primary"
                             style={{
                                 padding: '0.5rem 1.5rem',
