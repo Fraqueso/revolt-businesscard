@@ -35,8 +35,8 @@ export default function Hero() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                         >
-                            THERE'S VOICE AI <br />
-                            <span className="text-gradient">THEN THERE'S REVOLT</span>
+                            You Can't Answer Every Call. <br />
+                            <span className="text-gradient">Revolt Can.</span>
                         </motion.h1>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
