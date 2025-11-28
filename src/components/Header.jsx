@@ -37,49 +37,26 @@ export default function Header() {
             borderBottom: '1px solid rgba(255, 255, 255, 0.05)'
         }}>
             <div className="container">
-                <div style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    height: '80px'
-                }}>
+                <div className="header-inner">
                     {/* Logo */}
-                    <Link to="/" onClick={() => handleNavClick('/')} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                        <div style={{
-                            width: '40px',
-                            height: '40px',
-                            background: 'var(--gradient-primary)',
-                            borderRadius: '8px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            fontSize: '1.5rem'
-                        }}>
+                    <Link to="/" onClick={() => handleNavClick('/')} className="header-logo">
+                        <div className="logo-icon">
                             ⚡
                         </div>
-                        <span style={{
-                            fontSize: '1.5rem',
-                            fontWeight: '800',
-                            color: 'white',
-                            letterSpacing: '-0.02em'
-                        }}>
+                        <span className="logo-text">
                             Revolt
                         </span>
                     </Link>
 
                     {/* Navigation */}
-                    <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+                    <nav className="header-nav">
                         <Link to="/about" className="nav-link" onClick={() => handleNavClick('/about')}>About</Link>
                         <Link to="/journey-map" className="nav-link" onClick={() => handleNavClick('/journey-map')}>Journey Map</Link>
                         <Link to="/simulator" className="nav-link" onClick={() => handleNavClick('/simulator')}>Simulator</Link>
 
                         <button
                             onClick={handleTalkToAIClick}
-                            className="btn btn-primary"
-                            style={{
-                                padding: '0.5rem 1.5rem',
-                                fontSize: '0.9rem'
-                            }}
+                            className="btn btn-primary nav-btn"
                         >
                             Talk to AI
                         </button>

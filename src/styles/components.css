@@ -17,38 +17,86 @@
     justify-content: space-between;
 }
 
-.logo {
-    font-weight: 700;
-    font-size: 1.5rem;
-    letter-spacing: -0.02em;
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.header-logo {
+    text-decoration: none;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    text-shadow: 0 0 20px rgba(112, 66, 248, 0.3);
 }
 
-.nav-links {
-    display: none;
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--gradient-primary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
 }
 
-@media (min-width: 768px) {
-    .nav-links {
-        display: flex;
-        gap: var(--spacing-lg);
-    }
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.02em;
 }
 
+/* Header Navigation - Mobile First */
+.header-nav {
+    display: flex;
+    gap: 0.5rem; /* Smaller gap for mobile */
+    align-items: center;
+}
+
+.nav-btn {
+    padding: 0.4rem 0.8rem; /* Smaller padding for mobile */
+    font-size: 0.75rem; /* Smaller font for mobile */
+}
+
+/* Adjust nav links for mobile */
 .nav-link {
     color: var(--color-text-secondary);
-    font-size: 0.9rem;
+    font-size: 0.75rem; /* Smaller font for mobile */
     font-weight: 500;
     transition: color var(--transition-fast);
     position: relative;
+    white-space: nowrap;
 }
 
 .nav-link:hover {
     color: var(--color-text);
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Desktop Header Adjustments */
+@media (min-width: 768px) {
+    .header-nav {
+        gap: 2rem;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .nav-btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile adjustments for logo text if needed */
+@media (max-width: 480px) {
+    .logo-text {
+        display: none; /* Hide logo text on very small screens to make room for nav */
+    }
 }
 
 /* Hero */
@@ -73,6 +121,10 @@
     }
 }
 
+.hero-text {
+    text-align: center; /* Center by default on mobile */
+}
+
 .hero-text h1 {
     font-size: 2.5rem;
     line-height: 1.2;
@@ -82,6 +134,10 @@
 }
 
 @media (min-width: 768px) {
+    .hero-text {
+        text-align: left; /* Reset to left on desktop */
+    }
+
     .hero-text h1 {
         font-size: clamp(2.2rem, 4vw, 3.5rem); /* Smaller min/base to fit narrower column */
         max-width: 100%;
@@ -101,6 +157,29 @@
     color: var(--color-text-secondary);
     margin-bottom: var(--spacing-xl);
     max-width: 600px;
+    margin-left: auto; /* Center the p block on mobile */
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .hero-text p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center; /* Center CTA on mobile */
+    background-color: transparent;
+}
+
+@media (min-width: 768px) {
+    .hero-cta {
+        justify-content: flex-start; /* Left align on desktop */
+    }
 }
 
 .form-label {
@@ -136,6 +215,13 @@
     margin-top: var(--spacing-2xl);
     padding-top: var(--spacing-xl);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    justify-content: center; /* Center stats on mobile */
+}
+
+@media (min-width: 768px) {
+    .hero-stats {
+        justify-content: flex-start;
+    }
 }
 
 .stat-item h3 {
@@ -230,21 +316,55 @@
     gap: 2rem;
 }
 
-.comparison-header,
+/* Mobile Layout (Default) */
+.comparison-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem; /* Smaller gap */
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--color-border);
+    font-weight: bold;
+    font-size: 0.9rem; /* Smaller header font on mobile */
+    text-align: center; /* Center headers on mobile */
+    
+    /* Sticky Header */
+    position: sticky;
+    top: 80px; /* Stick below the fixed main header */
+    z-index: 40; /* Below header (50) but above content */
+    background: #030014; /* Opaque background to hide scrolling content */
+    margin: -2rem -2rem 1rem -2rem; /* Pull up to top of container, counteract padding */
+    padding: 1.5rem 2rem 1rem 2rem; /* Add padding to match container look */
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0; /* Restore top rounded corners */
+}
+
+.comparison-header > div:first-child {
+    display: none; /* Hide "Feature" column header on mobile */
+}
+
 .comparison-row {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
-
-.comparison-header {
-    display: none;
-}
-
-.comparison-row {
-    margin-bottom: 2rem;
+    grid-template-columns: 1fr 1fr; /* 2 columns for content */
+    gap: 0.5rem; /* Tighter gap between columns */
+    margin-bottom: 1rem; /* Reduced bottom margin */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 2rem;
+    padding-bottom: 1rem; /* Reduced padding */
+}
+
+.comparison-row > div:first-child {
+    grid-column: 1 / -1; /* Feature name spans full width */
+    text-align: center;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.25rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.25rem;
+    border-radius: 4px;
+}
+
+.comparison-row > div:not(:first-child) {
+    font-size: 0.75rem; /* Smaller content font on mobile */
 }
 
 .comparison-row:last-child {
@@ -254,9 +374,19 @@
 }
 
 @media (min-width: 768px) {
+    .comparison-grid {
+        gap: 2rem;
+    }
+
     .comparison-header {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .comparison-header > div:first-child {
+        display: block;
     }
 
     .comparison-row {
@@ -264,6 +394,22 @@
         margin-bottom: 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         padding-bottom: 1.5rem;
+    }
+
+    .comparison-row > div:first-child {
+        grid-column: auto;
+        text-align: left;
+        font-size: 1rem;
+        text-transform: none;
+        letter-spacing: normal;
+        color: inherit;
+        margin-bottom: 0;
+        background: none;
+        padding: 0;
+    }
+
+    .comparison-row > div:not(:first-child) {
+        font-size: 0.9rem;
     }
 }
 

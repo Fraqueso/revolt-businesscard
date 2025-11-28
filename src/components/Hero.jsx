@@ -52,7 +52,8 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.4 }}
-                            style={{ display: 'flex', gap: '1rem', alignItems: 'center', backgroundColor: 'transparent' }}
+                            className="hero-cta"
+                            style={{ backgroundColor: 'transparent' }}
                         >
                             <button onClick={openModal} className="btn btn-primary" style={{ fontSize: '1.2rem', padding: '1rem 2.5rem' }}>
                                 Hear The Difference

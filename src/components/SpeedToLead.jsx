@@ -137,8 +137,8 @@ export default function SpeedToLead() {
                         fontSize: '1.2rem'
                     }}>
                         <div>Feature</div>
-                        <div style={{ color: 'var(--color-primary)' }}>Revolt</div>
-                        <div style={{ color: 'var(--color-text-secondary)' }}>Human Sales Reps</div>
+                        <div style={{ color: 'var(--color-primary)', textAlign: 'center' }}>Revolt</div>
+                        <div style={{ color: 'var(--color-text-secondary)', textAlign: 'center' }}>Human Sales Reps</div>
                     </div>
 
                     {/* Table Rows */}
@@ -150,19 +150,21 @@ export default function SpeedToLead() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            style={{
-                                padding: '1.5rem 0',
-                                borderBottom: index !== comparisonData.length - 1 ? '1px solid rgba(255,255,255,0.05)' : 'none'
-                            }}
                         >
-                            <div style={{ fontWeight: '600', display: 'flex', alignItems: 'center' }}>{item.feature}</div>
-                            <div>
-                                <div style={{ fontWeight: '600', color: 'var(--color-text)', marginBottom: '0.25rem' }}>{item.ai.title}</div>
-                                <div style={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)' }}>{item.ai.desc}</div>
+                            <div style={{ fontWeight: '600', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{item.feature}</div>
+                            <div style={{ textAlign: 'center' }}>
+                                <div style={{ fontWeight: '600', color: 'var(--color-text)', marginBottom: '0.25rem', display: 'inline-block', textAlign: 'left' }}>
+                                    <span style={{ color: '#22c55e', marginRight: '0.5rem' }}>✓</span>
+                                    {item.ai.title}
+                                </div>
+                                <div style={{ color: 'var(--color-text-secondary)' }}>{item.ai.desc}</div>
                             </div>
-                            <div>
-                                <div style={{ fontWeight: '600', color: 'var(--color-text-secondary)', marginBottom: '0.25rem' }}>{item.human.title}</div>
-                                <div style={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)', opacity: 0.8 }}>{item.human.desc}</div>
+                            <div style={{ textAlign: 'center' }}>
+                                <div style={{ fontWeight: '600', color: 'var(--color-text-secondary)', marginBottom: '0.25rem', display: 'inline-block', textAlign: 'left' }}>
+                                    <span style={{ color: '#ef4444', marginRight: '0.5rem' }}>✕</span>
+                                    {item.human.title}
+                                </div>
+                                <div style={{ color: 'var(--color-text-secondary)', opacity: 0.8 }}>{item.human.desc}</div>
                             </div>
                         </motion.div>
                     ))}
