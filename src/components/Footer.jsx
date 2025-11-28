@@ -1,7 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
+    const handleLinkClick = () => {
+        window.scrollTo(0, 0);
+    };
+
     return (
         <footer style={{
             background: 'rgba(3, 0, 20, 0.95)',
@@ -21,11 +26,17 @@ export default function Footer() {
                     <div>
                         <h4 style={{ fontSize: '1rem', fontWeight: '700', marginBottom: '1.5rem', color: 'white' }}>Product</h4>
                         <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                            {['Features', 'Integrations', 'Journey Map', 'Simulator', 'Pricing'].map((item, i) => (
+                            {/* Removed Integrations, Pricing */}
+                            {['Features', 'Journey Map', 'Simulator'].map((item, i) => (
                                 <li key={i} style={{ marginBottom: '0.75rem' }}>
-                                    <a href="#" style={{ color: 'var(--color-text-secondary)', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }} className="footer-link">
+                                    <Link 
+                                        to={item === 'Journey Map' ? '/journey-map' : item === 'Simulator' ? '/simulator' : '/'} 
+                                        onClick={handleLinkClick}
+                                        style={{ color: 'var(--color-text-secondary)', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }} 
+                                        className="footer-link"
+                                    >
                                         {item}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -35,7 +46,8 @@ export default function Footer() {
                     <div>
                         <h4 style={{ fontSize: '1rem', fontWeight: '700', marginBottom: '1.5rem', color: 'white' }}>Resources</h4>
                         <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                            {['Case Studies', 'Blog', 'Documentation', 'Support'].map((item, i) => (
+                            {/* Removed Blog, Documentation */}
+                            {['Case Studies', 'Support'].map((item, i) => (
                                 <li key={i} style={{ marginBottom: '0.75rem' }}>
                                     <a href="#" style={{ color: 'var(--color-text-secondary)', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }} className="footer-link">
                                         {item}
@@ -49,11 +61,17 @@ export default function Footer() {
                     <div>
                         <h4 style={{ fontSize: '1rem', fontWeight: '700', marginBottom: '1.5rem', color: 'white' }}>Company</h4>
                         <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                            {['About', 'Careers', 'Contact'].map((item, i) => (
+                            {/* Removed Careers */}
+                            {['About', 'Contact'].map((item, i) => (
                                 <li key={i} style={{ marginBottom: '0.75rem' }}>
-                                    <a href="#" style={{ color: 'var(--color-text-secondary)', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }} className="footer-link">
+                                    <Link 
+                                        to={item === 'About' ? '/about' : '#'}
+                                        onClick={handleLinkClick}
+                                        style={{ color: 'var(--color-text-secondary)', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }} 
+                                        className="footer-link"
+                                    >
                                         {item}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -65,9 +83,14 @@ export default function Footer() {
                         <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                             {['Privacy Policy', 'Terms of Service', 'Security'].map((item, i) => (
                                 <li key={i} style={{ marginBottom: '0.75rem' }}>
-                                    <a href="#" style={{ color: 'var(--color-text-secondary)', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }} className="footer-link">
+                                    <Link 
+                                        to={item === 'Privacy Policy' ? '/privacy' : item === 'Terms of Service' ? '/terms' : '#'}
+                                        onClick={handleLinkClick}
+                                        style={{ color: 'var(--color-text-secondary)', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }} 
+                                        className="footer-link"
+                                    >
                                         {item}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -89,14 +112,7 @@ export default function Footer() {
                     <p style={{ fontSize: '0.85rem', color: 'var(--color-text-secondary)' }}>
                         © 2025 Revolt. All rights reserved.
                     </p>
-                    <div style={{ display: 'flex', gap: '1.5rem' }}>
-                        {/* Social Icons Placeholder */}
-                        {['Twitter', 'LinkedIn', 'GitHub'].map((social, i) => (
-                            <a key={i} href="#" style={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem', textDecoration: 'none' }}>
-                                {social}
-                            </a>
-                        ))}
-                    </div>
+                    {/* Removed Social Icons */}
                 </div>
             </div>
         </footer>

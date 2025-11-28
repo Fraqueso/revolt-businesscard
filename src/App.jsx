@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import Background from './components/Background';
 import VoltageField from './components/VoltageField';
 import Home from './pages/Home';
-import Integrations from './pages/Integrations';
+import About from './pages/About';
 import Simulator from './pages/Simulator';
 import JourneyMap from './pages/JourneyMap';
 import Privacy from './pages/Privacy';
@@ -45,7 +45,7 @@ function AppContent() {
       <ActionModal />
       <Routes key={pageKey}>
         <Route path="/" element={<Home />} />
-        <Route path="/integrations" element={<Integrations />} />
+        <Route path="/about" element={<About />} />
         <Route path="/simulator" element={<Simulator />} />
         <Route path="/journey-map" element={<JourneyMap />} />
         <Route path="/privacy" element={<Privacy />} />

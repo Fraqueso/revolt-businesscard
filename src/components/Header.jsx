@@ -69,7 +69,7 @@ export default function Header() {
 
                     {/* Navigation */}
                     <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-                        <Link to="/integrations" className="nav-link" onClick={() => handleNavClick('/integrations')}>Integrations</Link>
+                        <Link to="/about" className="nav-link" onClick={() => handleNavClick('/about')}>About</Link>
                         <Link to="/journey-map" className="nav-link" onClick={() => handleNavClick('/journey-map')}>Journey Map</Link>
                         <Link to="/simulator" className="nav-link" onClick={() => handleNavClick('/simulator')}>Simulator</Link>
 
