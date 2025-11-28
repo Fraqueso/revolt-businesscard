@@ -147,7 +147,7 @@ export default function ActionModal() {
                                             border: '1px solid var(--color-border)',
                                             borderRadius: '0.5rem',
                                             color: 'white',
-                                            fontSize: '1rem'
+                                            fontSize: '16px'
                                         }}
                                     />
                                 </div>
@@ -181,7 +181,7 @@ export default function ActionModal() {
                                             border: '1px solid var(--color-border)',
                                             borderRadius: '0.5rem',
                                             color: 'white',
-                                            fontSize: '1rem'
+                                            fontSize: '16px'
                                         }}
                                     />
                                 </div>
