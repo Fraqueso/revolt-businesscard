@@ -89,9 +89,9 @@ export default function Hero() {
                             className="hero-cta"
                             style={{ backgroundColor: 'transparent' }}
                         >
-                            <button onClick={openModal} className="btn btn-primary" style={{ fontSize: '1.2rem', padding: '1rem 2.5rem' }}>
-                                Hear The Difference
-                            </button>
+<button onClick={openModal} className="btn btn-primary hero-cta-btn">
+    Hear The Difference
+</button>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>
                                 <span style={{ width: '10px', height: '10px', background: '#22c55e', borderRadius: '50%', display: 'inline-block' }}></span>
                                 98% Human Accuracy
