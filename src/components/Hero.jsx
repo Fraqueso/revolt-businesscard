@@ -2,13 +2,16 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import ReCAPTCHA from "react-google-recaptcha";
 import { useModal } from '../context/ModalContext';
+import { submitToN8n } from '../utils/api';
 
 export default function Hero() {
     const { openModal, registerHeroForm } = useModal();
     const [phone, setPhone] = useState('');
+    const [name, setName] = useState('');
     const [isAgreed, setIsAgreed] = useState(false);
     const [showCaptcha, setShowCaptcha] = useState(false);
     const [captchaToken, setCaptchaToken] = useState(null);
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const recaptchaRef = useRef(null);
     const formRef = useRef(null);
 
@@ -18,10 +21,41 @@ export default function Hero() {
         }
     }, [registerHeroForm]);
 
-    const handleSubmit = (e) => {
+    const submitHeroForm = async (token) => {
+        setIsSubmitting(true);
+        try {
+            await submitToN8n({ 
+                phone,
+                name: name || undefined, // Only send if not empty 
+                captchaToken: token,
+                source: 'hero_form'
+            });
+            alert("Sweet! We'll Call You Immediately, Make Sure You're Not on DND");
+            setPhone('');
+            setIsAgreed(false);
+            setCaptchaToken(null);
+            setShowCaptcha(false);
+        } catch (error) {
+            console.error(error);
+            alert(`Error: ${error.message || 'Something went wrong. Please check your connection.'}`);
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        
+        // If we have a token already, submit immediately
+        if (captchaToken) {
+            submitHeroForm(captchaToken);
+            return;
+        }
+
+        // Otherwise check phone length and show captcha
         if (phone.length > 9) {
             setShowCaptcha(true);
+            return;
         }
     };
 
@@ -92,8 +126,19 @@ export default function Hero() {
                             Talk To Revolt
                         </h3>
                         <form onSubmit={handleSubmit}>
+                            <div className="form-group" style={{ marginBottom: '1rem' }}>
+                                <label className="form-label">Name (Optional)</label>
+                                <input
+                                    type="text"
+                                    className="form-input"
+                                    placeholder="Your Name"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                />
+                            </div>
+
                             <div className="form-group">
-                                <label className="form-label">Phone Number</label>
+                                <label className="form-label">Phone Number <span style={{ color: 'var(--color-primary)' }}>*</span></label>
                                 <input
                                     type="tel"
                                     className="form-input"
@@ -125,11 +170,11 @@ export default function Hero() {
 
                             <button 
                                 type="submit" 
-                                disabled={!isAgreed}
+                                disabled={!isAgreed || isSubmitting}
                                 className={`btn btn-primary ${isAgreed ? 'sweeping-animation' : ''}`}
-                                style={{ width: '100%', marginTop: '1.5rem' }}
+                                style={{ width: '100%', marginTop: '1.5rem', opacity: isSubmitting ? 0.7 : 1 }}
                             >
-                                Call Me Now
+                                {isSubmitting ? 'Submitting...' : 'Call Me Now'}
                             </button>
                             {showCaptcha && (
                                 <motion.div
@@ -142,7 +187,7 @@ export default function Hero() {
                                         sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                                         onChange={(token) => {
                                             setCaptchaToken(token);
-                                            console.log('Captcha verified! Token:', token);
+                                            submitHeroForm(token);
                                         }}
                                         theme="dark"
                                     />

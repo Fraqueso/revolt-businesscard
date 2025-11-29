@@ -1,11 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import ReCAPTCHA from "react-google-recaptcha";
+import Cal, { getCalApi } from "@calcom/embed-react";
 import { useModal } from '../context/ModalContext';
+import { submitToN8n } from '../utils/api';
 
 export default function ActionModal() {
     const { isModalOpen, closeModal, scrollToHero } = useModal();
     const [step, setStep] = useState('initial'); // initial, demo-choice, phone-input, email-input
-    const [formData, setFormData] = useState({ phone: '', email: '' });
+    const [formData, setFormData] = useState({ phone: '', email: '', name: '' });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [showCaptcha, setShowCaptcha] = useState(false);
+    const [captchaToken, setCaptchaToken] = useState(null);
+    const recaptchaRef = useRef(null);
+
+    useEffect(() => {
+        (async function () {
+            const cal = await getCalApi({"namespace":"demo"});
+            cal("ui", {"theme":"dark","cssVarsPerTheme":{"dark":{"cal-brand":"#433dbf"}},"hideEventTypeDetails":false,"layout":"month_view"});
+        })();
+    }, []);
 
     if (!isModalOpen) return null;
 
@@ -13,6 +27,8 @@ export default function ActionModal() {
         if (e.target === e.currentTarget) {
             closeModal();
             setStep('initial');
+            setShowCaptcha(false);
+            setCaptchaToken(null);
         }
     };
 
@@ -21,12 +37,48 @@ export default function ActionModal() {
         setStep('initial');
     };
 
+    const performSubmission = async (token) => {
+        setIsSubmitting(true);
+        try {
+            // Determine the data payload based on the current step
+            const payload = {
+                source: 'action_modal',
+                type: step === 'phone-input' ? 'phone' : 'email',
+                captchaToken: token
+            };
+
+            if (step === 'phone-input') {
+                payload.phone = formData.phone;
+            } else {
+                payload.email = formData.email;
+            }
+            
+            // Add name if present
+            if (formData.name) payload.name = formData.name;
+
+            await submitToN8n(payload);
+            alert("Sweet! We'll Call You Immediately, Make Sure You're Not on DND");
+            closeModal();
+            setStep('initial');
+            setFormData({ phone: '', email: '', name: '' });
+            setShowCaptcha(false);
+            setCaptchaToken(null);
+        } catch (error) {
+            console.error(error);
+            alert(`Error: ${error.message || 'Something went wrong. Please check your connection.'}`);
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Here you would handle the actual submission logic
-        alert("Thanks! We'll be in touch shortly.");
-        closeModal();
-        setStep('initial');
+        
+        if (captchaToken) {
+            performSubmission(captchaToken);
+        } else {
+            setShowCaptcha(true);
+        }
     };
 
     return (
@@ -86,7 +138,7 @@ export default function ActionModal() {
                         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
                             <h2 style={{ fontSize: '1.8rem', fontWeight: '700', marginBottom: '0.5rem' }}>Talk to Revolt</h2>
                             <p style={{ color: 'var(--color-text-secondary)' }}>
-                                We'll call you to demonstrate Revolt with a real call
+                                Book a call with our team
                             </p>
                         </div>
 
@@ -133,7 +185,27 @@ export default function ActionModal() {
                         {step === 'phone-input' && (
                             <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '1rem' }}>
                                 <div>
-                                    <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-text-secondary)' }}>Phone Number</label>
+                                    <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-text-secondary)' }}>Name (Optional)</label>
+                                    <input
+                                        type="text"
+                                        placeholder="Your Name"
+                                        value={formData.name}
+                                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                        style={{
+                                            width: '100%',
+                                            padding: '0.75rem',
+                                            background: 'rgba(0, 0, 0, 0.2)',
+                                            border: '1px solid var(--color-border)',
+                                            borderRadius: '0.5rem',
+                                            color: 'white',
+                                            fontSize: '16px'
+                                        }}
+                                    />
+                                </div>
+                                <div>
+                                    <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-text-secondary)' }}>
+                                        Phone Number <span style={{ color: 'var(--color-primary)' }}>*</span>
+                                    </label>
                                     <input
                                         type="tel"
                                         required
@@ -151,9 +223,33 @@ export default function ActionModal() {
                                         }}
                                     />
                                 </div>
-                                <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '1rem' }}>
-                                    Submit
+                                <button 
+                                    type="submit" 
+                                    className="btn btn-primary" 
+                                    style={{ width: '100%', padding: '1rem', opacity: isSubmitting ? 0.7 : 1 }}
+                                    disabled={isSubmitting}
+                                >
+                                    {isSubmitting ? 'Submitting...' : 'Submit'}
                                 </button>
+
+                                {showCaptcha && (
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        style={{ marginTop: '1rem', display: 'flex', justifyContent: 'center' }}
+                                    >
+                                        <ReCAPTCHA
+                                            ref={recaptchaRef}
+                                            sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                                            onChange={(token) => {
+                                                setCaptchaToken(token);
+                                                performSubmission(token);
+                                            }}
+                                            theme="dark"
+                                        />
+                                    </motion.div>
+                                )}
+
                                 <button
                                     type="button"
                                     onClick={() => setStep('demo-choice')}
@@ -165,29 +261,13 @@ export default function ActionModal() {
                         )}
 
                         {step === 'email-input' && (
-                            <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '1rem' }}>
-                                <div>
-                                    <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-text-secondary)' }}>Business Email</label>
-                                    <input
-                                        type="email"
-                                        required
-                                        placeholder="john@company.com"
-                                        value={formData.email}
-                                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                        style={{
-                                            width: '100%',
-                                            padding: '0.75rem',
-                                            background: 'rgba(0, 0, 0, 0.2)',
-                                            border: '1px solid var(--color-border)',
-                                            borderRadius: '0.5rem',
-                                            color: 'white',
-                                            fontSize: '16px'
-                                        }}
-                                    />
-                                </div>
-                                <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '1rem' }}>
-                                    Submit
-                                </button>
+                            <div style={{ display: 'grid', gap: '1rem', height: '450px' }}>
+                                <Cal 
+                                    namespace="demo"
+                                    calLink="dantebrunelli/demo"
+                                    style={{width:"100%",height:"100%",overflow:"scroll"}}
+                                    config={{"layout":"month_view","theme":"dark"}}
+                                />
                                 <button
                                     type="button"
                                     onClick={() => setStep('demo-choice')}
@@ -195,7 +275,7 @@ export default function ActionModal() {
                                 >
                                     Back
                                 </button>
-                            </form>
+                            </div>
                         )}
                     </motion.div>
                 </motion.div>
