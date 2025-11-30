@@ -104,7 +104,7 @@ function Particles({ count = 2000 }) {
     );
 }
 
-export default function VoltageField({ isDarker = false }) {
+export default function VoltageField() {
     return (
         <div style={{
             position: 'fixed',
@@ -113,7 +113,7 @@ export default function VoltageField({ isDarker = false }) {
             width: '100%',
             height: '100%',
             zIndex: -5,
-            opacity: isDarker ? 0.3 : 0.6, // Darker (less opaque) if requested
+            opacity: 0.35,
             pointerEvents: 'none', // Let clicks pass through to content
             maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)', // Feathering effect
             WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)' // Webkit support

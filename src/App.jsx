@@ -35,12 +35,7 @@ function AppContent() {
     <div className="app">
       <ScrollToTop />
       <Background />
-      {/* 
-          VoltageField is now global.
-          On Home page (isHomePage=true): default opacity (isDarker=false)
-          On other pages (isHomePage=false): darker/less opaque (isDarker=true)
-      */}
-      <VoltageField isDarker={!isHomePage} />
+      <VoltageField />
       <Header />
       <ActionModal />
       <Routes key={pageKey}>
