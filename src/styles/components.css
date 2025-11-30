@@ -1,3 +1,20 @@
+/* Pulsing Glow Animation */
+@keyframes breathing-glow {
+    0% {
+        box-shadow: 0 0 20px rgba(112, 66, 248, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(112, 66, 248, 0.25);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(112, 66, 248, 0.1);
+    }
+}
+
+.breathing-glow {
+    animation: breathing-glow 5s ease-in-out infinite;
+}
+
 /* Header */
 .header {
     position: fixed;
@@ -354,6 +371,12 @@
     color: var(--color-primary);
     margin-bottom: var(--spacing-lg);
     box-shadow: 0 0 20px rgba(112, 66, 248, 0.2);
+}
+
+.feature-emoji {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+    line-height: 1;
 }
 
 .feature-title {
@@ -741,6 +764,32 @@
     background: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-1px);
+}
+
+.glass-card {
+    text-align: center;
+    padding: 2rem;
+    background: var(--glass-bg);
+    border-radius: var(--radius-lg);
+    border: var(--glass-border);
+}
+
+.glass-card-sm {
+    background: var(--glass-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    padding: 0.25rem 0.5rem;
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-size: 0.9em;
+    vertical-align: middle;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .glass-card {
+        padding: 1.5rem;
+    }
 }
 
 /* About Page Hero Title */

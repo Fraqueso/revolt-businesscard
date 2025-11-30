@@ -124,12 +124,13 @@ export default function ActionModal() {
                             background: 'var(--color-bg-secondary)',
                             border: '1px solid var(--color-border)',
                             borderRadius: 'var(--radius-lg)',
-                            padding: '2rem',
+                            padding: '3rem',
                             width: '100%',
-                            maxWidth: '500px',
+                            maxWidth: '750px',
                             position: 'relative',
-                            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
+                            // Removed inline boxShadow to let class handle it
                         }}
+                        className="breathing-glow"
                     >
                         <button
                             onClick={() => { closeModal(); setStep('initial'); }}
@@ -147,9 +148,9 @@ export default function ActionModal() {
                             ×
                         </button>
 
-                        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                            <h2 style={{ fontSize: '1.8rem', fontWeight: '700', marginBottom: '0.5rem' }}>Talk to Revolt</h2>
-                            <p style={{ color: 'var(--color-text-secondary)' }}>
+                        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+                            <h2 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '1rem' }}>Talk to Revolt</h2>
+                            <p style={{ color: 'var(--color-text-secondary)', fontSize: '1.2rem' }}>
                                 Book a call with our team
                             </p>
                         </div>
@@ -180,7 +181,7 @@ export default function ActionModal() {
                                     By Phone
                                 </button>
                                 <button
-                                    onClick={() => setStep('email-input')}
+                                    onClick={() => setStep('email-captcha')}
                                     className="btn-glass-pill"
                                 >
                                     By Email
@@ -270,6 +271,30 @@ export default function ActionModal() {
                                     Back
                                 </button>
                             </form>
+                        )}
+
+                        {step === 'email-captcha' && (
+                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
+                                <p style={{ color: 'var(--color-text-secondary)', marginBottom: '1rem' }}>
+                                    Please verify you are human to continue
+                                </p>
+                                <ReCAPTCHA
+                                    sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                                    onChange={(token) => {
+                                        if (token) {
+                                            setStep('email-input');
+                                        }
+                                    }}
+                                    theme="dark"
+                                />
+                                <button
+                                    type="button"
+                                    onClick={() => setStep('demo-choice')}
+                                    style={{ background: 'none', border: 'none', color: 'var(--color-text-secondary)', marginTop: '1rem', cursor: 'pointer' }}
+                                >
+                                    Back
+                                </button>
+                            </div>
                         )}
 
                         {step === 'email-input' && (
