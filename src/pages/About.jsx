@@ -66,8 +66,11 @@ export default function About() {
                     {...fadeInUp}
                     style={{ textAlign: 'center', marginBottom: '4rem' }}
                 >
-                    <h1 style={{ fontSize: '3.5rem', fontWeight: '700', marginBottom: '1.5rem' }}>
-                        See Revolt Handling <span className="text-gradient">Real Conversations</span>
+                    <h1 className="about-hero-title">
+                        See Revolt Handling <br />
+                        <span className="text-gradient about-hero-gradient">
+                            <span className="highlight-real">REAL</span><br />Conversations
+                        </span>
                     </h1>
                 </motion.div>
 

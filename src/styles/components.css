@@ -731,3 +731,78 @@
     border-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-1px);
 }
+
+/* About Page Hero Title */
+.about-hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+/* Helper class to show breaks only on mobile */
+.mobile-break {
+    display: none;
+}
+
+/* REAL text animation */
+.highlight-real {
+    display: inline-block;
+    font-size: 2em; /* 2x as big */
+    font-weight: 800;
+    line-height: 1;
+    /* Change to single animation on load */
+    animation: pop-in-real 1s ease-out forwards;
+    
+    /* Ensure text is visible even if gradient clip fails */
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback */
+}
+
+@keyframes pop-in-real {
+    0% { 
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% { 
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero-title {
+        font-size: 2.5rem; /* Keep original font size */
+    }
+    
+    /* Enable the line breaks on mobile */
+    .mobile-break {
+        display: block;
+    }
+    
+    .about-hero-gradient {
+        display: block; /* Force new block for spacing */
+        font-size: 1em; /* Keep original size */
+        line-height: 1.2;
+        margin-top: 0.2em;
+    }
+
+    /* Ensure animated text behaves nicely on mobile */
+    .highlight-real {
+        font-size: 2em; /* Maintain 2x relative size */
+        margin-bottom: 0.1em; /* Add slight spacing */
+    }
+}
