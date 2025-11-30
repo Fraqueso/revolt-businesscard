@@ -78,7 +78,7 @@ export default function DualProblem() {
                 </div>
 
                 <div style={{ textAlign: 'center', marginTop: '8rem' }}>
-                    <button onClick={openModal} className="btn btn-primary" style={{ fontSize: '1.2rem', padding: '1rem 3rem' }}>
+                    <button onClick={openModal} className="btn btn-primary btn-glow-hover" style={{ fontSize: '1.2rem', padding: '1rem 3rem' }}>
                         See How We Do It
                     </button>
                 </div>

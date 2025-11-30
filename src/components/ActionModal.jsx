@@ -21,6 +21,18 @@ export default function ActionModal() {
         })();
     }, []);
 
+    // Lock body scroll when modal is open
+    useEffect(() => {
+        if (isModalOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isModalOpen]);
+
     if (!isModalOpen) return null;
 
     const handleBackdropClick = (e) => {

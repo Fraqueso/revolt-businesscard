@@ -56,7 +56,7 @@ export default function Header() {
 
                         <button
                             onClick={handleTalkToAIClick}
-                            className="btn btn-primary nav-btn"
+                            className="btn btn-primary nav-btn btn-glow-hover"
                         >
                             Talk to AI
                         </button>

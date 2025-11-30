@@ -89,7 +89,7 @@ export default function Hero() {
                             className="hero-cta"
                             style={{ backgroundColor: 'transparent' }}
                         >
-<button onClick={openModal} className="btn btn-primary hero-cta-btn">
+<button onClick={openModal} className="btn btn-primary hero-cta-btn btn-glow-hover">
     Hear The Difference
 </button>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>

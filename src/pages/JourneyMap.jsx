@@ -72,7 +72,11 @@ export default function JourneyMap() {
                     <p style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>
                         Most businesses lose 60% of leads before a conversation even starts.
                     </p>
-                    <button onClick={openModal} className="btn btn-primary">
+                    <button 
+                        onClick={openModal} 
+                        className="btn btn-primary btn-glow-hover"
+                        style={{ fontSize: '1.5rem', padding: '1rem 3rem' }}
+                    >
                         Fix your funnel with Revolt
                     </button>
                 </div>
