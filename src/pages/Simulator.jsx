@@ -9,9 +9,12 @@ export default function Simulator() {
         return leads * (conversionRate / 100) * dealValue;
     };
 
+    const MAX_REVENUE = 9999999999999999;
+
     const calculateLostRevenue = () => {
         // Assuming 50% improvement with Revolt
-        return calculateRevenue() * 0.5;
+        const revenue = calculateRevenue() * 0.5;
+        return revenue > MAX_REVENUE ? MAX_REVENUE : revenue;
     };
 
     return (
@@ -41,7 +44,7 @@ export default function Simulator() {
                                 type="number"
                                 className="form-input"
                                 value={leads}
-                                onChange={(e) => setLeads(Number(e.target.value))}
+                                onChange={(e) => setLeads(e.target.value === '' ? '' : Number(e.target.value))}
                             />
                         </div>
                         <div className="form-group">
@@ -49,8 +52,18 @@ export default function Simulator() {
                             <input
                                 type="number"
                                 className="form-input"
+                                min="0"
+                                max="100"
                                 value={conversionRate}
-                                onChange={(e) => setConversionRate(Number(e.target.value))}
+                                onChange={(e) => {
+                                    const val = e.target.value;
+                                    if (val === '') {
+                                        setConversionRate('');
+                                    } else {
+                                        const num = Number(val);
+                                        setConversionRate(num > 100 ? 100 : num);
+                                    }
+                                }}
                             />
                         </div>
                         <div className="form-group">
@@ -59,7 +72,7 @@ export default function Simulator() {
                                 type="number"
                                 className="form-input"
                                 value={dealValue}
-                                onChange={(e) => setDealValue(Number(e.target.value))}
+                                onChange={(e) => setDealValue(e.target.value === '' ? '' : Number(e.target.value))}
                             />
                         </div>
                     </div>
@@ -72,7 +85,7 @@ export default function Simulator() {
                     }}>
                         <h3 style={{ marginBottom: '0.5rem' }}>Potential Monthly Revenue Increase</h3>
                         <div style={{ fontSize: '3rem', fontWeight: '700', color: 'var(--color-primary)' }}>
-                            ${calculateLostRevenue().toLocaleString()}
+                            ${calculateLostRevenue().toLocaleString()}{calculateLostRevenue() >= MAX_REVENUE ? '+' : ''}
                         </div>
                         <p style={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)', marginTop: '1rem' }}>
                             With Revolt's instant response, you could capture 50% more of your missed opportunities.
