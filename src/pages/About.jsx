@@ -23,13 +23,13 @@ export default function About() {
         {
             icon: "📞",
             title: "Missed Calls",
-            emoji: "😠",
+            emoji: "",
             desc: "Every ring unanswered is revenue lost."
         },
         {
             icon: "⏰",
             title: "No After-Hours Bookings",
-            emoji: "😢",
+            emoji: "",
             desc: "Your clients are ready when you're closed."
         },
         {
@@ -41,13 +41,13 @@ export default function About() {
         {
             icon: "☎️",
             title: "Staff Stuck on Phones",
-            emoji: "😩",
+            emoji: "",
             desc: "Your people are tied up instead of showing up."
         },
         {
             icon: "🙄",
             title: "Visitors Waiting",
-            emoji: "😕",
+            emoji: "",
             desc: "The floor's full, but the phone keeps stealing attention."
         },
         {
