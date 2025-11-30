@@ -21,10 +21,10 @@ export default function Simulator() {
         <div className="page-content" style={{ paddingTop: '8rem', paddingBottom: '4rem' }}>
             <div className="container">
                 <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                    <h1 style={{ fontSize: '3rem', fontWeight: '700', marginBottom: '1rem' }}>
+                    <h1 className="page-title">
                         Speed-to-Lead <span className="text-gradient">Impact Calculator</span>
                     </h1>
-                    <p style={{ color: 'var(--color-text-secondary)', maxWidth: '700px', margin: '0 auto', fontSize: '1.2rem' }}>
+                    <p style={{ color: 'var(--color-text-secondary)', maxWidth: '900px', margin: '0 auto', fontSize: '1.5rem', lineHeight: '1.4' }}>
                         See exactly how much revenue slow response times are costing you every single month.
                     </p>
                 </div>
@@ -85,10 +85,12 @@ export default function Simulator() {
                     }}>
                         <h3 style={{ marginBottom: '0.5rem' }}>Potential Monthly Revenue Increase</h3>
                         <div style={{ fontSize: '3rem', fontWeight: '700', color: 'var(--color-primary)' }}>
-                            ${calculateLostRevenue().toLocaleString()}{calculateLostRevenue() >= MAX_REVENUE ? '+' : ''}
+                            ${calculateLostRevenue().toLocaleString(undefined, { maximumFractionDigits: 2 })}{calculateLostRevenue() >= MAX_REVENUE ? '+' : ''}
                         </div>
                         <p style={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)', marginTop: '1rem' }}>
                             With Revolt's instant response, you could capture 50% more of your missed opportunities.
+                            <br />
+                            <small>*Results may vary</small>
                         </p>
                     </div>
                 </div>

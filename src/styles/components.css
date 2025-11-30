@@ -734,10 +734,24 @@
 
 /* About Page Hero Title */
 .about-hero-title {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    line-height: 1.2;
+    line-height: 1.1;
+}
+
+/* Common Page Title Class to use across pages */
+.page-title {
+    font-size: 3.0rem; /* Default mobile size */
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+    .page-title {
+        font-size: 4.5rem; /* Desktop size */
+    }
 }
 
 /* Helper class to show breaks only on mobile */
