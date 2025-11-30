@@ -33,7 +33,7 @@ export default function JourneyMap() {
                         { step: "4. Appointment Booked", val: "15%", color: "#10b981" }
                     ].map((item, i) => (
                         <div key={i} style={{
-                            background: 'var(--color-bg-secondary)',
+                            background: 'linear-gradient(180deg, var(--color-bg-secondary) 0%, rgba(112, 66, 248, 0.05) 100%)',
                             border: '1px solid var(--color-border)',
                             borderRadius: 'var(--radius-lg)',
                             padding: '3rem 2rem',
@@ -46,7 +46,7 @@ export default function JourneyMap() {
                         }}>
                             <div style={{
                                 fontSize: '1.1rem',
-                                color: 'var(--color-text-secondary)',
+                                color: 'var(--color-text)',
                                 marginBottom: '1.5rem',
                                 textTransform: 'uppercase',
                                 letterSpacing: '0.05em',
