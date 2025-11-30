@@ -680,6 +680,11 @@
     border-color: rgba(255, 255, 255, 0.1);
 }
 
+.btn-glow-border {
+    box-shadow: 0 0 15px rgba(112, 66, 248, 0.4);
+    border-color: rgba(112, 66, 248, 0.6);
+}
+
 .btn.sweeping-animation {
     background: linear-gradient(90deg, 
         var(--color-primary) 0%, 

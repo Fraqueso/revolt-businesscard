@@ -12,6 +12,7 @@ export default function ActionModal() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [showCaptcha, setShowCaptcha] = useState(false);
     const [captchaToken, setCaptchaToken] = useState(null);
+    const [isAgreed, setIsAgreed] = useState(false);
     const recaptchaRef = useRef(null);
 
     useEffect(() => {
@@ -41,6 +42,7 @@ export default function ActionModal() {
             setStep('initial');
             setShowCaptcha(false);
             setCaptchaToken(null);
+            setIsAgreed(false);
         }
     };
 
@@ -75,6 +77,7 @@ export default function ActionModal() {
             setFormData({ phone: '', email: '', name: '' });
             setShowCaptcha(false);
             setCaptchaToken(null);
+            setIsAgreed(false);
         } catch (error) {
             console.error(error);
             alert(`Error: ${error.message || 'Something went wrong. Please check your connection.'}`);
@@ -236,11 +239,29 @@ export default function ActionModal() {
                                         }}
                                     />
                                 </div>
+                                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
+                                    <input 
+                                        type="checkbox" 
+                                        id="modal-consent" 
+                                        required 
+                                        checked={isAgreed}
+                                        onChange={(e) => setIsAgreed(e.target.checked)}
+                                        style={{ marginTop: '0.25rem' }} 
+                                    />
+                                    <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                        <label htmlFor="modal-consent" style={{ fontSize: '0.85rem', color: 'var(--color-text-secondary)', lineHeight: '1.2', cursor: 'pointer' }}>
+                                            I agree to allow Revolt to call this phone number
+                                        </label>
+                                        <p style={{ fontSize: '0.75rem', color: 'var(--color-text-secondary)', marginTop: '0.2rem', opacity: 0.8 }}>
+                                            We'll call you to demonstrate Revolt with a real call
+                                        </p>
+                                    </div>
+                                </div>
                                 <button 
                                     type="submit" 
-                                    className="btn btn-primary" 
+                                    className={`btn btn-primary ${isAgreed ? 'sweeping-animation' : (formData.phone.length > 0 ? 'btn-glow-border' : '')}`}
                                     style={{ width: '100%', padding: '1rem', opacity: isSubmitting ? 0.7 : 1 }}
-                                    disabled={isSubmitting}
+                                    disabled={!isAgreed || isSubmitting}
                                 >
                                     {isSubmitting ? 'Submitting...' : 'Submit'}
                                 </button>
