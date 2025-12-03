@@ -78,9 +78,6 @@ export default function ChallengeSection() {
                     {...fadeInUp}
                     style={{ textAlign: 'center', marginBottom: '6rem' }}
                 >
-                    <h2 style={{ fontSize: '1rem', color: 'var(--color-primary)', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '1rem' }}>
-                        The Challenge
-                    </h2>
                     <h1 style={{ fontSize: '3rem', fontWeight: '700', marginBottom: '1.5rem' }}>
                         Powered by Pain. <span className="text-gradient">Solved by You.</span>
                     </h1>
@@ -120,7 +117,7 @@ export default function ChallengeSection() {
                     style={{ textAlign: 'center', marginTop: '4rem' }}
                 >
                     <button onClick={openModal} className="btn btn-primary btn-glow-hover" style={{ fontSize: '1.2rem', padding: '1rem 3rem' }}>
-                        Try the tech
+                        Try The Tech
                     </button>
                 </motion.div>
             </div>

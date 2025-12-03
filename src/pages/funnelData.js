@@ -1,0 +1,1230 @@
+
+export const funnelHtml = `
+<link href="/funnel-assets/bland-ai-staging.shared.a017aa7e1.min_2.css" rel="stylesheet" type="text/css"/>
+<div class="page-wrapper is--lp"><div class="w-embed w-iframe"><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGHSRXZW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --></div><header data-element="nav" class="navigation_new is-white"><div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="section_navbar w-nav"><div data-element="nav" class="nav_container is-lp"><a href="https://www.bland.ai/" data-element="nav-link" aria-current="page" class="nav_brand is-lp w-nav-brand w--current"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 93 26" fill="none"><path d="M0.127667 25V1.14434H10.6371C15.0213 1.14434 17.6648 3.30424 17.6648 6.81812C17.6648 9.13921 16.3431 11.0735 14.2799 11.9439C17.3424 12.911 18.9865 15.0064 18.9865 17.9723C18.9865 22.0664 16.1174 25 10.9917 25H0.127667ZM9.9923 5.14177H4.99551V10.3965H9.9923C12.0233 10.3965 12.8937 9.20368 12.8937 7.753C12.8937 6.30232 12.0233 5.14177 9.9923 5.14177ZM10.4759 14.1682H4.99551V20.9703H10.4759C13.0226 20.9703 14.1187 19.5196 14.1187 17.5532C14.1187 15.6512 13.0226 14.1682 10.4759 14.1682ZM20.5883 25V1.14434H25.5851V25H20.5883ZM43.3268 24.9355C42.5208 25.1289 41.7794 25.2257 41.1669 25.2257C39.1681 25.2257 37.9754 24.2908 37.4918 23.0013C36.4602 24.5487 34.7194 25.3224 32.7207 25.3224C29.5292 25.3224 27.2403 23.3559 27.2403 20.0999C27.2403 16.6183 29.6903 15.0709 33.72 14.5229C36.2023 14.1682 37.1049 13.6202 37.1049 12.5241C37.1049 11.4925 36.299 10.8156 34.8161 10.8156C33.2042 10.8156 31.9147 11.7182 31.7535 13.4913L27.5949 12.4597C28.562 9.52606 31.0121 7.52734 35.074 7.52734C38.9747 7.52734 41.8116 9.36487 41.8116 13.0077V20.648C41.8116 21.4539 42.2952 21.6795 43.3268 21.4861V24.9355ZM37.1694 19.2617V16.1347C36.5247 16.6505 35.6543 16.9407 34.6871 17.1341C32.9463 17.5209 32.0114 18.1012 32.0114 19.7453C32.0114 21.2282 32.8819 22.1309 34.3325 22.1309C35.9122 22.1309 37.1694 21.1638 37.1694 19.2617ZM44.517 25V7.84972H49.5138V10.4287C50.4487 8.81684 52.125 7.52734 54.4139 7.52734C57.0896 7.52734 59.2495 9.20368 59.2495 12.6531V25H54.285V14.0393C54.285 12.2662 53.5113 11.4603 52.125 11.4603C50.5132 11.4603 49.5138 12.6853 49.5138 14.4261V25H44.517ZM71.7309 25V22.5822C70.925 24.1618 69.3131 25.3224 67.2822 25.3224C63.4459 25.3224 60.9636 21.873 60.9636 16.4249C60.9636 11.009 63.4459 7.52734 67.2822 7.52734C69.3131 7.52734 70.925 8.72012 71.7309 10.2998V1.14434H76.6955V25H71.7309ZM71.8599 16.0058C71.8599 12.911 70.8927 11.0412 69.023 11.0412C66.9598 11.0412 66.0249 13.2011 66.0249 16.4249C66.0249 19.6486 66.9598 21.8085 69.023 21.8085C70.8927 21.8085 71.8599 19.971 71.8599 16.8762V16.0058ZM92.7807 7.94643C92.7807 12.0728 89.5892 15.0709 85.6562 15.0709C81.7232 15.0709 78.5317 12.0728 78.5317 7.94643C78.5317 3.82004 81.7232 0.821965 85.6562 0.821965C89.5892 0.821965 92.7807 3.82004 92.7807 7.94643ZM91.2977 7.94643C91.2977 4.65821 88.8799 2.1437 85.6562 2.1437C82.4325 2.1437 80.0147 4.65821 80.0147 7.94643C80.0147 11.2346 82.4325 13.7492 85.6562 13.7492C88.8799 13.7492 91.2977 11.2346 91.2977 7.94643ZM84.4957 8.42999V11.6537H82.7226V4.14242H86.3332C87.9451 4.14242 88.9122 5.01283 88.9122 6.27008C88.9122 7.20497 88.3319 8.10761 87.1391 8.36551L89.2346 11.6537H87.2681L85.2371 8.42999H84.4957ZM86.0108 5.39967H84.4957V7.20497H86.0108C86.72 7.20497 87.0424 6.78588 87.0424 6.30232C87.0424 5.78652 86.72 5.39967 86.0108 5.39967Z" fill="currentColor"></path></svg></a><nav role="navigation" class="nav_menu is-lp w-nav-menu"><div class="nav_links-wrap"><a href="https://www.bland.ai/#how-it-works" id="how_it_works_hero" data-element="nav-link" class="nav_menu-link is-lp w-nav-link">How it works</a><div data-hover="true" data-delay="0" data-element="nav-drop" class="nav_drop w-dropdown"><div class="nav_drop-toggle w-dropdown-toggle"><div class="nav_drop-chevron w-icon-dropdown-toggle"></div><div class="nav_menu-link is-lp">Product</div></div><nav data-element="nav-drop-list" class="nav_drop-list w-dropdown-list"><div class="nav_drop-bridge"></div><a href="https://www.bland.ai/product/bland-voice" id="docs_hero" class="nav_menu-link is-lp w-nav-link">Voice</a><a href="https://www.bland.ai/product/bland-sms" id="university_hero" class="nav_menu-link is-lp w-nav-link">SMS</a><a href="https://www.bland.ai/product/bland-chat" id="blog_hero" class="nav_menu-link is-lp w-nav-link">Chat</a><a href="https://www.bland.ai/product/conversational-pathways" id="blog_hero" class="nav_menu-link is-lp w-nav-link">Pathways</a></nav></div><a href="https://www.bland.ai/for-enterprises" id="enterprise_page" data-element="nav-link" class="nav_menu-link is-lp w-nav-link">Enterprises</a><div data-hover="true" data-delay="0" data-element="nav-drop" class="nav_drop w-dropdown"><div class="nav_drop-toggle w-dropdown-toggle"><div class="nav_drop-chevron w-icon-dropdown-toggle"></div><div class="nav_menu-link is-lp">Resources</div></div><nav data-element="nav-drop-list" class="nav_drop-list w-dropdown-list"><div class="nav_drop-bridge"></div><a href="https://www.bland.ai/blog" id="blog_hero" class="nav_menu-link is-lp w-nav-link">Blog</a><a href="https://docs.bland.ai" id="docs_hero" target="_blank" class="nav_menu-link is-lp w-nav-link">Docs</a><a href="https://university.bland.ai" id="university_hero" target="_blank" class="nav_menu-link is-lp w-nav-link">University</a><div data-hover="true" data-delay="0" class="nav_drop is-almost w-dropdown"><div class="nav_drop-toggle w-dropdown-toggle"><div class="nav_menu-link is-lp">Use Cases</div><div class="nav_drop-chevron w-icon-dropdown-toggle"></div></div><nav class="nav_drop-list is-sec w-dropdown-list"><div class="nav_drop-bridge is-sec"></div><a href="https://www.bland.ai/use-cases/appointment-booking" id="appointment_booking_hero" class="nav_menu-link is-lp w-nav-link">Appointment Booking</a><a href="https://www.bland.ai/use-cases/financial-intakes" id="financial_intake_hero" class="nav_menu-link is-lp w-nav-link">Financial Intake</a><a href="https://www.bland.ai/use-cases/logistics-id-verification" id="logistics_id_verification_hero" class="nav_menu-link is-lp w-nav-link">Logistics ID Verification</a></nav></div><div data-hover="true" data-delay="0" class="nav_drop w-dropdown"><div id="case-studies-toggle" class="nav_drop-toggle w-dropdown-toggle"><div class="nav_menu-link is-lp">Case Studies</div><div class="nav_drop-chevron w-icon-dropdown-toggle"></div></div><nav class="nav_drop-list is-sec w-dropdown-list"><div class="nav_drop-bridge is-sec"></div><a href="https://www.bland.ai/case-studies/parade" id="parade" class="nav_menu-link is-lp w-nav-link">Parade</a><a href="https://www.bland.ai/case-studies/monster-rg" id="monster_rg" class="nav_menu-link is-lp w-nav-link">MonsterRG</a><a href="https://www.bland.ai/case-studies/slash" id="monster_rg" class="nav_menu-link is-lp w-nav-link">Slash</a><a href="https://www.bland.ai/case-studies/certus" id="monster_rg" class="nav_menu-link is-lp w-nav-link">Certus</a><a href="https://www.bland.ai/case-studies/kin-insurance" id="monster_rg" class="nav_menu-link is-lp w-nav-link">Kin Insurance</a><a href="https://www.bland.ai/case-studies/precisionit" id="monster_rg" class="nav_menu-link is-lp w-nav-link">Precision IT</a></nav></div></nav></div></div><div class="nav_btns-wrap"><a href="https://app.bland.ai/signup" id="signup" data-element="nav-link" class="nav_menu-link is-lp w-nav-link">Sign up</a><a href="https://app.bland.ai" id="signin" data-element="data-element" class="nav_menu-link is-lp w-nav-link">Sign in</a><a id="enterprise_hero_btn" data-element="nav-btn" href="https://www.bland.ai/enterprise" class="lp_button is-nav w-inline-block"><div id="enterprise_hero_btn_txt">Talk to Us</div></a></div><div class="hide w-embed"><style>
+@media only screen and (max-width: 991px){
+	.nav_drop-list .nav_menu-link.is-lp:not(div){margin-bottom: 1rem;}
+	.nav_drop-list .nav_menu-link.is-lp:nth-last-child(1){margin-bottom:0rem!important;}
+	.nav_menu.is-lp.w-nav-menu a{opacity: 1!important;}
+	.nav_menu.is-lp.w-nav-menu:has(.nav_drop-toggle.w-dropdown-toggle.w--nav-dropdown-toggle-open.w--open) :is(a, .nav_drop-toggle){opacity: .4!important;}
+  .nav_menu.is-lp.w-nav-menu:has(.nav_drop-toggle.w-dropdown-toggle.w--nav-dropdown-toggle-open.w--open) .nav_drop.w-dropdown.w--nav-dropdown-open a{opacity: 1!important;}
+}
+@media only screen and (max-width: 479px){
+	.nav_drop-list .nav_menu-link.is-lp:not(div){margin-bottom: 1.5rem;}
+	.nav_drop-list .nav_menu-link.is-lp:not(div):nth-last-child(1){margin-bottom:0rem!important;}
+}
+
+.navigation_new.is-white .nav_button-line.is-lp{background: var(--lp-black);}
+.navigation_new.is-white:has(.nav_button.padding-0.w-nav-button.w--open) .nav_button-line.is-lp{background: var(--lp-black);}
+.navigation_new.is-white :is(.nav_menu-link, .nav_brand){color: var(--lp-black);}
+.navigation_new.is-white .nav_container{background: var(--lp-white);}
+.navigation_new.is-white .lp_button{background: var(--lp-black); color: var(--lp-white); }
+.navigation_new.is-white .nav_drop-list{background: var(--lp-white);}
+.navigation_new.is-white .nav_drop-list :is(a, .nav_menu-link){color: var(--lp-black);}
+
+
+@media only screen and (min-width: 991px){
+.navigation_new.is-white .lp_button:hover{border-color: var(--lp-red); background: var(--lp-red);}
+.navigation_new.is-white:has(.nav_button.padding-0.w-nav-button.w--open) .nav_menu.is-lp.w-nav-menu[data-nav-menu-open]{background: transparent!importnat; position: relative!important;}
+.navigation_new:has(.nav_button.padding-0.w-nav-button.w--open) .nav_menu.is-lp.w-nav-menu[data-nav-menu-open]{background: transparent!importnat; position: relative!important;}
+.navigation_new.is-white .nav_drop-chevron{color: var(--lp-black);}
+}
+@media only screen and (max-width: 990px){
+.navigation_new.is-white .nav_menu{background: var(--lp-white);}
+.navigation_new.is-white .nav_btns-wrap {border-top: 1px solid rgba(0, 0, 0, 0.1);}
+.navigation_new.is-white .nav_drop-chevron{color: var(--lp-black);}
+.navigation_new.is-white .lp_button{background: var(--lp-white); color: var(--lp-black); border: none;}
+.navigation_new.is-white .nav_button.is-in{background: var(--lp-white); border: 1px solid var(--lp-black);}
+}
+
+
+
+[data-page="black-start"] :is(.nav_container, .nav_drop-list){background: var(--lp-black)!important;}
+[data-page="black-start"] .nav_drop-chevron{color: var(--lp-white)!important;}
+[data-page="black-start"] .nav_menu-link{color: var(--lp-white)!important;}
+[data-page="black-start"] nav .lp_button{background: var(--lp-white)!important;color: var(--lp-black)!important;}
+@media only screen and (min-width: 991px){
+[data-page="black-start"] .lp_button:hover{background: var(--lp-red)!important; color: var(--lp-white)!important;}
+}
+
+[data-page="black-start"] .nav_brand{color: var(--lp-white)!important;}
+
+@media only screen and (max-width: 990px){
+[data-page="black-start"] .navigation_new.is-white :is(.lp_button.is-nav, .nav_container, .nav_drop-list, .nav_menu, .nav_button){background: var(--lp-black)!important;}
+[data-page="black-start"] .navigation_new.is-white :is(.nav_menu-link, .navigation_new.is-white, .nav_drop-chevron){color: var(--lp-white)!important;}
+[data-page="black-start"] .navigation_new.is-white .lp_button.is-nav{background: var(--lp-black)!important;color: var(--lp-white)!important;}
+[data-page="black-start"] .navigation_new.is-white .nav_button{border: 1px solid rgb(from var(--lp-white) r g b / 0.2)!important; }
+
+
+[data-page="black-start"] .navigation_new.is-white .nav_button-line{background: var(--lp-white)!important;}
+}
+</style></div></nav><div class="hide-desktop"><div class="nav_button padding-0 w-nav-button"><div class="nav_button is-in"><div class="nav_button-line is-lp"></div><div class="nav_button-line is-lp"></div></div></div></div><div class="display-none w-embed w-script"><script>
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("case-studies-toggle");
+  if (!toggle) return;
+
+  const text = toggle.querySelector(".nav_menu-link"); // "Case Studies" text
+
+  text.style.cursor = "pointer";
+  text.addEventListener("click", (e) => {
+    e.stopPropagation(); // ne sme da ugasi hover dropdown
+    window.location.href = "/case-studies";
+  });
+});
+</script></div></div></div><div class="cookie-wrapper"><div id="modal2" class="bottom-cookie-wrapper"><div class="cookie-content"><div class="cookie-consent-to-wrap color-white"><p>When you visit our website, cookies and similar technologies may be used by our online data partners or vendors to associate these activities with personal information they or others have about you. We (or service providers on our behalf) may then send communications or marketing to these email addresses or phone numbers. Accepting this also means you confirm that you are 18 years of age or older, have read our <a href="https://www.bland.ai/legal/privacy-policy" class="inline-link is-white">Privacy Policy</a>, and consent to receiving a demonstration call.</p></div></div><div class="cookie-content bottom-banner-content"><a id="close-modal3" data-w-id="bae4ced7-9364-303a-b40a-af8eae23207d" href="#" class="inline-link is-white">Reject All</a><a id="close-modal2" data-w-id="bae4ced7-9364-303a-b40a-af8eae23207f" href="#" class="lp_button is--outline is-new w-button">Accept All</a><a id="close-modal-x2" data-w-id="bae4ced7-9364-303a-b40a-af8eae232081" href="#" class="white-x w-inline-block"></a></div><div class="hide w-embed w-script"><script>
+  // Cookie helpers
+  function getCookie(name) {
+    const value = \`; \${document.cookie}\`;
+    const parts = value.split(\`; \${name}=\`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+  }
+
+  function setCookie(name, value, days) {
+    const expires = new Date();
+    expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+    document.cookie = \`\${name}=\${value};expires=\${expires.toUTCString()};path=/\`;
+  }
+
+  function deleteCookie(name) {
+    document.cookie = \`\${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;\`;
+  }
+
+  // Load tracking scripts
+  function loadTrackingScripts() {
+    // Default Form Manager
+    const dfm = document.createElement('script');
+    dfm.src = "https://pixel-cdn.default.com";
+    dfm.async = true;
+    document.head.appendChild(dfm);
+
+    // Fox Tracker
+    const fox = document.createElement('img');
+    fox.src = "https://jelly.mdhv.io/v1/star.gif?pid=iCejbJ73OamL5xjHyOkCry3yCfhW&src=mh&evt=hi";
+    fox.style.display = "none";
+    fox.width = 0;
+    fox.height = 0;
+    document.body.appendChild(fox);
+
+    // Default Tag Manager
+    const dtm = document.createElement('script');
+    dtm.src = "https://import-cdn.default.com/gtm.js";
+    dtm.async = true;
+    document.head.appendChild(dtm);
+
+    // Google Tag Manager
+    const gtm = document.createElement('script');
+    gtm.innerHTML = \`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KGHSRXZW');\`;
+    document.head.appendChild(gtm);
+
+    // Turnstile
+    const turnstileScript = document.createElement('script');
+    turnstileScript.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback";
+    document.head.appendChild(turnstileScript);
+
+    const blandDiv = document.createElement('div');
+    blandDiv.id = "bland-turnstile";
+    blandDiv.className = "bland-turnstile";
+    blandDiv.setAttribute("data-sitekey", "0x4AAAAAAAxjZ88OGKNpTFL2");
+    document.body.appendChild(blandDiv);
+
+    const blandLogic = document.createElement('script');
+    blandLogic.innerHTML = \`
+      window.__turnstile_response = "";
+      window.onloadTurnstileCallback = function () {
+        turnstile.render("#bland-turnstile", {
+          sitekey: "0x4AAAAAAAxjZ88OGKNpTFL2",
+          action: "welcome_call",
+          callback: function (token) {
+            window.__turnstile_response = token
+          },
+        });
+      };\`;
+    document.head.appendChild(blandLogic);
+
+    // gtag
+    const gtag1 = document.createElement('script');
+    gtag1.src = "https://www.googletagmanager.com/gtag/js?id=AW-11433301113";
+    gtag1.async = true;
+    document.head.appendChild(gtag1);
+
+    const gtag2 = document.createElement('script');
+    gtag2.innerHTML = \`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-11433301113');\`;
+    document.head.appendChild(gtag2);
+
+    // Reb2b
+    const rebScript = document.createElement('script');
+    rebScript.innerHTML = \`!function () {
+      var reb2b = window.reb2b = window.reb2b || [];
+      if (reb2b.invoked) return;
+      reb2b.invoked = true;
+      reb2b.methods = ["identify", "collect"];
+      reb2b.factory = function (method) {
+        return function () {
+          var args = Array.prototype.slice.call(arguments);
+          args.unshift(method);
+          reb2b.push(args);
+          return reb2b;
+        };
+      };
+      for (var i = 0; i < reb2b.methods.length; i++) {
+        var key = reb2b.methods[i];
+        reb2b[key] = reb2b.factory(key);
+      }
+      reb2b.load = function (key) {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.async = true;
+        script.src = "https://s3-us-west-2.amazonaws.com/b2bjsstore/b/" + key + "/reb2b.js.gz";
+        var first = document.getElementsByTagName("script")[0];
+        first.parentNode.insertBefore(script, first);
+      };
+      reb2b.SNIPPET_VERSION = "1.0.1";
+      reb2b.load("RGNLKQHJJ36Q");
+    }();\`;
+    document.body.appendChild(rebScript);
+
+    // LinkedIn
+    const linkedin1 = document.createElement('script');
+    linkedin1.type = 'text/javascript';
+    linkedin1.innerHTML = \`_linkedin_partner_id = "5896988";
+      window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+      window._linkedin_data_partner_ids.push(_linkedin_partner_id);\`;
+    document.body.appendChild(linkedin1);
+
+    const linkedin2 = document.createElement('script');
+    linkedin2.type = 'text/javascript';
+    linkedin2.innerHTML = \`(function(l) {
+      if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+      window.lintrk.q=[]}
+      var s = document.getElementsByTagName("script")[0];
+      var b = document.createElement("script");
+      b.type = "text/javascript";b.async = true;
+      b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+      s.parentNode.insertBefore(b, s);})(window.lintrk);\`;
+    document.body.appendChild(linkedin2);
+  }
+
+  // Remove tracking scripts
+  function removeTrackingScripts() {
+    const patterns = [
+      'pixel-cdn.default.com',
+      'jelly.mdhv.io',
+      'import-cdn.default.com',
+      'googletagmanager.com',
+      'cloudflare.com/turnstile',
+      's3-us-west-2.amazonaws.com/b2bjsstore',
+      'snap.licdn.com',
+      'px.ads.linkedin.com'
+    ];
+
+    document.querySelectorAll('script[src], img[src]').forEach(el => {
+      if (patterns.some(p => el.src.includes(p))) {
+        el.remove();
+      }
+    });
+
+    document.querySelectorAll('noscript').forEach(el => {
+      if (patterns.some(p => el.innerHTML.includes(p))) {
+        el.remove();
+      }
+    });
+
+    // Clear globals
+    window.dataLayer = [];
+    window.reb2b = { push: () => {}, invoked: true };
+    window.lintrk = () => {};
+  }
+
+  // Main logic
+  document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('modal2');
+    const closeBtn2 = document.getElementById('close-modal2'); // Turn ON
+    const closeBtn3 = document.getElementById('close-modal3'); // Turn OFF
+
+    const cookieName = 'modalClosed2';
+    const toggleCookie = 'disableTrackingScripts';
+
+    // Respect stored preference
+    if (getCookie(toggleCookie) === 'true') {
+      removeTrackingScripts();
+    } else {
+      loadTrackingScripts();
+    }
+
+    // Hide modal if user closed it before
+    if (getCookie(cookieName)) {
+      if (modal) modal.remove();
+    }
+
+    // Turn cookies ON
+    if (closeBtn2) {
+      closeBtn2.addEventListener('click', function () {
+        if (modal) modal.remove();
+        deleteCookie(toggleCookie); // Enable tracking
+        setCookie(cookieName, 'ok', 7);
+        loadTrackingScripts();
+      });
+    }
+
+    // Turn cookies OFF
+    if (closeBtn3) {
+      closeBtn3.addEventListener('click', function () {
+        if (modal) modal.remove();
+        setCookie(toggleCookie, 'true', 365); // Disable tracking
+        setCookie(cookieName, 'ok', 7);
+        removeTrackingScripts();
+      });
+    }
+  });
+</script></div></div></div></header><div class="global-styles w-embed"><style>
+
+/* Make text look crisper and more legible in all browsers */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overscroll-behavior: none;
+}
+
+/* Focus state style for keyboard navigation for the focusable elements */
+*[tabindex]:focus-visible,
+  input[type="file"]:focus-visible {
+   outline: 0.125rem solid #4d65ff;
+   outline-offset: 0.125rem;
+}
+
+/* Set color style to inherit */
+.inherit-color * {
+    color: inherit;
+}
+
+/* Get rid of top margin on first element in any rich text element */
+.w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+  margin-top: 0 !important;
+}
+
+/* Get rid of bottom margin on last element in any rich text element */
+.w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+	margin-bottom: 0 !important;
+}
+
+
+/* Make sure containers never lose their center alignment */
+.container-medium,.container-small, .container-large {
+	margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+/* 
+Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+*/
+/*
+a,
+.w-input,
+.w-select,
+.w-tab-link,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+*/
+
+/* Apply "..." after 3 lines of text */
+.text-style-3lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+
+/* Apply "..." after 2 lines of text */
+.text-style-2lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+/* Adds inline flex display */
+.display-inlineflex {
+  display: inline-flex;
+}
+
+/* These classes are never overwritten */
+.hide {
+  display: none !important;
+}
+
+@media screen and (max-width: 991px) {
+    .hide, .hide-tablet {
+        display: none !important;
+    }
+}
+  @media screen and (max-width: 767px) {
+    .hide-mobile-landscape{
+      display: none !important;
+    }
+}
+  @media screen and (max-width: 479px) {
+    .hide-mobile{
+      display: none !important;
+    }
+}
+ 
+.margin-0 {
+  margin: 0rem !important;
+}
+  
+.padding-0 {
+  padding: 0rem !important;
+}
+
+.spacing-clean {
+padding: 0rem !important;
+margin: 0rem !important;
+}
+
+.margin-top {
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+
+.padding-top {
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+  
+.margin-right {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+
+.padding-right {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+
+.margin-bottom {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+
+.padding-bottom {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+
+.margin-left {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+  
+.padding-left {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+  
+.margin-horizontal {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+
+.padding-horizontal {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+
+.margin-vertical {
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+  
+.padding-vertical {
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+
+</style></div><div class="hide w-embed"><style>  
+  html { font-size: 1rem; }
+  @media screen and (max-width:1328px) { html { font-size: calc(0.011904761904761751rem + 1.1904761904761907vw); } }
+  @media screen and (max-width:992px) { html { font-size: calc(0.19642857142857145rem + 0.8928571428571428vw); } }
+  @media screen and (max-width:767px) { html { font-size: 1rem; } }
+  
+  @media only screen and (min-width: 991px){
+  [class*="button"]:hover [class*="arrow"]{transform: translateX(.25rem);}
+  .blog_item-link:hover .blog_image{transform: scale(1.1);}
+  }
+  @media only screen and (max-width: 991px){
+  .section_navbar:has(.nav_button.padding-0.w-nav-button.w--open) .nav_button-line:nth-child(1){transform: translateY(.1625rem) rotate(-45deg);}
+  .section_navbar:has(.nav_button.padding-0.w-nav-button.w--open) .nav_button-line:nth-child(2){transform: translateY(-.1625rem) rotate(45deg);}
+  .section_navbar:has(.nav_button.padding-0.w-nav-button.w--open) .nav_button-line{background: var(--lp-white);} 
+  .nav_button-line{background: var(--lp-white);} 
+  .nav_button.padding-0.w-nav-button.w--open{background: var(--lp-black);}
+  }
+</style>
+<style id="color-themes" speed="0.4" ease="power1.out" percent-from-top="50" min-width="0">
+[element-theme="1"] {
+--lp-page--background: var(--light--background);
+--lp-page--text: var(--light--text);
+}
+[element-theme="2"] {
+--lp-page--background: var(--dark--background);
+--lp-page--text: var(--dark--text);
+}
+.lp_form-block.is-hero:hover{width: 25rem;}
+.lp_form-block.is-hero:has(.lp_cta_input:focus){width: 25rem;}
+@media only screen and (max-width: 767px){
+.lp_form-block.is-hero:hover{width: 20rem;}
+.lp_form-block.is-hero:has(.lp_cta_input:focus){width: 20rem;}
+}
+@media only screen and (max-width: 767px){
+.lp_form-block.is-hero{width: 100%;}
+.lp_form-block.is-hero:hover{width: 100%;}
+.lp_form-block.is-hero:has(.lp_cta_input:focus){width: 100%;}
+}
+.logo-video-wrap{overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+.blinker{
+-webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+  from, to {opacity: 0;}
+  50%{opacity: 1;}
+}
+
+@-moz-keyframes blink {
+  from, to {opacity: 0;}
+  50%{opacity: 1;}
+}
+
+@-webkit-keyframes blink {
+  from, to {opacity: 0;}
+  50%{opacity: 1;}
+}
+
+@-ms-keyframes blink {
+  from, to {opacity: 0;}
+  50%{opacity: 1;}
+}
+
+@-o-keyframes blink {
+  from, to {opacity: 0;}
+  50%{opacity: 1;}
+}
+.input-wrap:has(.lp_hero_input:focus) .blinker{animation:none;opacity: 0;}
+.blinker.is-none{-webkit-animation: none;
+  -moz-animation: none;
+  -ms-animation: none;
+  -o-animation: none;
+  animation: none;}
+</style></div><main><article class="p-relative"><div class="bg-black"><section data-secton-bundle="hero" data-section="white" class="lp_hero_wrap is-transparent is-new"><div class="lp_container_hero lp_container is-newer mw-86rem"><h1 class="lp_hero_h1 is-l">Voice AI that makes every customer feel like a VIP.</h1><div id="call_submit_1" class="form-0 is-new w-form"><form id="call_submit_1" name="wf-form-Phone-Form-2" data-name="Phone Form" method="get" class="lp_hero_form-wrap is-new" data-wf-page-id="68cbee39b457bbb25fe98ee8" data-wf-element-id="f94b5f3d-b527-7dc5-5082-0a566fb093b1"><h2 class="lp_hero_h2">Don’t believe us? <br/>Have Blandy give you a call.</h2><div class="input_wrap is-new"><div class="input-wrap is-new"><input class="lp_hero_input is-new w-input" maxlength="256" name="Phone" data-name="Phone" placeholder="Your Phone Number" type="tel" id="pn_input_1" required=""/><input type="submit" data-wait="Let&#x27;s Talk" id="phone_hero" class="lp_button is-red is-newer is-input w-button" value="Let&#x27;s Talk"/></div></div></form><div class="lp_success_new w-form-done"><div>You are now receiving a call from Blandy. <br/>Please make sure your &quot;do not disturb&quot; is off so she can reach you :)</div></div><div class="w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div></div></section><section id="hide-cta" data-section="white" class="section_logos is--lp is-new"><div class="logos-wrapper"><div class="hide w-embed"><style>
+@keyframes scroll {
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.scroll {
+  animation: scroll 100s linear infinite;
+}
+</style>
+
+<style>
+@keyframes scroll-reverse {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.scroll.reverse {
+  animation: scroll-reverse 100s linear infinite;
+}
+</style></div><div class="logos is--lp is-new mh-80"><div class="logos_wrapper scroll"><img loading="eager" src="/funnel-assets/68d3968c57aca0e5c45bcc2d_zeta_logo_2.svg" alt="" class="logo_image is--medallion"/><img loading="eager" src="/funnel-assets/68d3968b108af37c7c3921ae_travelperk_2.svg" alt="" class="logo_image is--medallion"/><img loading="eager" src="/funnel-assets/677d6741acdd1cccb49f20bd_importantlogo14_2.avif" alt="nuitee logo" class="logo_image is--nuitee"/><img loading="eager" src="/funnel-assets/67ca27ed12c5c2ce834415d5_medallion_4_2.webp" alt="Medallion Logo" class="logo_image is--medallion"/><img loading="eager" src="/funnel-assets/68d3968b0e31de8ce5acf840_lendi_logo_2.svg" alt="" class="logo_image is--nuitee"/><img loading="eager" src="/funnel-assets/691ee122360e0615126ca7f1_Thingee%20logo%20new_2.avif" alt="" class="logo_image"/></div><div class="logos_wrapper scroll"><img loading="eager" src="/funnel-assets/68d3968c57aca0e5c45bcc2d_zeta_logo_2.svg" alt="" class="logo_image is--medallion"/><img loading="eager" src="/funnel-assets/68d3968b108af37c7c3921ae_travelperk_2.svg" alt="" class="logo_image is--medallion"/><img loading="eager" src="/funnel-assets/677d6741acdd1cccb49f20bd_importantlogo14_2.avif" alt="nuitee logo" class="logo_image is--nuitee"/><img loading="eager" src="/funnel-assets/67ca27ed12c5c2ce834415d5_medallion_4_2.webp" alt="Medallion Logo" class="logo_image is--medallion"/><img loading="eager" src="/funnel-assets/68d3968b0e31de8ce5acf840_lendi_logo_2.svg" alt="" class="logo_image is--nuitee"/><img loading="eager" src="/funnel-assets/691ee122360e0615126ca7f1_Thingee%20logo%20new_2.avif" alt="" class="logo_image"/></div><div class="logos_wrapper scroll"><img loading="eager" src="/funnel-assets/68d3968c57aca0e5c45bcc2d_zeta_logo_2.svg" alt="" class="logo_image is--medallion"/><img loading="eager" src="/funnel-assets/68d3968b108af37c7c3921ae_travelperk_2.svg" alt="" class="logo_image is--medallion"/><img loading="eager" src="/funnel-assets/677d6741acdd1cccb49f20bd_importantlogo14_2.avif" alt="nuitee logo" class="logo_image is--nuitee"/><img loading="eager" src="/funnel-assets/67ca27ed12c5c2ce834415d5_medallion_4_2.webp" alt="Medallion Logo" class="logo_image is--medallion"/><img loading="eager" src="/funnel-assets/68d3968b0e31de8ce5acf840_lendi_logo_2.svg" alt="" class="logo_image is--nuitee"/><img loading="eager" src="/funnel-assets/691ee122360e0615126ca7f1_Thingee%20logo%20new_2.avif" alt="" class="logo_image"/></div></div><div class="logos is--lp is-new mh-80"><div class="logos_wrapper scroll reverse"><img loading="eager" src="/funnel-assets/68d396880b5b028baad76251_january_logo_2.svg" alt="" class="logo_image is-sendbird"/><img loading="eager" src="/funnel-assets/68d398b8b1127fba34382ea4_Innovaccer_id6-tvzgdK_0_2.svg" alt="" class="logo_image is--nuitee"/><img loading="eager" src="/funnel-assets/68d39688b765c65d21fa0522_evenup_logo%201_2.svg" alt="" class="logo_image is-reverse"/><img sizes="(max-width: 1200px) 100vw, 1200px" srcset="/funnel-assets/678511e72a0cb6c326d0f20d_copart_logo-p-500_2.webp 500w, /funnel-assets/678511e72a0cb6c326d0f20d_copart_logo-p-800_2.webp 800w, /funnel-assets/678511e72a0cb6c326d0f20d_copart_logo-p-1080_2.webp 1080w, /funnel-assets/678511e72a0cb6c326d0f20d_copart_logo_2.webp 1200w" alt="Copart logo" src="/funnel-assets/678511e72a0cb6c326d0f20d_copart_logo_2.webp" loading="eager" class="logo_image is--copart"/><img sizes="(max-width: 1200px) 100vw, 1200px" srcset="/funnel-assets/6785121abf22b78b4ce507c7_cno_logo-p-500_2.png 500w, /funnel-assets/6785121abf22b78b4ce507c7_cno_logo_2.webp 1200w" alt="CNO logo" src="/funnel-assets/6785121abf22b78b4ce507c7_cno_logo_2.webp" loading="eager" class="logo_image is--cno"/><img loading="eager" src="/funnel-assets/691ee121ec92a5a67fd7069c_Triumph%20logo%20new_2.avif" alt="" class="logo_image"/><img sizes="(max-width: 3306px) 100vw, 3306px" srcset="/funnel-assets/691edea23c4fff778774460c_hb_logo_7-p-500_2.png 500w, /funnel-assets/691edea23c4fff778774460c_hb_logo_7-p-800_2.png 800w, /funnel-assets/691edea23c4fff778774460c_hb_logo_7_2.avif 3306w" alt="" src="/funnel-assets/691edea23c4fff778774460c_hb_logo_7_2.avif" loading="eager" class="logo_image"/><img loading="eager" src="/funnel-assets/691edeed852d99146f6e6766_connie_logo-03-copy-1_2.png" alt="" class="logo_image"/></div><div class="logos_wrapper scroll reverse"><img loading="eager" src="/funnel-assets/68d396880b5b028baad76251_january_logo_2.svg" alt="" class="logo_image is-sendbird"/><img loading="eager" src="/funnel-assets/68d398b8b1127fba34382ea4_Innovaccer_id6-tvzgdK_0_2.svg" alt="" class="logo_image is--nuitee"/><img loading="eager" src="/funnel-assets/68d39688b765c65d21fa0522_evenup_logo%201_2.svg" alt="" class="logo_image is-reverse"/><img sizes="(max-width: 1200px) 100vw, 1200px" srcset="/funnel-assets/678511e72a0cb6c326d0f20d_copart_logo-p-500_2.webp 500w, /funnel-assets/678511e72a0cb6c326d0f20d_copart_logo-p-800_2.webp 800w, /funnel-assets/678511e72a0cb6c326d0f20d_copart_logo-p-1080_2.webp 1080w, /funnel-assets/678511e72a0cb6c326d0f20d_copart_logo_2.webp 1200w" alt="Copart logo" src="/funnel-assets/678511e72a0cb6c326d0f20d_copart_logo_2.webp" loading="eager" class="logo_image is--copart"/><img sizes="(max-width: 1200px) 100vw, 1200px" srcset="/funnel-assets/6785121abf22b78b4ce507c7_cno_logo-p-500_2.png 500w, /funnel-assets/6785121abf22b78b4ce507c7_cno_logo_2.webp 1200w" alt="CNO logo" src="/funnel-assets/6785121abf22b78b4ce507c7_cno_logo_2.webp" loading="eager" class="logo_image is--cno"/><img loading="eager" src="/funnel-assets/691ee121ec92a5a67fd7069c_Triumph%20logo%20new_2.avif" alt="" class="logo_image"/><img sizes="(max-width: 3306px) 100vw, 3306px" srcset="/funnel-assets/691edea23c4fff778774460c_hb_logo_7-p-500_2.png 500w, /funnel-assets/691edea23c4fff778774460c_hb_logo_7-p-800_2.png 800w, /funnel-assets/691edea23c4fff778774460c_hb_logo_7_2.avif 3306w" alt="" src="/funnel-assets/691edea23c4fff778774460c_hb_logo_7_2.avif" loading="eager" class="logo_image"/><img loading="eager" src="/funnel-assets/691edeed852d99146f6e6766_connie_logo-03-copy-1_2.png" alt="" class="logo_image"/></div><div class="logos_wrapper scroll reverse"><img loading="eager" src="/funnel-assets/68d396880b5b028baad76251_january_logo_2.svg" alt="" class="logo_image is-sendbird"/><img loading="eager" src="/funnel-assets/68d398b8b1127fba34382ea4_Innovaccer_id6-tvzgdK_0_2.svg" alt="" class="logo_image is--nuitee"/><img loading="eager" src="/funnel-assets/68d39688b765c65d21fa0522_evenup_logo%201_2.svg" alt="" class="logo_image is-reverse"/><img sizes="(max-width: 1200px) 100vw, 1200px" srcset="/funnel-assets/678511e72a0cb6c326d0f20d_copart_logo-p-500_2.webp 500w, /funnel-assets/678511e72a0cb6c326d0f20d_copart_logo-p-800_2.webp 800w, /funnel-assets/678511e72a0cb6c326d0f20d_copart_logo-p-1080_2.webp 1080w, /funnel-assets/678511e72a0cb6c326d0f20d_copart_logo_2.webp 1200w" alt="Copart logo" src="/funnel-assets/678511e72a0cb6c326d0f20d_copart_logo_2.webp" loading="eager" class="logo_image is--copart"/><img sizes="(max-width: 1200px) 100vw, 1200px" srcset="/funnel-assets/6785121abf22b78b4ce507c7_cno_logo-p-500_2.png 500w, /funnel-assets/6785121abf22b78b4ce507c7_cno_logo_2.webp 1200w" alt="CNO logo" src="/funnel-assets/6785121abf22b78b4ce507c7_cno_logo_2.webp" loading="eager" class="logo_image is--cno"/><img loading="eager" src="/funnel-assets/691ee121ec92a5a67fd7069c_Triumph%20logo%20new_2.avif" alt="" class="logo_image"/><img sizes="(max-width: 3306px) 100vw, 3306px" srcset="/funnel-assets/691edea23c4fff778774460c_hb_logo_7-p-500_2.png 500w, /funnel-assets/691edea23c4fff778774460c_hb_logo_7-p-800_2.png 800w, /funnel-assets/691edea23c4fff778774460c_hb_logo_7_2.avif 3306w" alt="" src="/funnel-assets/691edea23c4fff778774460c_hb_logo_7_2.avif" loading="eager" class="logo_image"/><img loading="eager" src="/funnel-assets/691edeed852d99146f6e6766_connie_logo-03-copy-1_2.png" alt="" class="logo_image"/></div></div><div class="logos is--lp is-new mh-80"><div class="logos_wrapper scroll"><img loading="eager" src="/funnel-assets/677d674cd9c12931b57322f3_importantlogo9_2.svg" alt="better logo" class="logo_image is--better"/><img sizes="(max-width: 1200px) 100vw, 1200px" srcset="/funnel-assets/677d6742cc54662503ae13c4_importantlogo2-p-500_2.avif 500w, /funnel-assets/677d6742cc54662503ae13c4_importantlogo2_2.avif 1200w" alt="Cavaliers logo" src="/funnel-assets/677d6742cc54662503ae13c4_importantlogo2_2.avif" loading="eager" class="logo_image is--cavaliers"/><img loading="eager" src="/funnel-assets/677d6741352673dea50022e9_importantlogo15_2.avif" alt="Clipboard Health logo" class="logo_image is--ch"/><img loading="eager" src="/funnel-assets/68de5d4b3bd8f40147b5ace6_please%20hold%20logo_2.svg" alt="" class="logo_image"/><img loading="eager" src="/funnel-assets/690b3aef01da6abe8324cb67_kin-insurance%20(3)_2.avif" alt="" class="logo_image"/><img loading="eager" src="/funnel-assets/69119f0ff0287592a363b77f_signant%20(1)_2.avif" alt="" class="logo_image is--signant"/><img loading="eager" src="/funnel-assets/691ee1c898a7b3512d472a6d_CTS%20new_2.avif" alt="" class="logo_image"/><img loading="eager" src="/funnel-assets/691edf499dda893fc60cd4aa_Alta_2.svg" alt="" class="logo_image"/><img loading="eager" src="/funnel-assets/691edf4a530170c417317196_o_2.avif" alt="" class="logo_image"/></div><div class="logos_wrapper scroll"><img loading="eager" src="/funnel-assets/677d674cd9c12931b57322f3_importantlogo9_2.svg" alt="better logo" class="logo_image is--better"/><img sizes="(max-width: 1200px) 100vw, 1200px" srcset="/funnel-assets/677d6742cc54662503ae13c4_importantlogo2-p-500_2.avif 500w, /funnel-assets/677d6742cc54662503ae13c4_importantlogo2_2.avif 1200w" alt="Cavaliers logo" src="/funnel-assets/677d6742cc54662503ae13c4_importantlogo2_2.avif" loading="eager" class="logo_image is--cavaliers"/><img loading="eager" src="/funnel-assets/677d6741352673dea50022e9_importantlogo15_2.avif" alt="Clipboard Health logo" class="logo_image is--ch"/><img loading="eager" src="/funnel-assets/68de5d4b3bd8f40147b5ace6_please%20hold%20logo_2.svg" alt="" class="logo_image"/><img loading="eager" src="/funnel-assets/690b3aef01da6abe8324cb67_kin-insurance%20(3)_2.avif" alt="" class="logo_image"/><img loading="eager" src="/funnel-assets/69119f0ff0287592a363b77f_signant%20(1)_2.avif" alt="" class="logo_image is--signant"/><img loading="eager" src="/funnel-assets/691ee1c898a7b3512d472a6d_CTS%20new_2.avif" alt="" class="logo_image"/><img loading="eager" src="/funnel-assets/691edf499dda893fc60cd4aa_Alta_2.svg" alt="" class="logo_image"/><img loading="eager" src="/funnel-assets/691edf4a530170c417317196_o_2.avif" alt="" class="logo_image"/></div><div class="logos_wrapper scroll"><img loading="eager" src="/funnel-assets/677d674cd9c12931b57322f3_importantlogo9_2.svg" alt="better logo" class="logo_image is--better"/><img sizes="(max-width: 1200px) 100vw, 1200px" srcset="/funnel-assets/677d6742cc54662503ae13c4_importantlogo2-p-500_2.avif 500w, /funnel-assets/677d6742cc54662503ae13c4_importantlogo2_2.avif 1200w" alt="Cavaliers logo" src="/funnel-assets/677d6742cc54662503ae13c4_importantlogo2_2.avif" loading="eager" class="logo_image is--cavaliers"/><img loading="eager" src="/funnel-assets/677d6741352673dea50022e9_importantlogo15_2.avif" alt="Clipboard Health logo" class="logo_image is--ch"/><img loading="eager" src="/funnel-assets/68de5d4b3bd8f40147b5ace6_please%20hold%20logo_2.svg" alt="" class="logo_image"/><img loading="eager" src="/funnel-assets/690b3aef01da6abe8324cb67_kin-insurance%20(3)_2.avif" alt="" class="logo_image"/><img loading="eager" src="/funnel-assets/69119f0ff0287592a363b77f_signant%20(1)_2.avif" alt="" class="logo_image is--signant"/><img loading="eager" src="/funnel-assets/691ee1c898a7b3512d472a6d_CTS%20new_2.avif" alt="" class="logo_image"/><img loading="eager" src="/funnel-assets/691edf499dda893fc60cd4aa_Alta_2.svg" alt="" class="logo_image"/><img loading="eager" src="/funnel-assets/691edf4a530170c417317196_o_2.avif" alt="" class="logo_image"/></div></div></div></section></div><section id="how-it-works" data-section="white" class="lp_own"><div class="lp_container_how lp_container is-l-r is-new"><div class="how_it_works-content-wrap is-new"><h2 class="lp_h2 is-s mw-26ch"><strong>Own your AI, don’t rent it.</strong></h2><p class="lp_p p-24">Don’t give your IP to frontier model providers.</p><a id="enterprise_3" href="https://www.bland.ai/enterprise" class="lp_button is--red is-new is-small w-inline-block"><div class="p-14_500">Talk to Us</div><div class="hide w-embed"><style>
+@media only screen and (min-width: 991px){
+.sec-link:hover [class*="arrow"]{transform: translateX(.25rem);}
+}
+</style></div></a></div><div class="lp_how_card-grid is-one"><div id="w-node-_8d558a48-199c-1095-9b53-3a4a2815bb5e-5fe98ee8" class="customization_card is-new"><div class="customization-h-wrap is-v"><h3 class="u-text-size-h5"><strong>Custom Trained Models</strong></h3><p class="lp_p">We’ll fine-tune models for you with your recordings and transcriptions.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 25" fill="none" class="own-svg"><path d="M15.535 11.793C15.3475 11.9805 15.2422 12.2348 15.2422 12.5C15.2422 12.7651 15.3475 13.0194 15.535 13.207L17.911 15.584C18.0985 15.7714 18.3528 15.8767 18.618 15.8767C18.8831 15.8767 19.1374 15.7714 19.325 15.584L21.702 13.207C21.8894 13.0194 21.9948 12.7651 21.9948 12.5C21.9948 12.2348 21.8894 11.9805 21.702 11.793L19.325 9.41596C19.1374 9.22848 18.8831 9.12317 18.618 9.12317C18.3528 9.12317 18.0985 9.22848 17.911 9.41596L15.535 11.793Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2.29669 11.793C2.10922 11.9805 2.00391 12.2348 2.00391 12.5C2.00391 12.7651 2.10922 13.0194 2.29669 13.207L4.67369 15.584C4.86122 15.7714 5.11553 15.8767 5.38069 15.8767C5.64586 15.8767 5.90016 15.7714 6.08769 15.584L8.46469 13.207C8.65216 13.0194 8.75748 12.7651 8.75748 12.5C8.75748 12.2348 8.65216 11.9805 8.46469 11.793L6.08769 9.41596C5.90016 9.22848 5.64586 9.12317 5.38069 9.12317C5.11553 9.12317 4.86122 9.22848 4.67369 9.41596L2.29669 11.793Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8.91829 18.412C8.82531 18.5048 8.75155 18.6151 8.70123 18.7365C8.6509 18.8579 8.625 18.988 8.625 19.1194C8.625 19.2509 8.6509 19.381 8.70123 19.5024C8.75155 19.6238 8.82531 19.7341 8.91829 19.827L11.2953 22.2029C11.4828 22.3904 11.7371 22.4957 12.0023 22.4957C12.2675 22.4957 12.5218 22.3904 12.7093 22.2029L15.0863 19.827C15.1793 19.7341 15.253 19.6238 15.3033 19.5024C15.3537 19.381 15.3796 19.2509 15.3796 19.1194C15.3796 18.988 15.3537 18.8579 15.3033 18.7365C15.253 18.6151 15.1793 18.5048 15.0863 18.412L12.7093 16.036C12.5218 15.8485 12.2675 15.7432 12.0023 15.7432C11.7371 15.7432 11.4828 15.8485 11.2953 16.036L8.91829 18.412Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8.91779 5.17394C8.73032 5.36146 8.625 5.61577 8.625 5.88094C8.625 6.1461 8.73032 6.40041 8.91779 6.58794L11.2948 8.96394C11.4823 9.15141 11.7366 9.25672 12.0018 9.25672C12.267 9.25672 12.5213 9.15141 12.7088 8.96394L15.0858 6.58794C15.2733 6.40041 15.3786 6.1461 15.3786 5.88094C15.3786 5.61577 15.2733 5.36146 15.0858 5.17394L12.7088 2.79694C12.5213 2.60947 12.267 2.50415 12.0018 2.50415C11.7366 2.50415 11.4823 2.60947 11.2948 2.79694L8.91779 5.17394Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div id="w-node-b13dc2ca-5587-ccf7-bf12-fde6f1eff244-5fe98ee8" class="customization_card is-new"><div class="customization-h-wrap is-v"><h3 class="u-text-size-h5"><strong>Dedicated Infrastructure</strong></h3><p class="lp_p">We’ll put you on your own servers and GPUs.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 25" fill="none" class="own-svg"><path d="M19 3.5H5C3.89543 3.5 3 4.39543 3 5.5V19.5C3 20.6046 3.89543 21.5 5 21.5H19C20.1046 21.5 21 20.6046 21 19.5V5.5C21 4.39543 20.1046 3.5 19 3.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 9.5V15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16 15.5V21.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16 3.5V9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 15.5H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 9.5H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 15.5V21.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 3.5V9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div id="w-node-_8f89554c-fd9b-606d-ab2a-96adf25075c2-5fe98ee8" class="customization_card is-new"><div class="customization-h-wrap is-v"><h3 class="u-text-size-h5"><strong>Choose a Unique Voice</strong></h3><p class="lp_p">Pick out a voice actor and make it the voice of your brand.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 25" fill="none" class="own-svg"><path d="M2 10.5V13.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M6 6.5V17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10 3.5V21.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14 8.5V15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M18 5.5V18.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M22 10.5V13.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div id="w-node-_5c901738-33ac-d635-d7c9-96941cfdca59-5fe98ee8" class="customization_card is-new"><div class="customization-h-wrap is-v"><h3 class="u-text-size-h5"><strong>Protected Data</strong></h3><p class="lp_p">All data is securely encrypted on your own dedicated servers.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 25" fill="none" class="own-svg"><path d="M20 13.5C20 18.5 16.5 21 12.34 22.45C12.1222 22.5238 11.8855 22.5202 11.67 22.44C7.5 21 4 18.5 4 13.5V6.49996C4 6.23474 4.10536 5.98039 4.29289 5.79285C4.48043 5.60532 4.73478 5.49996 5 5.49996C7 5.49996 9.5 4.29996 11.24 2.77996C11.4519 2.59896 11.7214 2.49951 12 2.49951C12.2786 2.49951 12.5481 2.59896 12.76 2.77996C14.51 4.30996 17 5.49996 19 5.49996C19.2652 5.49996 19.5196 5.60532 19.7071 5.79285C19.8946 5.98039 20 6.23474 20 6.49996V13.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 12.5L11 14.5L15 10.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></section><section class="lp_protect"><div class="lp_container_how lp_container is-protect"><a href="https://www.bland.ai/enterprise" class="protect-content w-inline-block"><p class="lp_p is-20_700">We protect your customer’s data. Our competitors don’t. Try it now.</p><p class="lp_p is-20_700">Learn More</p></a></div></section><section class="lp_meet"><div class="lp_container_how lp_container is-meet"><div class="meet-wrap"><div class="meet-content"><h2 class="lp_h2 is-small"><strong>Meet Bland. The fastest conversational AI in the world.</strong></h2><p class="lp_p p-20_400 color-bland o-60">Learn why we’re trusted by companies like Samsara, Snapchat, and Gallup to automate customer support, sales, and more.</p><a href="https://www.bland.ai/enterprise" class="lp_link w-inline-block"><div class="lp_link-text"><strong>Talk to Sales</strong></div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 25" fill="none" class="lp_link-svg"><path d="M5 12.5H19M19 12.5L12 5.5M19 12.5L12 19.5" stroke="currentColor" stroke-width="2.5"></path></svg></a></div><div class="meet-img_wrap"><div data-w-id="a42428cb-5067-57c9-2c30-39c4b7388fac" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/66cddff3a7bb08f0bc015747/68cc20a584d24fe429b143ae_cheetah.lottie" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="0"></div></div></div></div></section><section class="lp_support"><div class="lp_container_how lp_container is-support"><div class="support-text"><p class="lp_p p-16_700">Any Use Case. Any Country. Any Language.</p><h2>Support your Customers Anywhere and Everywhere</h2></div><div class="support-grid"><div class="support-card"><div class="support-card_text"><h3 class="lp_h2 is-small"><strong>From customer support to sales, and everything in between.</strong></h3><p class="lp_p p-20_400 color-bland mw-27 o-60">Bland works across any use case and vertical. Whether your company is in financial services, healthcare, or logistics, you can build on Bland.</p><a href="https://www.bland.ai/enterprise" class="lp_link w-inline-block"><div class="lp_link-text"><strong>Talk to Sales</strong></div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 25" fill="none" class="lp_link-svg"><path d="M5 12.5H19M19 12.5L12 5.5M19 12.5L12 19.5" stroke="currentColor" stroke-width="2.5"></path></svg></a></div><img src="/funnel-assets/68cc12c5214b0d9c6e4141e4_support1_2.svg" loading="lazy" alt="" class="support-img"/></div><div class="support-card"><div class="support-card_text"><h3 class="lp_h2 is-small"><strong>Keep your customer’s data secure in any region.  </strong></h3><p class="lp_p p-20_400 color-bland mw-27 o-60">Bland is fully multi-regional and multi-lingual, so your data never needs to cross borders and your AI can speak any language you want it to.</p></div><img src="/funnel-assets/68cc226286e2ab13fd1e8034_planet_2.jpg" loading="lazy" sizes="100vw" srcset="/funnel-assets/68cc226286e2ab13fd1e8034_planet-p-500_2.jpg 500w, /funnel-assets/68cc226286e2ab13fd1e8034_planet-p-800_2.jpg 800w, /funnel-assets/68cc226286e2ab13fd1e8034_planet-p-1080_2.jpg 1080w, /funnel-assets/68cc226286e2ab13fd1e8034_planet_2.jpg 1310w" alt="" class="support-img"/></div></div></div></section><section class="lp_omni-channel"><div class="lp_container_how lp_container is-l-r is-new"><div class="how_it_works-content-wrap"><h2 class="lp_h2 is-s mw-26ch"><strong>Build AI agents that people want to talk to.</strong></h2><p class="lp_p p-24">Don’t give your IP to frontier model providers.</p><a id="enterprise_3" href="https://www.bland.ai/enterprise" class="lp_button is--red is-new is-small w-inline-block"><div class="p-14_500">Talk to Us</div><div class="hide w-embed"><style>
+@media only screen and (min-width: 991px){
+.sec-link:hover [class*="arrow"]{transform: translateX(.25rem);}
+}
+</style></div></a></div><div class="lp_how_card-grid is-one"><div id="w-node-c3ee7bdb-743b-0131-6c2c-21b7037a0545-5fe98ee8" class="customization_card is-new"><div class="customization-h-wrap is-v"><h3 class="u-text-size-h5"><strong>Calls, SMS, and Chat</strong></h3><p class="lp_p">Omni-channel generative AI communication.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 25" fill="none" class="own-svg"><path d="M2 10.5V13.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M6 6.5V17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10 3.5V21.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14 8.5V15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M18 5.5V18.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M22 10.5V13.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div id="w-node-c3ee7bdb-743b-0131-6c2c-21b7037a0551-5fe98ee8" class="customization_card is-new"><div class="customization-h-wrap is-v"><h3 class="u-text-size-h5"><strong>Up to 1 Million Concurrent Calls</strong></h3><p class="lp_p">Handle communication at any scale.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 25" fill="none" class="own-svg"><path d="M20 13.5C20 18.5 16.5 21 12.34 22.45C12.1222 22.5238 11.8855 22.5202 11.67 22.44C7.5 21 4 18.5 4 13.5V6.49996C4 6.23474 4.10536 5.98039 4.29289 5.79285C4.48043 5.60532 4.73478 5.49996 5 5.49996C7 5.49996 9.5 4.29996 11.24 2.77996C11.4519 2.59896 11.7214 2.49951 12 2.49951C12.2786 2.49951 12.5481 2.59896 12.76 2.77996C14.51 4.30996 17 5.49996 19 5.49996C19.2652 5.49996 19.5196 5.60532 19.7071 5.79285C19.8946 5.98039 20 6.23474 20 6.49996V13.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 12.5L11 14.5L15 10.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div id="w-node-c3ee7bdb-743b-0131-6c2c-21b7037a0561-5fe98ee8" class="customization_card is-new"><div class="customization-h-wrap is-v"><h3 class="u-text-size-h5"><strong>Information on Every Conversation</strong></h3><p class="lp_p">Analyze every call with insights like sentiment analysis and call scoring.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 25" fill="none" class="own-svg"><path d="M15.535 11.793C15.3475 11.9805 15.2422 12.2348 15.2422 12.5C15.2422 12.7651 15.3475 13.0194 15.535 13.207L17.911 15.584C18.0985 15.7714 18.3528 15.8767 18.618 15.8767C18.8831 15.8767 19.1374 15.7714 19.325 15.584L21.702 13.207C21.8894 13.0194 21.9948 12.7651 21.9948 12.5C21.9948 12.2348 21.8894 11.9805 21.702 11.793L19.325 9.41596C19.1374 9.22848 18.8831 9.12317 18.618 9.12317C18.3528 9.12317 18.0985 9.22848 17.911 9.41596L15.535 11.793Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2.29669 11.793C2.10922 11.9805 2.00391 12.2348 2.00391 12.5C2.00391 12.7651 2.10922 13.0194 2.29669 13.207L4.67369 15.584C4.86122 15.7714 5.11553 15.8767 5.38069 15.8767C5.64586 15.8767 5.90016 15.7714 6.08769 15.584L8.46469 13.207C8.65216 13.0194 8.75748 12.7651 8.75748 12.5C8.75748 12.2348 8.65216 11.9805 8.46469 11.793L6.08769 9.41596C5.90016 9.22848 5.64586 9.12317 5.38069 9.12317C5.11553 9.12317 4.86122 9.22848 4.67369 9.41596L2.29669 11.793Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8.91829 18.412C8.82531 18.5048 8.75155 18.6151 8.70123 18.7365C8.6509 18.8579 8.625 18.988 8.625 19.1194C8.625 19.2509 8.6509 19.381 8.70123 19.5024C8.75155 19.6238 8.82531 19.7341 8.91829 19.827L11.2953 22.2029C11.4828 22.3904 11.7371 22.4957 12.0023 22.4957C12.2675 22.4957 12.5218 22.3904 12.7093 22.2029L15.0863 19.827C15.1793 19.7341 15.253 19.6238 15.3033 19.5024C15.3537 19.381 15.3796 19.2509 15.3796 19.1194C15.3796 18.988 15.3537 18.8579 15.3033 18.7365C15.253 18.6151 15.1793 18.5048 15.0863 18.412L12.7093 16.036C12.5218 15.8485 12.2675 15.7432 12.0023 15.7432C11.7371 15.7432 11.4828 15.8485 11.2953 16.036L8.91829 18.412Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8.91779 5.17394C8.73032 5.36146 8.625 5.61577 8.625 5.88094C8.625 6.1461 8.73032 6.40041 8.91779 6.58794L11.2948 8.96394C11.4823 9.15141 11.7366 9.25672 12.0018 9.25672C12.267 9.25672 12.5213 9.15141 12.7088 8.96394L15.0858 6.58794C15.2733 6.40041 15.3786 6.1461 15.3786 5.88094C15.3786 5.61577 15.2733 5.36146 15.0858 5.17394L12.7088 2.79694C12.5213 2.60947 12.267 2.50415 12.0018 2.50415C11.7366 2.50415 11.4823 2.60947 11.2948 2.79694L8.91779 5.17394Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div id="w-node-c3ee7bdb-743b-0131-6c2c-21b7037a056f-5fe98ee8" class="customization_card is-new"><div class="customization-h-wrap is-v"><h3 class="u-text-size-h5"><strong>Robust API’s</strong></h3><p class="lp_p">Integrate with your CRM, ERP, and anywhere else.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 25" fill="none" class="own-svg"><path d="M19 3.5H5C3.89543 3.5 3 4.39543 3 5.5V19.5C3 20.6046 3.89543 21.5 5 21.5H19C20.1046 21.5 21 20.6046 21 19.5V5.5C21 4.39543 20.1046 3.5 19 3.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 9.5V15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16 15.5V21.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16 3.5V9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 15.5H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 9.5H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 15.5V21.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 3.5V9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></section><section class="lp_support"><div class="lp_container_how lp_container is-omni-channel"><div class="support-text is-omni"><p class="lp_p p-16_700"><strong>True omni-channel communication.</strong></p><h2><strong>Make a call. Send a text. Chat instantly. All on Bland.</strong></h2></div><div class="omni-channel_grid"><div class="omni-item-wrap"><div class="support-card"><div data-w-id="b32afeac-e3b9-70b8-c3b9-cdcb29a73fa7" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/66cddff3a7bb08f0bc015747/68cc3a4da3d42a161da38c9c_Bland_Product_SMS.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="0"></div></div><a href="https://www.bland.ai/product/bland-sms" class="lp_link is-dark w-inline-block"><div class="lp_link-text">Bland SMS</div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 25" fill="none" class="lp_link-svg"><path d="M5 12.5H19M19 12.5L12 5.5M19 12.5L12 19.5" stroke="currentColor" stroke-width="2.5"></path></svg></a></div><div class="omni-item-wrap"><div class="support-card"><div data-w-id="000628f4-01a1-534c-1452-a0087c46df51" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/66cddff3a7bb08f0bc015747/68cc3a4da3bef530cef8d79a_Bland_Product_Voice.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="0"></div></div><a href="https://www.bland.ai/product/bland-voice" class="lp_link is-dark w-inline-block"><div class="lp_link-text">Bland Voice</div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 25" fill="none" class="lp_link-svg"><path d="M5 12.5H19M19 12.5L12 5.5M19 12.5L12 19.5" stroke="currentColor" stroke-width="2.5"></path></svg></a></div><div class="omni-item-wrap"><div class="support-card"><div data-w-id="72c265ef-4fe0-7a23-f0ed-002cdac3b096" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/66cddff3a7bb08f0bc015747/68cc3a4d22152a24dc3caed7_Bland_Product_Message.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="0"></div></div><a href="https://www.bland.ai/product/bland-chat" class="lp_link is-dark w-inline-block"><div class="lp_link-text">Bland Chat</div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 25" fill="none" class="lp_link-svg"><path d="M5 12.5H19M19 12.5L12 5.5M19 12.5L12 19.5" stroke="currentColor" stroke-width="2.5"></path></svg></a></div></div></div></section><section class="lp_protect is-pre-why"><div class="lp_container_how lp_container is-protect"><a href="https://www.bland.ai/product/conversational-pathways" class="protect-content is-purple-pink w-inline-block"><p class="lp_p is-20_700"><strong>Control your AI. Use Conversational Pathways.</strong></p><p class="lp_p is-20_700">Read More</p></a></div></section><section class="lp_why-bland"><div class="lp_container-why lp_container"><h2 class="mw-20ch text-align-center">Why the world&#x27;s largest enterprises choose Bland.</h2><div class="why-wrap"><div class="why-item"><div class="why-lottie" data-w-id="5b21b75b-bbc2-634c-369f-29662aae8bf6" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/66cddff3a7bb08f0bc015747/68cc29dba30d4181814cbb01_Create-value.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="4"></div><div class="product-feature-content-wrap"><h3 class="lp_h2 is-small">Creating value in a month, not a year.</h3><p class="lp_p p-20_400 color-bland mw-27 o-60">Don’t waste a year on a pilot that doesn’t end up going anywhere. Work with a team of experts obsessed with driving value for your business.</p><a href="https://www.bland.ai/enterprise" class="lp_link w-inline-block"><div class="lp_link-text">Learn More</div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 25" fill="none" class="lp_link-svg"><path d="M5 12.5H19M19 12.5L12 5.5M19 12.5L12 19.5" stroke="currentColor" stroke-width="2.5"></path></svg></a></div></div><div class="why-item"><div class="product-feature-content-wrap"><h3 class="lp_h2 is-small"><strong>Built from the ground up.</strong></h3><p class="lp_p p-20_400 color-bland mw-27 o-60">Using open-source foundations, we train and fine-tune models for every part of the conversation. That means no OpenAI, Anthropic, or any foundational model providers. Just Bland.</p><a href="https://www.bland.ai/enterprise" class="lp_link w-inline-block"><div class="lp_link-text">Learn More</div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 25" fill="none" class="lp_link-svg"><path d="M5 12.5H19M19 12.5L12 5.5M19 12.5L12 19.5" stroke="currentColor" stroke-width="2.5"></path></svg></a></div><div data-poster-url="https://cdn.prod.website-files.com/66cddff3a7bb08f0bc015747%2F68cc314b57c0d73c99ad9c6b_Built-from-ground-poster-00001.jpg" data-video-urls="https://cdn.prod.website-files.com/66cddff3a7bb08f0bc015747%2F68cc314b57c0d73c99ad9c6b_Built-from-ground-transcode.mp4,https://cdn.prod.website-files.com/66cddff3a7bb08f0bc015747%2F68cc314b57c0d73c99ad9c6b_Built-from-ground-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="why-lottie w-background-video w-background-video-atom"><video id="e0578900-759d-947b-ad66-a9a9ada60324-video" autoplay="" loop="" style="background-image:url(&quot;https://cdn.prod.website-files.com/66cddff3a7bb08f0bc015747%2F68cc314b57c0d73c99ad9c6b_Built-from-ground-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="/funnel-assets/66cddff3a7bb08f0bc015747%2F68cc314b57c0d73c99ad9c6b_Built-from-ground-transcode_2.mp4" data-wf-ignore="true"/><source src="/funnel-assets/66cddff3a7bb08f0bc015747%2F68cc314b57c0d73c99ad9c6b_Built-from-ground-transcode_2.webm" data-wf-ignore="true"/></video></div></div><div class="why-item"><div class="why-lottie" data-w-id="bda716f0-e84c-d5da-8e00-53cdcea01d51" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/66cddff3a7bb08f0bc015747/68cc29d1d2894f5fb1322be3_Strict-guardrails.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="0"></div><div class="product-feature-content-wrap"><h3 class="lp_h2 is-small"><strong>Strict guardrails so your AI never goes off script.</strong></h3><p class="lp_p p-20_400 color-bland mw-27 o-60">Control tone, vocabulary, rhythm, and everything else that will delight your customers. No bad attitudes, no difficult to understand voices, just refreshingly helpful AI.</p><a href="https://www.bland.ai/enterprise" class="lp_link w-inline-block"><div class="lp_link-text"><strong>Talk to Sales</strong></div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 25" fill="none" class="lp_link-svg"><path d="M5 12.5H19M19 12.5L12 5.5M19 12.5L12 19.5" stroke="currentColor" stroke-width="2.5"></path></svg></a></div></div><div class="why-item"><div class="product-feature-content-wrap"><h3 class="lp_h2 is-small"><strong>Forward Deployed Engineers build your custom agent.</strong></h3><p class="lp_p p-20_400 color-bland mw-27 o-60">Your AI should be as unique as your company. Work with our team to create a custom voice, tone, and prompts that sound and act like no one else. We’ll even fine-tune a model just for you.</p><a href="https://www.bland.ai/enterprise" class="lp_link w-inline-block"><div class="lp_link-text"><strong>Talk to Sales</strong></div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 25" fill="none" class="lp_link-svg"><path d="M5 12.5H19M19 12.5L12 5.5M19 12.5L12 19.5" stroke="currentColor" stroke-width="2.5"></path></svg></a></div><div class="why-lottie" data-w-id="8654334f-258a-d549-5381-78ce231424be" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/66cddff3a7bb08f0bc015747/68cc29d3a151641726924796_Fwd-deployed-engineers.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="6"></div></div></div></div></section><div data-secton-bundle="cta"><section data-section="featured" class="lp_blog-wrap is-blog is-featured is-home"><div class="blog_container lp_container is-home"><div class="hpme-blog_h-wrap"><h2 class="lp_text-size-medium is-pad"><strong>Bland News.</strong></h2><h3 class="u-text-style-h2">Insights, stories, &amp; trends shaping AI Phone Calls</h3></div><div class="hide w-embed"><style>  
+  html { font-size: 1rem; }
+  @media screen and (max-width:1328px) { html { font-size: calc(0.011904761904761751rem + 1.1904761904761907vw); } }
+  @media screen and (max-width:992px) { html { font-size: calc(0.19642857142857145rem + 0.8928571428571428vw); } }
+  @media screen and (max-width:767px) { html { font-size: 1rem; } }
+  
+  @media only screen and (min-width: 991px){
+  [class*="button"]:hover [class*="arrow"]{transform: translateX(.25rem);}
+  :is(.blog_hero_featured-blog-item:hover, .blog_item-link:hover) .blog_image{transform: scale(1.1);}
+  :is(.blog_hero_featured-blog-item:hover, .blog_item-link:hover) [class*="arrow"]{transform: translateX(.25rem);}
+  }
+  @media only screen and (max-width: 991px){
+  .section_navbar:has(.nav_button.padding-0.w-nav-button.w--open) .nav_button-line:nth-child(1){transform: translateY(.1625rem) rotate(-45deg);}
+  .section_navbar:has(.nav_button.padding-0.w-nav-button.w--open) .nav_button-line:nth-child(2){transform: translateY(-.1625rem) rotate(45deg);}
+  .section_navbar:has(.nav_button.padding-0.w-nav-button.w--open) .nav_button-line{background: var(--lp-white);} 
+  .nav_button.padding-0.w-nav-button.w--open{background: var(--lp-black)}
+  }
+
+  @media only screen and (min-width: 1370px){
+  .blog_shape{min-width: 121.5%;bottom: -2.95rem;}
+  }
+  
+  .lp_button.is-black.is-pag{background: var(--lp-black)!important; color: var(--lp-white)!important;}
+   .lp_button.is-black.is-pag:hover{background: var(--lp-white)!important; color: var(--lp-black)!important;}
+   
+   
+  /*featured grid*/
+@media only screen and (min-width: 767px){
+[data-section="featured"] .blog_grid.is-blog {
+    grid-template-columns: repeat(3, 1fr)!important;
+    grid-template-rows: repeat(2, 1fr)!important;
+    gap: 1.5rem;
+}
+    
+[data-section="featured"] .blog-item:nth-child(1) {
+    grid-column: span 2 / span 2!important;
+    grid-row: span 2 / span 2!important;
+}
+[data-section="featured"] .blog-item:nth-child(1) .blog_h-wrap{gap: 1rem;}
+[data-section="featured"] .blog-item:nth-child(1) h3{font-size: 3rem; line-height: 1.1; max-width: 24ch;}
+[data-section="featured"] .blog-item:nth-child(2) {grid-column-start: 3!important;}
+[data-section="featured"] .blog-item:nth-child(3) {grid-column-start: 3!important; grid-row-start: 2!important;}
+}
+@media only screen and (max-width: 767px){
+	[data-section="featured"] .blog-item:nth-child(1) h3{
+	font-size: 1.5rem!important;
+	line-height: 1.1;}
+}
+
+
+[data-section="featured"] .blog-item:nth-child(2) p{
+    display: none;
+}
+[data-section="featured"] .blog-item:nth-child(3) p{
+    display: none;
+}   
+[data-section="featured"] .blog_grid.is-blog {
+    gap: 1.5rem;
+}
+   
+   /* Select the 1st item, and then every 5th after it */
+.blog-item:nth-child(5n + 1) .blog_icon{background: rgba(94, 0, 126, 1);}
+.blog-item:nth-child(5n + 2) .blog_icon{background: rgba(249, 169, 0, 1);}
+.blog-item:nth-child(5n + 3) .blog_icon{background: rgba(255, 89, 0, 1);}
+.blog-item:nth-child(5n + 4) .blog_icon{background: rgba(202, 7, 26, 1);}
+.blog-item:nth-child(5n + 5) .blog_icon{background: rgba(255, 66, 148, 1);}
+
+[data-section="featured"] :is(.blog-item:nth-child(1), .blog-item:nth-child(3)) .blog_icon{background: rgba(255, 66, 148, 1);}
+
+</style></div><div class="w-dyn-list"><div fs-cmsload-mode="load-under" fs-cmsload-element="list" role="list" class="blog_grid is-blog is-featured w-dyn-items"><div id="w-node-_90383d58-584c-68c8-a8b6-8893424a16fe-5fe98ee8" role="listitem" class="blog-item is-new w-dyn-item"><a href="https://www.bland.ai/blogs/the-enterprise-framework-for-voice-ai-security-questionnaires" class="blog_item-link is-new w-inline-block"><div class="blog_icon"><div class="blog_icon-circ"></div></div><div class="blog_h-wrap"><h3 class="text-size-medium fw700">The Enterprise Framework for Voice AI Security Questionnaires</h3><p class="lp_p mw-60ch">Traditional SaaS security questionnaires fall short for AI. Learn how our AI-First framework with Delve ensures safer, reliable, enterprise-ready systems.</p><p class="lp_p is-desc o-5"><span>Sep 2, 2025</span><span> — </span><span>3</span><span> minute read</span></p></div></a></div><div id="w-node-_90383d58-584c-68c8-a8b6-8893424a16fe-5fe98ee8" role="listitem" class="blog-item is-new w-dyn-item"><a href="https://www.bland.ai/blogs/new-tts-announcement" class="blog_item-link is-new w-inline-block"><div class="blog_icon"><div class="blog_icon-circ"></div></div><div class="blog_h-wrap"><h3 class="text-size-medium fw700">The Future of Voice: Bland’s New Breakthrough TTS Engine</h3><p class="lp_p mw-60ch">We just unveiled a transformative text-to-speech system powered by large language models. Learn how our LLM-based architecture generates lifelike, emotionally intelligent speech with unmatched precision and style control.</p><p class="lp_p is-desc o-5"><span>Jun 4, 2025</span><span> — </span><span>5</span><span> minute read</span></p></div></a></div><div id="w-node-_90383d58-584c-68c8-a8b6-8893424a16fe-5fe98ee8" role="listitem" class="blog-item is-new w-dyn-item"><a href="https://www.bland.ai/blogs/memory-slack-hubspot-integrations" class="blog_item-link is-new w-inline-block"><div class="blog_icon"><div class="blog_icon-circ"></div></div><div class="blog_h-wrap"><h3 class="text-size-medium fw700">Our Latest Updates: Memory, Slack, and Hubspot Integrations</h3><p class="lp_p mw-60ch">Bland AI voice agents now have Memory, Slack, and HubSpot integrations, plus a redesigned Send Calls page.</p><p class="lp_p is-desc o-5"><span>Mar 7, 2025</span><span> — </span><span>2</span><span> minute read</span></p></div></a></div></div></div></div></section></div></article></main><footer data-secton-bundle="footer" data-section="white" class="footer_wrap"><div class="footer_container lp_container"><div class="logo-video-wrap"><img loading="lazy" src="/funnel-assets/677c0b4c6ec28a036ef87efd_top_2.svg" alt="" class="top_footer_img-2"/><img loading="lazy" src="/funnel-assets/6882984ad544208fe9572caf_bland_grid_animated_2.svg" alt="" class="bland_animated-grid-4"/><img loading="eager" src="/funnel-assets/677a6fa26f12ef31a58405c1_footer%20bottom%20img_2.svg" alt="" class="bottom_footer_img-4"/></div><nav class="lp_h-wrap"><div><div class="text-weight-bold is--footer">Industries</div><ul role="list" class="lp_footer_list"><li class="lp_footer_li"><a href="https://www.bland.ai/conversational-ai-for-hospitality" class="lp_footer_link">Hospitality</a></li></ul></div><div><div class="text-weight-bold is--footer">Use Cases</div><ul role="list" class="lp_footer_list"><li class="lp_footer_li"><a href="https://www.bland.ai/use-cases/appointment-booking" class="lp_footer_link">Appointment Booking</a></li><li class="lp_footer_li"><a href="https://www.bland.ai/use-cases/financial-intakes" class="lp_footer_link">Financial Intake</a></li><li class="lp_footer_li"><a href="https://www.bland.ai/use-cases/logistics-id-verification" class="lp_footer_link">Logistics ID Verification</a></li><li class="lp_footer_li"><a href="https://www.bland.ai/ai-customer-service" class="lp_footer_link">Customer Service</a></li></ul></div><div><div class="text-weight-bold is--footer">Case Studies</div><ul role="list" class="lp_footer_list"><li class="lp_footer_li"><a href="https://www.bland.ai/case-studies/parade" class="lp_footer_link">Parade</a></li><li class="lp_footer_li"><a href="https://www.bland.ai/case-studies/monster-rg" target="_blank" class="lp_footer_link">MonsterRG</a></li><li class="lp_footer_li"><a href="https://www.bland.ai/case-studies/slash" target="_blank" class="lp_footer_link">Slash</a></li><li class="lp_footer_li"><a href="https://www.bland.ai/case-studies/certus" target="_blank" class="lp_footer_link">Certus</a></li><li class="lp_footer_li"><a href="https://www.bland.ai/case-studies/kin-insurance" target="_blank" class="lp_footer_link">Kin Insurance</a></li><li class="lp_footer_li"><a href="https://www.bland.ai/case-studies/precisionit" target="_blank" class="lp_footer_link">PrecisionIT</a></li></ul></div><div><div class="text-weight-bold is--footer">Resources</div><ul role="list" class="lp_footer_list"><li class="lp_footer_li"><a href="#" class="lp_footer_link">Blog</a></li><li class="lp_footer_li"><a href="https://docs.bland.ai/welcome-to-bland" target="_blank" class="lp_footer_link">Docs</a></li><li class="lp_footer_li"><a href="https://jobs.ashbyhq.com/bland" target="_blank" class="lp_footer_link">Careers</a></li><li class="lp_footer_li"><a href="#" class="lp_footer_link">Trust &amp; Security</a></li><li class="lp_footer_li"><a href="https://zapier.com/apps/bland-ai/integrations" target="_blank" class="lp_footer_link">No Code University</a></li></ul></div><div><div class="text-weight-bold is--footer">Support</div><ul role="list" class="lp_footer_list"><li class="lp_footer_li"><a href="https://www.bland.ai/legal/privacy-policy" class="lp_footer_link">Privacy Policy</a></li><li class="lp_footer_li"><a href="https://www.bland.ai/legal/terms-of-service" class="lp_footer_link">Terms</a></li><li class="lp_footer_li"><a href="https://www.bland.ai/legal/cookie-policy" class="lp_footer_link">Cookie Policy</a></li><li class="lp_footer_li"><a href="https://www.bland.ai/trust-security" class="lp_footer_link">Trust &amp; Security</a></li><li class="lp_footer_li"><a href="https://www.bland.ai/legal/sub-processor-list" class="lp_footer_link">Sub-processor List</a></li><li class="lp_footer_li"><a href="https://www.bland.ai/legal/data-processing-agreement" class="lp_footer_link">Data Processing Agreement</a></li><li class="lp_footer_li"><a href="#" class="lp_footer_link">Model Governance</a></li></ul></div></nav><div class="footer_certificates-wrap-5"><a id="w-node-_823730fa-3d4e-46fe-b446-1810dceb45cb-d5416bd6" href="https://trust.delve.co/blandai" target="_blank" class="w-inline-block"><img sizes="(max-width: 1060px) 100vw, 1060px" srcset="/funnel-assets/67b78afd2edad0295603f618_IMG_5297-p-500_2.webp 500w, /funnel-assets/67b78afd2edad0295603f618_IMG_5297-p-800_2.webp 800w, /funnel-assets/67b78afd2edad0295603f618_IMG_5297_2.webp 1060w" alt="SOC 2 Certificate Badge" src="/funnel-assets/67b78afd2edad0295603f618_IMG_5297_2.webp" loading="lazy" class="footer_badge"/></a><a href="https://trust.delve.co/blandai" target="_blank" class="w-inline-block"><img sizes="(max-width: 1060px) 100vw, 1060px" srcset="/funnel-assets/67b78afd16a5d35d528414c0_IMG_5296-p-500_2.webp 500w, /funnel-assets/67b78afd16a5d35d528414c0_IMG_5296-p-800_2.webp 800w, /funnel-assets/67b78afd16a5d35d528414c0_IMG_5296_2.webp 1060w" alt="HIPAA Certificate Badge" src="/funnel-assets/67b78afd16a5d35d528414c0_IMG_5296_2.webp" loading="lazy" class="footer_badge"/></a><a href="https://trust.delve.co/blandai" target="_blank" class="w-inline-block"><img sizes="(max-width: 1060px) 100vw, 1060px" srcset="/funnel-assets/67ee71e3655851a9f4d67d54_Frame%20175-p-500_2.webp 500w, /funnel-assets/67ee71e3655851a9f4d67d54_Frame%20175-p-800_2.webp 800w, /funnel-assets/67ee71e3655851a9f4d67d54_Frame%20175_2.webp 1060w" alt="" src="/funnel-assets/67ee71e3655851a9f4d67d54_Frame%20175_2.webp" loading="lazy" class="footer_badge"/></a></div><div class="footer_logo-wrap"><div class="lp_footer_socials u-hflex-left-top"><a href="https://discord.com/invite/8xGGg2KfH7" target="_blank" class="lp_footer_icon-2 is--1 w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 30 30" fill="none"><path d="M21.9419 8.52317C20.6473 7.91744 19.263 7.47723 17.8157 7.22656C17.638 7.5479 17.4304 7.98012 17.2872 8.32394C15.7487 8.09258 14.2245 8.09258 12.7143 8.32394C12.5712 7.98012 12.3588 7.5479 12.1795 7.22656C10.7307 7.47723 9.3448 7.91906 8.05016 8.52638C5.43887 12.4724 4.73099 16.3204 5.08493 20.1137C6.81688 21.4071 8.49534 22.1928 10.1455 22.7069C10.5529 22.1462 10.9163 21.5501 11.2293 20.9219C10.6331 20.6954 10.0621 20.4158 9.52256 20.0912C9.6657 19.9852 9.80571 19.8743 9.94098 19.7603C13.2318 21.2995 16.8074 21.2995 20.0589 19.7603C20.1958 19.8743 20.3358 19.9852 20.4774 20.0912C19.9362 20.4174 19.3637 20.6969 18.7675 20.9235C19.0805 21.5501 19.4423 22.1478 19.8513 22.7085C21.503 22.1944 23.183 21.4087 24.915 20.1137C25.3303 15.7163 24.2056 11.9036 21.9419 8.52317ZM11.6776 17.7809C10.6898 17.7809 9.87963 16.8586 9.87963 15.7355C9.87963 14.6125 10.6725 13.6886 11.6776 13.6886C12.6829 13.6886 13.493 14.6109 13.4757 15.7355C13.4772 16.8586 12.6829 17.7809 11.6776 17.7809ZM18.3223 17.7809C17.3344 17.7809 16.5243 16.8586 16.5243 15.7355C16.5243 14.6125 17.3171 13.6886 18.3223 13.6886C19.3275 13.6886 20.1376 14.6109 20.1203 15.7355C20.1203 16.8586 19.3275 17.7809 18.3223 17.7809Z" fill="currentColor"></path></svg></a><a href="https://twitter.com/usebland" class="lp_footer_icon-2 is--2 w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 25" fill="none"><path d="M4.03848 4.80811L10.2159 13.0696L4 19.7868H5.39935L10.8419 13.9061L15.2389 19.7868H20.0001L13.4754 11.0606L19.2615 4.80811H17.8621L12.8503 10.2241L8.80059 4.80811H4.03941H4.03848ZM6.09574 5.83892H8.28252L17.941 18.756H15.7542L6.09574 5.83892Z" fill="currentColor"></path></svg></a><a href="https://www.linkedin.com/company/bland-ai/?viewAsMember=true" target="_blank" class="lp_footer_icon-2 is--3 w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 30 30" fill="none"><path d="M8.75 6.25C7.36929 6.25 6.25 7.36929 6.25 8.75V21.25C6.25 22.6307 7.36929 23.75 8.75 23.75H21.25C22.6307 23.75 23.75 22.6307 23.75 21.25V8.75C23.75 7.36929 22.6307 6.25 21.25 6.25H8.75ZM12.0833 20.1042H9.89583V12.0833H12.0833V20.1042ZM10.9896 11.1588C10.2852 11.1588 9.71354 10.5827 9.71354 9.8725C9.71354 9.16229 10.2852 8.58625 10.9896 8.58625C11.694 8.58625 12.2656 9.16229 12.2656 9.8725C12.2656 10.5827 11.6947 11.1588 10.9896 11.1588ZM20.8333 20.1042H18.6458V16.0179C18.6458 13.5621 15.7292 13.748 15.7292 16.0179V20.1042H13.5417V12.0833H15.7292V13.3703C16.7478 11.4847 20.8333 11.3454 20.8333 15.1757V20.1042Z" fill="currentColor"></path></svg></a></div><div id="w-node-_823730fa-3d4e-46fe-b446-1810dceb45dc-d5416bd6" class="code-embed-6 w-embed"><button class="lp_footer_link" style="padding: 0px; background: transparent; transform: scale(0.7);" onclick="DelveCookieConsent.show()">Cookie Settings</button></div><a href="#" class="lp_footer_link">Bland.ai, Inc. © 2025</a></div></div></footer></div><script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=66cddff3a7bb08f0bc015747" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/66cddff3a7bb08f0bc015747/js/bland-ai-staging.schunk.36b8fb49256177c8.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/66cddff3a7bb08f0bc015747/js/bland-ai-staging.schunk.8208d3e53b97e3c7.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/66cddff3a7bb08f0bc015747/js/bland-ai-staging.schunk.7cf19e9b820efdc6.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/66cddff3a7bb08f0bc015747/js/bland-ai-staging.schunk.a5328fc6e4f79712.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/66cddff3a7bb08f0bc015747/js/bland-ai-staging.schunk.b4435221be879eb3.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/66cddff3a7bb08f0bc015747/js/bland-ai-staging.c4d727d6.84ac70674c303a80.js" type="text/javascript"></script><script type="text/javascript">
+(function(l) {
+if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+window.lintrk.q=[]}
+var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})(window.lintrk);
+</script>
+
+<script>
+  // Function to extract UTM parameters from the current URL
+  function getURLParameters() {
+    const params = new URLSearchParams(window.location.search);
+    return params;
+  }
+
+  // Function for adding UTM parameters to the base URL
+  function buildURLWithParameters(baseURL, queryParams) {
+    let url = baseURL;
+    if (queryParams.toString() !== '') {
+      url += (url.includes('?') ? '&' : '?') + [...queryParams].map(([key, value]) => \`\${key}=\${value}\`).join('&');
+    }
+    return url;
+  }
+
+  // Function for redirecting to a page with UTM parameters
+  function redirectToCustomPage(buttonId) {
+    const queryParams = getURLParameters();
+    const baseUrls = {
+      'utm-button-1': 'https://bland.ai/enterprise',
+      'utm-button-2': 'https://bland.ai/enterprise',
+      'utm-button-3': 'https://bland.ai/enterprise',
+      'utm-button-4': 'https://bland.ai/enterprise',
+      'utm-button-5': 'https://bland.ai/enterprise',
+      'utm-button-6': 'https://bland.ai/enterprise',
+    };
+    const selectedURL = baseUrls[buttonId] || 'https://bland.ai/enterprise';
+    const finalURL = buildURLWithParameters(selectedURL, queryParams);
+    
+    // Follow the link
+    window.location.href = finalURL;
+  }
+
+  // Function for adding a button click listener
+  function addClickListener(buttonId, callback) {
+    const buttonElement = document.getElementById(buttonId);
+    if (buttonElement) {
+      buttonElement.addEventListener('click', callback);
+    }
+  }
+
+  // Add click handlers for all buttons
+  addClickListener('utm-button-1', () => redirectToCustomPage('utm-button-1'));
+  addClickListener('utm-button-2', () => redirectToCustomPage('utm-button-2'));
+  addClickListener('utm-button-3', () => redirectToCustomPage('utm-button-3'));
+  addClickListener('utm-button-4', () => redirectToCustomPage('utm-button-4'));
+  addClickListener('utm-button-5', () => redirectToCustomPage('utm-button-5'));
+  addClickListener('utm-button-6', () => redirectToCustomPage('utm-button-6'));
+</script>
+
+<script>
+    // Define an array of background colors to cycle through
+    const highlightBackgrounds = ['#F9A900', '#FF5900', '#CA071A', '#5E007E'];
+
+    // Helper function to calculate the brightness of a color
+    function getBrightness(hexColor) {
+        const r = parseInt(hexColor.substr(1, 2), 16); // Red component
+        const g = parseInt(hexColor.substr(3, 2), 16); // Green component
+        const b = parseInt(hexColor.substr(5, 2), 16); // Blue component
+        return (r * 0.299 + g * 0.587 + b * 0.114) / 255; // Weighted brightness formula
+    }
+
+    // Helper function to determine text color for optimal contrast
+    function getTextColor(hexColor) {
+        return getBrightness(hexColor) > 0.5 ? '#151515' : '#FFFDF5';
+    }
+
+    // Create a <style> element to dynamically update ::selection styles
+    const style = document.createElement('style');
+    document.head.appendChild(style);
+
+    // Counter for cycling through highlight colors
+    let selectionCount = 0;
+
+    // Function to update ::selection styles dynamically
+    function updateSelectionStyle() {
+        const currentBackground = highlightBackgrounds[selectionCount % highlightBackgrounds.length];
+        const currentTextColor = getTextColor(currentBackground);
+        style.textContent = \`
+            ::selection {
+                background: \${currentBackground} !important;
+                color: \${currentTextColor} !important;
+            }
+        \`;
+    }
+
+    // Initialize the ::selection style
+    updateSelectionStyle();
+
+    // Event listener for mouseup to cycle selection colors
+    document.addEventListener('mouseup', () => {
+        const selectionText = window.getSelection().toString(); // Get selected text
+        if (selectionText.length > 0) {
+            selectionCount++; // Increment selection counter
+            updateSelectionStyle(); // Update the selection style
+        }
+    });
+
+    // Optional: Handle cases when the user clears the selection
+    document.addEventListener('selectionchange', () => {
+        if (window.getSelection().toString().length === 0) {
+            // No reset required here unless intended
+        }
+    });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const links = document.querySelectorAll('a[href^="/"], a[href^="https://bland.ai"]');
+  const params = new URLSearchParams(window.location.search);
+
+  links.forEach(link => {
+    link.addEventListener('click', function(event) {
+      const href = new URL(link.href);
+      params.forEach((value, key) => {
+        href.searchParams.set(key, value);
+      });
+      link.href = href.toString();
+    });
+  });
+});
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="https://www.bland.ai//js.hs-scripts.com/45282614.js"></script>
+<!-- End of HubSpot Embed Code -->
+
+<script type="text/javascript">
+(function(l) {
+if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+window.lintrk.q=[]}
+var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})(window.lintrk);
+</script>
+
+<script>
+  DelveCookieConsent.init({
+    message: "We use cookies to enhance your development experience and keep your data secure.",
+    privacyPolicyUrl: "https://delve.co/privacy-policy",
+    manageScriptTags: true,
+    preferencesDisplayMode: 'button', // use 'button' to show preferences in modal
+    categories: {
+      necessary: {
+        enabled: true,
+        cookieTable: {
+          cookies: [
+            { name: 'delve_cookie_consent', purpose: 'Stores your cookie preferences', duration: '1 year' },
+            { name: 'session_id', purpose: 'Keeps you logged in', duration: 'Session' },
+            { name: 'csrf_token', purpose: 'Security protection', duration: 'Session' }
+          ]
+        }
+      },
+      analytics: {
+        enabled: false,
+        cookieTable: {
+          cookies: [
+            { name: '_ga*', purpose: 'Google Analytics – Distinguishes users', duration: '2 years' },
+            { name: '_gid', purpose: 'Google Analytics – Session identification', duration: '24 hours' },
+            { name: '_gat', purpose: 'Google Analytics – Throttles request rate', duration: '1 minute' },
+            { name: 'analytics_session', purpose: 'Custom analytics session', duration: 'Session' }
+          ]
+        }
+      },
+      marketing: {
+        enabled: false,
+        cookieTable: {
+          cookies: [
+            { name: '_fbp*', purpose: 'Facebook Browser Pixel', duration: '3 months' },
+            { name: '_fbc*', purpose: 'Facebook Click ID', duration: '7 days' },
+            { name: '_gcl_au', purpose: 'Google Ads attribution', duration: '90 days' },
+            { name: 'utm_*', purpose: 'UTM tracking parameters', duration: 'Session' }
+          ]
+        }
+      },
+      preferences: {
+        enabled: false,
+        cookieTable: {
+          cookies: [
+            { name: 'theme_*', purpose: 'UI theme preferences', duration: '1 year' },
+            { name: 'lang_*', purpose: 'Language preferences', duration: '1 year' },
+            { name: 'user_prefs', purpose: 'General user settings', duration: '1 year' }
+          ]
+        }
+      }
+    }
+  });
+</script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTDMQ78F"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper(".swiper", {
+    // Existing Swiper parameters
+    direction: "horizontal",
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    slidesPerGroup: 1,
+    spaceBetween: 16,
+    speed: 300,
+    draggable: true,
+    
+    breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 16
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 1,
+      spaceBetween: 16
+    },
+    // when window width is >= 640px
+    687: {
+      slidesPerView: 'auto',
+      spaceBetween: 16
+    }
+  },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-next",
+      prevEl: ".swiper-prev",
+    },
+  });
+  
+  
+  var menu = ['Customer Experience', 'Dedicated Infrastructure', 'Operating Procedure']
+  const swiper3 = new Swiper(".swiper3", {
+    // Existing Swiper parameters
+    direction: "horizontal",
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 0,
+    speed: 300,
+    draggable: true,
+    initialslide: 0,
+    
+        pagination: {
+      el: '.swiper-paginationn',
+			clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (menu[index]) + '</span>';
+        },
+    }
+  });
+</script>
+<script>
+let ctaWrapper = $('.lp_btn_wrap');
+let ctaWrap = $('.link-holder');
+let ctaForm = $('.lp_form');
+let ctaBtn = $('.lp_button.is-red');
+
+// New elements
+let hero = $('[data-secton-bundle="hero"]');
+let ctaSection = $('[data-secton-bundle="cta"]');
+let footer = $('[data-secton-bundle="footer"]');
+let inputSection = $('#input-section');
+
+// Helper function to check if an element is in view
+function isInView(element) {
+    if (!element.length) return false;
+    let rect = element[0].getBoundingClientRect();
+    return (
+        rect.top < window.innerHeight &&
+        rect.bottom > 0
+    );
+}
+
+// Function to update visibility based on scroll
+function updateVisibility() {
+    let heroInView = isInView(hero);
+    let ctaInView = isInView(ctaSection);
+    let footerInView = isInView(footer);
+    let inputInView = isInView(inputSection);
+
+    // Handle ctaWrapper visibility
+    if (heroInView || ctaInView || footerInView) {
+        ctaWrapper.removeClass('is--visible');
+    } else {
+        ctaWrapper.addClass('is--visible');
+    }
+
+    // Handle inputSection visibility
+    if (inputInView) {
+        ctaForm.removeClass('is--button-cta');
+        ctaWrap.removeClass('is--button-cta');
+    } else {
+        ctaForm.addClass('is--button-cta');
+        ctaWrap.addClass('is--button-cta');
+    }
+}
+
+// Attach scroll event listener
+$(window).on('scroll', updateVisibility);
+
+// Initial check on page load
+updateVisibility();
+
+</script>
+<!--
+<script>
+$(document).ready(function() {
+    // Function to check the screen width and apply the appropriate script
+    function initResponsiveScript() {
+        const windowWidth = $(window).width();
+
+        // Common elements
+        let nav = $('.navigation_new');
+        let logo = $('.nav_brand.is-lp');
+        let navLinks = $('.nav_menu-link.is-lp');
+        let navBtn = $('.nav_button.padding-0');
+        let navBtnIn = $('.nav_button.is-in');
+        let navBtnLines = $('.nav_button-line.is-lp');
+
+        // Include navMenu only for <= 991px
+        let navMenu = windowWidth <= 991 ? $('.nav_menu.is-lp') : null;
+
+        // Function to check if .nav enters specific sections
+        function checkBackground() {
+            let isNavInBlackSection = false;
+            let isNavInWhiteSection = false;
+
+            // Check for black background sections
+            $('[data-section="black"]').each(function() {
+                if (nav.offset().top >= $(this).offset().top &&
+                    nav.offset().top <= $(this).offset().top + $(this).outerHeight()) {
+                    isNavInBlackSection = true;
+                    return false; // Exit loop if found in black section
+                }
+            });
+
+            // Check for white background sections if not in black section
+            if (!isNavInBlackSection) {
+                $('[data-section="white"]').each(function() {
+                    if (nav.offset().top >= $(this).offset().top &&
+                        nav.offset().top <= $(this).offset().top + $(this).outerHeight()) {
+                        isNavInWhiteSection = true;
+                        return false; // Exit loop if found in white section
+                    }
+                });
+            }
+
+            // Apply or remove classes based on section
+            if (isNavInBlackSection) {
+                nav.addClass('is-black').removeClass('is-white');
+                navLinks.addClass('is-white').removeClass('is-black');
+                logo.addClass('is-white').removeClass('is-black');
+                navBtn.addClass('is-white').removeClass('is-black');
+                navBtnIn.addClass('is-white').removeClass('is-black');
+                navBtnLines.addClass('is-white').removeClass('is-black');
+                if (navMenu) navMenu.addClass('is-black').removeClass('is-white');
+            } else if (isNavInWhiteSection) {
+                nav.addClass('is-white').removeClass('is-black');
+                navLinks.addClass('is-black').removeClass('is-white');
+                logo.addClass('is-black').removeClass('is-white');
+                navBtn.addClass('is-black').removeClass('is-white');
+                navBtnIn.addClass('is-black').removeClass('is-white');
+                navBtnLines.addClass('is-black').removeClass('is-white');
+                if (navMenu) navMenu.addClass('is-white').removeClass('is-black');
+            } else {
+                // Default: Remove all related classes
+                nav.removeClass('is-black is-white');
+                navLinks.removeClass('is-black is-white');
+                logo.removeClass('is-black is-white');
+                navBtn.removeClass('is-black is-white');
+                navBtnIn.removeClass('is-black is-white');
+                navBtnLines.removeClass('is-black is-white');
+                if (navMenu) navMenu.removeClass('is-black is-white');
+            }
+        }
+
+        // Attach scroll event listener
+        $(window).scroll(checkBackground);
+
+        // Initial check
+        checkBackground();
+    }
+
+    // Run script on page load
+    initResponsiveScript();
+
+    // Reinitialize the script on window resize
+    $(window).resize(initResponsiveScript);
+});
+</script>
+-->
+
+<script>
+$('#play-video').on('click', function(e) {
+    var $video = $('#video');
+    var src = $video.attr('src');
+    
+    // Check if ?autoplay=1 is already present
+    if (!src.includes('?autoplay=1') && !src.includes('&autoplay=1')) {
+        if (src.includes('?')) {
+            src += '&autoplay=1';
+        } else {
+            src += '?autoplay=1';
+        }
+        $video.attr('src', src);
+    }
+});
+</script>
+
+<script>
+  let svg = $('[data-element="svg"]');
+
+  // Helper function to check if the bottom of the element is aligned with the bottom of the screen
+  function isBottomAlignedWithViewport(element) {
+    if (!element.length) return false;
+    let rect = element[0].getBoundingClientRect();
+    return (
+      rect.bottom >= window.innerHeight && // Bottom is at or beyond the bottom of the viewport
+      rect.bottom <= window.innerHeight + 5 // Small buffer for precision
+    );
+  }
+
+  // Function to add the .is--active class when the bottom aligns with the viewport
+  function activateSvgOnScroll() {
+    svg.each(function () {
+      let $this = $(this); // Cache the jQuery object
+      if (isBottomAlignedWithViewport($this)) {
+        $this.addClass('is-active');
+      }
+    });
+  }
+
+  // Attach scroll event listener
+  $(window).on('scroll', activateSvgOnScroll);
+
+  // Initial check on page load
+  activateSvgOnScroll();
+</script>
+
+<script>
+      async function requestCallFromBland(label) {
+      	if(!window.__turnstile_response || typeof window.__turnstile_response !== "string" || window.__turnstile_response?.length === 0 || window.__turnstile_response === ""){
+          return;
+       	}
+      
+        const url = "https://us.api.bland.ai/welcome";
+        const customerPhone = document.getElementById(label).value;
+
+        fetch(url, {
+          method: "POST",
+          body: JSON.stringify({
+            phoneNumber: customerPhone,
+          }),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+            "x-bland-nonce": window.__turnstile_response
+          },
+        })
+          .then(function (response) {
+            return response.json();
+          })
+          .then((res) => {turnstile.reset("#bland-turnstile"); console.log(res)})
+          .catch((err) => {turnstile.reset("#bland-turnstile"); console.log(err)});
+      }
+
+      const CURRENT_TIMESTAMP_KEY = "CURRENT_TIMESTAMP_KEY";
+      const REQUESTS_COUNT_KEY = "REQUESTS_COUNT_KEY";
+      const MAX_REQUESTS = 3;
+      const VALID_TILL_IN_MINS = 15;
+
+			const submitShared = (e, label) => {
+              if (window.localStorage.getItem(CURRENT_TIMESTAMP_KEY) === null) {
+          window.localStorage.setItem(CURRENT_TIMESTAMP_KEY, new Date());
+        }
+
+        if (window.localStorage.getItem(REQUESTS_COUNT_KEY) === null) {
+          window.localStorage.setItem(REQUESTS_COUNT_KEY, 1);
+        }
+
+        const savedTimestamp = new Date(
+          window.localStorage.getItem(CURRENT_TIMESTAMP_KEY)
+        );
+
+        const savedRequestsCount = parseInt(
+          window.localStorage.getItem(REQUESTS_COUNT_KEY),
+          10
+        );
+
+        const currentTimestamp = new Date();
+        const difference =
+          currentTimestamp.valueOf() - savedTimestamp.valueOf();
+
+        const diffInMins = Math.floor(difference / 1000 / 60);
+
+        if (diffInMins < VALID_TILL_IN_MINS) {
+          if (savedRequestsCount <= MAX_REQUESTS) {
+            window.localStorage.setItem(
+              REQUESTS_COUNT_KEY,
+              savedRequestsCount + 1
+            );
+            requestCallFromBland(label);
+          } else {
+            window.alert(
+              "Max number of calls reached, try again in 15 minutes."
+            );
+          }
+        } else {
+          window.localStorage.setItem(CURRENT_TIMESTAMP_KEY, new Date());
+          window.localStorage.setItem(REQUESTS_COUNT_KEY, 2);
+          requestCallFromBland(label);
+        }
+      }
+
+      document.getElementById("call_submit_1").addEventListener("submit", (e) => submitShared(e, "pn_input_1"));
+      document.getElementById("call_submit_2").addEventListener("submit", (e) => submitShared(e, "pn_input_2"));
+    </script>
+    <script>
+    $(document).ready(function() {
+    // Select the input and the element with the .blinker class
+    let inputField = $('#pn_input_1');
+    let blinkerElement = $('.blinker');
+
+    // Add an event listener for the 'input' event
+    inputField.on('input', function() {
+        // Add the .is-none class to the .blinker element
+        blinkerElement.addClass('is-none');
+    });
+});
+</script>
+
+<script>
+(function() {
+  let lastWidth = window.innerWidth;
+
+  window.addEventListener("resize", function() {
+    const newWidth = window.innerWidth;
+
+    // Check if resized from <991px to ≥991px
+    if (lastWidth < 991 && newWidth >= 991) {
+      const navBtn = document.querySelector(".nav_button.padding-0.w-nav-button");
+
+      // Check if .w--open is applied
+      if (navBtn && navBtn.classList.contains("w--open")) {
+        navBtn.click(); // simulate click
+      }
+    }
+
+    lastWidth = newWidth;
+  });
+})();
+</script>
+<script>
+let nav = document.querySelector('[data-element="nav"]');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY < 20) {
+    nav.classList.add('is-white');
+  } else {
+    nav.classList.remove('is-white');
+  }
+});
+</script>
+`;

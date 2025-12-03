@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import VSL from '../components/VSL';
 import ChallengeSection from '../components/ChallengeSection';
 import AudioComparison from '../components/AudioComparison';
 import BuildProcess from '../components/BuildProcess';
@@ -13,6 +14,7 @@ export default function Home() {
     return (
         <>
             <Hero />
+            <VSL />
             <ChallengeSection />
             <AudioComparison />
             <BuildProcess />

@@ -8,6 +8,7 @@ export default function Hero() {
     const { openModal, registerHeroForm } = useModal();
     const [phone, setPhone] = useState('');
     const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
     const [isAgreed, setIsAgreed] = useState(false);
     const [showCaptcha, setShowCaptcha] = useState(false);
     const [captchaToken, setCaptchaToken] = useState(null);
@@ -26,12 +27,14 @@ export default function Hero() {
         try {
             await submitToN8n({ 
                 phone,
+                email,
                 name: name || undefined, // Only send if not empty 
                 captchaToken: token,
                 source: 'hero_form'
             });
             alert("Sweet! We'll Call You Immediately, Make Sure You're Not on DND");
             setPhone('');
+            setEmail('');
             setIsAgreed(false);
             setCaptchaToken(null);
             setShowCaptcha(false);
@@ -127,13 +130,25 @@ export default function Hero() {
                         </h3>
                         <form onSubmit={handleSubmit}>
                             <div className="form-group" style={{ marginBottom: '1rem' }}>
-                                <label className="form-label">Name (Optional)</label>
+                                <label className="form-label">First Name</label>
                                 <input
                                     type="text"
                                     className="form-input"
                                     placeholder="Your Name"
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
+                                />
+                            </div>
+
+                            <div className="form-group" style={{ marginBottom: '1rem' }}>
+                                <label className="form-label">Email <span style={{ color: 'var(--color-primary)' }}>*</span></label>
+                                <input
+                                    type="email"
+                                    className="form-input"
+                                    placeholder="your@email.com"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    required
                                 />
                             </div>
 
@@ -172,7 +187,7 @@ export default function Hero() {
                                 type="submit" 
                                 disabled={!isAgreed || isSubmitting}
                                 className={`btn btn-primary ${isAgreed ? 'sweeping-animation' : ''}`}
-                                style={{ width: '100%', marginTop: '1.5rem', opacity: isSubmitting ? 0.7 : 1 }}
+                                style={{ width: '100%', marginTop: '1.5rem', opacity: isSubmitting ? 0.7 : 1, fontSize: '1.1em' }}
                             >
                                 {isSubmitting ? 'Submitting...' : 'Call Me Now'}
                             </button>

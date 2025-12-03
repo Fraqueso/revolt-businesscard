@@ -63,6 +63,8 @@ export default function ActionModal() {
 
             if (step === 'phone-input') {
                 payload.phone = formData.phone;
+                // Add email if present in the phone input step
+                if (formData.email) payload.email = formData.email;
             } else {
                 payload.email = formData.email;
             }
@@ -201,12 +203,33 @@ export default function ActionModal() {
                         {step === 'phone-input' && (
                             <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '1rem' }}>
                                 <div>
-                                    <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-text-secondary)' }}>Name (Optional)</label>
+                                    <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-text-secondary)' }}>First Name</label>
                                     <input
                                         type="text"
                                         placeholder="Your Name"
                                         value={formData.name}
                                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                        style={{
+                                            width: '100%',
+                                            padding: '0.75rem',
+                                            background: 'rgba(0, 0, 0, 0.2)',
+                                            border: '1px solid var(--color-border)',
+                                            borderRadius: '0.5rem',
+                                            color: 'white',
+                                            fontSize: '16px'
+                                        }}
+                                    />
+                                </div>
+                                <div>
+                                    <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--color-text-secondary)' }}>
+                                        Email <span style={{ color: 'var(--color-primary)' }}>*</span>
+                                    </label>
+                                    <input
+                                        type="email"
+                                        required
+                                        placeholder="your@email.com"
+                                        value={formData.email}
+                                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                         style={{
                                             width: '100%',
                                             padding: '0.75rem',
