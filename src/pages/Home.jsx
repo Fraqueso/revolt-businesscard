@@ -1,6 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import DualProblem from '../components/DualProblem';
+import ChallengeSection from '../components/ChallengeSection';
 import AudioComparison from '../components/AudioComparison';
 import BuildProcess from '../components/BuildProcess';
 import ComparisonTable from '../components/ComparisonTable';
@@ -13,7 +13,7 @@ export default function Home() {
     return (
         <>
             <Hero />
-            <DualProblem />
+            <ChallengeSection />
             <AudioComparison />
             <BuildProcess />
             <ComparisonTable />
