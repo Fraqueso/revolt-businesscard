@@ -116,7 +116,7 @@ export default function ComparisonTable() {
                     transition={{ delay: 0.4 }}
                 >
                     <button onClick={openModal} className="btn btn-primary btn-glow-hover" style={{ fontSize: '1.2rem', padding: '1rem 3rem' }}>
-                        See Revolt In Action
+                        Test A Free Demo Call
                     </button>
                 </motion.div>
             </div>

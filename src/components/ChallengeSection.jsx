@@ -117,7 +117,7 @@ export default function ChallengeSection() {
                     style={{ textAlign: 'center', marginTop: '4rem' }}
                 >
                     <button onClick={openModal} className="btn btn-primary btn-glow-hover" style={{ fontSize: '1.2rem', padding: '1rem 3rem' }}>
-                        Try The Tech
+                        Book A Demo
                     </button>
                 </motion.div>
             </div>

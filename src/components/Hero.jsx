@@ -49,17 +49,13 @@ export default function Hero() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         
-        // If we have a token already, submit immediately
-        if (captchaToken) {
-            submitHeroForm(captchaToken);
-            return;
-        }
-
-        // Otherwise check phone length and show captcha
-        if (phone.length > 9) {
+        // Always require captcha
+        if (!captchaToken) {
             setShowCaptcha(true);
             return;
         }
+
+        submitHeroForm(captchaToken);
     };
 
     return (
@@ -92,9 +88,9 @@ export default function Hero() {
                             className="hero-cta"
                             style={{ backgroundColor: 'transparent' }}
                         >
-<button onClick={openModal} className="btn btn-primary hero-cta-btn btn-glow-hover">
-    Hear The Difference
-</button>
+                            <button onClick={openModal} className="btn btn-primary hero-cta-btn btn-glow-hover">
+                                Book A Demo
+                            </button>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>
                                 <span style={{ width: '10px', height: '10px', background: '#22c55e', borderRadius: '50%', display: 'inline-block' }}></span>
                                 98% Human Accuracy
@@ -183,15 +179,8 @@ export default function Hero() {
                                 </div>
                             </div>
 
-                            <button 
-                                type="submit" 
-                                disabled={!isAgreed || isSubmitting}
-                                className={`btn btn-primary ${isAgreed ? 'sweeping-animation' : ''}`}
-                                style={{ width: '100%', marginTop: '1.5rem', opacity: isSubmitting ? 0.7 : 1, fontSize: '1.1em' }}
-                            >
-                                {isSubmitting ? 'Submitting...' : 'Call Me Now'}
-                            </button>
-                            {showCaptcha && (
+                            {/* Captcha - Appears after consent checked */}
+                            {isAgreed && (
                                 <motion.div
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
@@ -202,12 +191,26 @@ export default function Hero() {
                                         sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                                         onChange={(token) => {
                                             setCaptchaToken(token);
-                                            submitHeroForm(token);
                                         }}
                                         theme="dark"
                                     />
                                 </motion.div>
                             )}
+
+                            <button 
+                                type="submit" 
+                                disabled={!isAgreed || isSubmitting || !captchaToken}
+                                className={`btn btn-primary ${isAgreed && captchaToken ? 'sweeping-animation' : ''}`}
+                                style={{ 
+                                    width: '100%', 
+                                    marginTop: '1.5rem', 
+                                    opacity: (isSubmitting || !captchaToken) ? 0.5 : 1, 
+                                    fontSize: '1.1em',
+                                    transition: 'all 0.3s ease' 
+                                }}
+                            >
+                                {isSubmitting ? 'Submitting...' : 'Call Me Now'}
+                            </button>
                         </form>
                     </motion.div>
                 </div>

@@ -187,7 +187,7 @@ export default function AudioComparison() {
 
                     <div>
                         <button onClick={openModal} className="btn btn-primary btn-glow-hover" style={{ fontSize: '1.2rem', padding: '1rem 3rem' }}>
-                            Build Your Perfect Agent
+                            Test A Free Demo Call
                         </button>
                     </div>
                 </motion.div>

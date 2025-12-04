@@ -85,7 +85,7 @@ export default function BuildProcess() {
                     transition={{ delay: 0.4 }}
                 >
                     <button onClick={openModal} className="btn btn-primary btn-glow-hover" style={{ fontSize: '1.2rem', padding: '1rem 3rem' }}>
-                        Start Your Custom Build
+                        Book A Demo
                     </button>
                 </motion.div>
             </div>

@@ -7,7 +7,8 @@ import BuildProcess from '../components/BuildProcess';
 import ComparisonTable from '../components/ComparisonTable';
 import Stats from '../components/Stats';
 import TechnicalFeatures from '../components/TechnicalFeatures';
-import SocialProof from '../components/SocialProof';
+import PricingSection from '../components/PricingSection';
+import RiskFreeSection from '../components/RiskFreeSection';
 // VoltageField removed from here as it is now global in App.jsx
 
 export default function Home() {
@@ -16,12 +17,13 @@ export default function Home() {
             <Hero />
             <VSL />
             <ChallengeSection />
-            <AudioComparison />
             <BuildProcess />
-            <ComparisonTable />
             <Stats />
+            <ComparisonTable />
+            <AudioComparison />
             <TechnicalFeatures />
-            <SocialProof />
+            <PricingSection />
+            <RiskFreeSection />
         </>
     );
 }
