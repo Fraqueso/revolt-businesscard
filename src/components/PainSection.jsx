@@ -219,7 +219,7 @@ export default function PainSection() {
                         >
                             {/* Impact text */}
                             <h3 className="pain-impact-title">
-                                Every <span style={{ color: '#ff4d4d' }}>ring</span> unanswered is <br className="mobile-break" /><span style={{ color: '#ff4d4d' }}>revenue lost</span>.
+                                Every <span style={{ color: '#ff4d4d', whiteSpace: 'nowrap' }}>ring unanswered</span> is <br className="mobile-break" /><span style={{ color: '#ff4d4d' }}>revenue lost</span>.
                             </h3>
 
                             <p className="pain-impact-text">

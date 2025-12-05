@@ -11,6 +11,9 @@ export default function Stats() {
         offset: ["start start", "end end"]
     });
 
+    const headerY = useTransform(scrollYProgress, [0, 0.2], [0, -100]);
+    const headerOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
+
     const stats = [
         {
             value: "78%",
@@ -42,23 +45,25 @@ export default function Stats() {
         <section ref={containerRef} className="section-padding" style={{ position: 'relative', height: '300vh' }}>
             <div className="sticky-wrapper" style={{ position: 'sticky', top: 0, height: '100vh', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div style={{ width: '100%', height: '100%' }}>
-                    {/* Header Overlay - Always visible */}
-                    <div
+                    {/* Header Overlay - Animates out on scroll */}
+                    <motion.div
                         style={{ 
                             textAlign: 'center', 
                             position: 'absolute', 
                             top: '15%', 
                             width: '100%', 
                             zIndex: 10,
-                            pointerEvents: 'none'
+                            pointerEvents: 'none',
+                            y: headerY,
+                            opacity: headerOpacity
                         }}
-                >
+                    >
                         <h2 
                             style={{ fontSize: '2.25rem', fontWeight: '700', marginBottom: '1rem', textShadow: '0 4px 20px rgba(0,0,0,0.8)' }}
                         >
                         Speed-To-Lead Is <span style={{ color: '#ff4d4d' }}>Killing</span> Your Close Rate
                     </h2>
-                    </div>
+                    </motion.div>
 
                     <div style={{ position: 'relative', height: '100vh', width: '100vw', margin: '0 auto', left: '50%', transform: 'translateX(-50%)' }}>
                         {stats.map((stat, index) => {

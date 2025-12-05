@@ -35,7 +35,7 @@ export default function Simulator() {
                     background: 'var(--color-bg-secondary)',
                     border: '1px solid var(--color-border)',
                     borderRadius: 'var(--radius-lg)',
-                    padding: '3rem'
+                    padding: 'clamp(1.5rem, 5vw, 3rem)' // Responsive padding
                 }}>
                     <div style={{ display: 'grid', gap: '2rem', marginBottom: '3rem' }}>
                         <div className="form-group">
@@ -84,9 +84,26 @@ export default function Simulator() {
                         textAlign: 'center'
                     }}>
                         <h3 style={{ marginBottom: '0.5rem' }}>Potential Monthly Revenue Increase</h3>
-                        <div style={{ fontSize: '3rem', fontWeight: '700', color: 'var(--color-primary)' }}>
+                        <div className="simulator-result" style={{ 
+                            fontSize: 'clamp(1.5rem, 5vw, 3rem)', 
+                            fontWeight: '700', 
+                            color: 'var(--color-primary)',
+                            whiteSpace: 'nowrap',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis'
+                        }}>
                             ${calculateLostRevenue().toLocaleString(undefined, { maximumFractionDigits: 2 })}{calculateLostRevenue() >= MAX_REVENUE ? '+' : ''}
                         </div>
+                        
+                        {/* Mobile font adjustment */}
+                        <style>{`
+                            @media (max-width: 480px) {
+                                .simulator-result {
+                                    font-size: clamp(1rem, 8vw, 2rem) !important;
+                                }
+                            }
+                        `}</style>
+
                         <p style={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)', marginTop: '1rem' }}>
                             With Revolt's instant response, you could capture 50% more of your missed opportunities.
                             <br />
