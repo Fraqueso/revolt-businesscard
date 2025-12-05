@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useModal } from '../context/ModalContext';
 
 export default function VSL() {
-    const { scrollToHero } = useModal();
+    const { openModal } = useModal();
 
     return (
         <section className="section-padding" style={{ position: 'relative', overflow: 'hidden' }}>
@@ -83,7 +83,7 @@ export default function VSL() {
 
                     <div style={{ textAlign: 'center' }}>
                         <button 
-                            onClick={scrollToHero}
+                            onClick={openModal}
                             className="btn btn-primary btn-glow-hover"
                             style={{ fontSize: '1.2rem', padding: '1rem 3rem' }}
                         >

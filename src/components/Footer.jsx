@@ -1,10 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useModal } from '../context/ModalContext';
 
 export default function Footer() {
+    const { openModal } = useModal();
+    
     const handleLinkClick = () => {
         window.scrollTo(0, 0);
+    };
+
+    const handleContactClick = (e) => {
+        e.preventDefault();
+        openModal();
     };
 
     return (
@@ -62,18 +70,26 @@ export default function Footer() {
                         <h4 style={{ fontSize: '1rem', fontWeight: '700', marginBottom: '1.5rem', color: 'white' }}>Company</h4>
                         <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                             {/* Removed Careers */}
-                            {['About', 'Contact'].map((item, i) => (
-                                <li key={i} style={{ marginBottom: '0.75rem' }}>
-                                    <Link 
-                                        to={item === 'About' ? '/about' : '#'}
-                                        onClick={handleLinkClick}
-                                        style={{ color: 'var(--color-text-secondary)', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }} 
-                                        className="footer-link"
-                                    >
-                                        {item}
-                                    </Link>
-                                </li>
-                            ))}
+                            <li style={{ marginBottom: '0.75rem' }}>
+                                <Link 
+                                    to="/about"
+                                    onClick={handleLinkClick}
+                                    style={{ color: 'var(--color-text-secondary)', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }} 
+                                    className="footer-link"
+                                >
+                                    About
+                                </Link>
+                            </li>
+                            <li style={{ marginBottom: '0.75rem' }}>
+                                <a 
+                                    href="#"
+                                    onClick={handleContactClick}
+                                    style={{ color: 'var(--color-text-secondary)', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }} 
+                                    className="footer-link"
+                                >
+                                    Contact
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
