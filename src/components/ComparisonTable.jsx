@@ -491,7 +491,18 @@ export default function ComparisonTable() {
                     }
 
                     .comparison-nav-btn {
-                        display: none !important; /* Hide arrows on mobile */
+                        display: flex !important; /* Force display arrows on mobile */
+                        width: 36px !important;
+                        height: 36px !important;
+                        background: rgba(0,0,0,0.5) !important; /* More visible bg */
+                    }
+
+                    .comparison-nav-btn.left {
+                        left: -10px !important; /* Adjust position */
+                    }
+
+                    .comparison-nav-btn.right {
+                        right: -10px !important; /* Adjust position */
                     }
                 }
             `}</style>

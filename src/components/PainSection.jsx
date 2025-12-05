@@ -58,43 +58,10 @@ export default function PainSection() {
     const contentOpacity = useTransform(scrollYProgress, [0.7, 0.85], [0, 1]);
     const contentY = useTransform(scrollYProgress, [0.7, 0.85], [20, 0]);
 
-    // === Background Overlay Animation ===
-    // Start as slight red around Ring 1 (small scale)
-    // Expand dramatically when Ring 3 hits (large scale)
-    // Scale: 0.2 (tight) -> 1.5 (envelopes screen)
-    // Opacity: 0.2 -> 0.4 -> fade out
-    
-    const bgScale = useTransform(scrollYProgress, 
-        [0, 0.5, 0.8], 
-        [0.2, 0.8, 1.5] // Start small, get massive
-    );
-    
-    const bgOpacity = useTransform(scrollYProgress, 
-        [0, 0.5, 0.65, 0.7, 0.85], 
-        [0, 0, 0.4, 0.4, 0] // Stay 0 until Ring 3 starts (0.65), then fade in, then fade out with text
-    );
-
     return (
         <section ref={sectionRef} className="section-padding" style={{ position: 'relative', height: '300vh' }}>
             <div style={{ position: 'sticky', top: 0, height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
                 
-                {/* Animated Background Overlay */}
-                <motion.div style={{
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                    x: '-50%',
-                    y: '-50%',
-                    width: '100vw', // Make it square so it's a perfect circle scaling up
-                    height: '100vw',
-                    background: 'radial-gradient(circle, rgba(255, 77, 77, 0.6) 0%, rgba(255, 77, 77, 0.1) 60%, transparent 80%)',
-                    opacity: bgOpacity,
-                    scale: bgScale,
-                    pointerEvents: 'none',
-                    zIndex: 0,
-                    borderRadius: '50%' // Force circle shape for expansion
-                }} />
-
                 <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                     <div style={{ 
                         textAlign: 'center',
@@ -149,7 +116,7 @@ export default function PainSection() {
                                         repeatType: "loop"
                                     }}
                                 >
-                                    ring...
+                                    The phone is ringing...
                                 </motion.span>
                             </motion.div>
                             
@@ -178,7 +145,7 @@ export default function PainSection() {
                                         delay: 0.1
                                     }}
                                 >
-                                    Ring
+                                    Ringing...
                                 </motion.span>
                             </motion.div>
                             
@@ -208,7 +175,7 @@ export default function PainSection() {
                                         delay: 0.2
                                     }}
                                 >
-                                    RING
+                                    RINGING!
                                 </motion.span>
                             </motion.div>
                         </div>

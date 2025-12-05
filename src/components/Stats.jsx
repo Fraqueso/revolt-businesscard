@@ -57,7 +57,7 @@ export default function Stats() {
                             y: headerY,
                             opacity: headerOpacity
                         }}
-                    >
+                >
                         <h2 
                             style={{ fontSize: '2.25rem', fontWeight: '700', marginBottom: '1rem', textShadow: '0 4px 20px rgba(0,0,0,0.8)' }}
                         >
