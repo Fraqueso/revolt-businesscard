@@ -201,14 +201,7 @@ export default function ComparisonTable() {
                 </div>
 
                 {/* Comparison Carousel */}
-                <div style={{ 
-                    position: 'relative',
-                    padding: '0 80px',
-                    flex: 1,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                }}>
+                <div className="comparison-container">
                     {/* Navigation Arrows - Left */}
                     <button
                         onClick={prevSlide}
@@ -463,18 +456,42 @@ export default function ComparisonTable() {
 
             {/* Mobile styles injection */}
             <style>{`
+                .comparison-container {
+                    position: relative;
+                    padding: 0 80px;
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
                 @media (max-width: 768px) {
+                    .comparison-container {
+                        padding: 0 20px;
+                    }
+
                     .comparison-card {
                         width: 100% !important;
                         flex: 1 1 100% !important;
-                        margin-bottom: 20px;
                         min-width: unset !important;
+                        padding: 30px 20px !important; /* Smaller padding */
+                        margin-bottom: 24px !important; /* Restore spacing between cards */
                     }
+
+                    .comparison-card:last-child {
+                        margin-bottom: 0 !important;
+                    }
+
+                    .comparison-card h3 {
+                        font-size: 24px !important; /* Smaller headlines */
+                    }
+
+                    .comparison-card p {
+                        font-size: 14px !important; /* Smaller text */
+                    }
+
                     .comparison-nav-btn {
-                        display: none !important; /* Hide arrows on mobile, rely on dots/swipe or just stack */
-                    }
-                    .comparison-card.loser {
-                        margin-top: 20px;
+                        display: none !important; /* Hide arrows on mobile */
                     }
                 }
             `}</style>
