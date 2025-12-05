@@ -108,3 +108,36 @@ svg {
     min-height: 100vh;
     position: relative;
 }
+
+/* Responsive line breaks for PainSection */
+.mobile-break {
+    display: none;
+}
+
+.pain-impact-title {
+    font-size: min(6vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+}
+
+.pain-impact-text {
+    font-size: min(5vw, 1.5rem);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+@media (max-width: 768px) {
+    .mobile-break {
+        display: block;
+    }
+    
+    .mobile-responsive-btn {
+        font-size: 0.9rem !important;
+        padding: 0.8rem 1.5rem !important;
+        width: 100%;
+        max-width: 90vw;
+    }
+}

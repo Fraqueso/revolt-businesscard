@@ -52,12 +52,12 @@ export default function Stats() {
                             zIndex: 10,
                             pointerEvents: 'none'
                         }}
-                    >
+                >
                         <h2 
                             style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '1rem', textShadow: '0 4px 20px rgba(0,0,0,0.8)' }}
                         >
-                            Speed-To-Lead Is <span style={{ color: '#ff4d4d' }}>Killing</span> Your Close Rate
-                        </h2>
+                        Speed-To-Lead Is <span style={{ color: '#ff4d4d' }}>Killing</span> Your Close Rate
+                    </h2>
                     </div>
 
                     <div style={{ position: 'relative', height: '100vh', width: '100vw', margin: '0 auto', left: '50%', transform: 'translateX(-50%)' }}>
@@ -95,9 +95,9 @@ export default function Stats() {
                             const finalScale = isLast ? useTransform(scrollYProgress, [start, start + 0.05], [0.95, 1]) : scale;
 
                             return (
-                                <motion.div
-                                    key={index}
-                                    style={{
+                        <motion.div
+                            key={index}
+                            style={{
                                         opacity: finalOpacity,
                                         scale: finalScale,
                                         position: 'absolute',
@@ -116,9 +116,9 @@ export default function Stats() {
                                         border: 'none',
                                         borderRadius: '0',
                                         padding: '0',
-                                        textAlign: 'center',
-                                        display: 'flex',
-                                        flexDirection: 'column',
+                                textAlign: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
                                         justifyContent: 'center',
                                         position: 'relative',
                                         overflow: 'hidden',
@@ -128,54 +128,55 @@ export default function Stats() {
                                         boxShadow: 'none'
                                     }}>
                                         <div style={{ position: 'relative', zIndex: 1, padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
-                                            <div style={{
-                                                fontSize: 'min(15vw, 8rem)',
-                                                fontWeight: '800',
-                                                marginBottom: '2rem',
-                                                background: 'var(--gradient-primary)',
-                                                WebkitBackgroundClip: 'text',
-                                                WebkitTextFillColor: 'transparent',
-                                                lineHeight: 1
-                                            }}>
-                                                {stat.value}
-                                            </div>
+                                <div style={{
+                                    fontSize: 'min(15vw, 8rem)',
+                                    fontWeight: '800',
+                                    marginBottom: '2rem',
+                                    background: 'var(--gradient-primary)',
+                                    WebkitBackgroundClip: 'text',
+                                    WebkitTextFillColor: 'transparent',
+                                    lineHeight: 1,
+                                    filter: 'drop-shadow(0 0 30px rgba(255, 255, 255, 0.15))'
+                                }}>
+                                    {stat.value}
+                                </div>
                                             <p style={{ fontSize: 'min(5vw, 2.5rem)', fontWeight: '600', marginBottom: '2rem', color: 'var(--color-text)' }}>
-                                                {stat.label}
-                                            </p>
+                                    {stat.label}
+                                </p>
                                             <p style={{ fontSize: 'min(4vw, 1.5rem)', color: 'var(--color-text-secondary)', lineHeight: '1.6', marginBottom: '1rem', maxWidth: '800px', margin: '0 auto' }}>
                                                 {stat.subtext}
                                             </p>
-                                        </div>
-                                        <div style={{ position: 'absolute', bottom: '2rem', width: '100%', textAlign: 'center', zIndex: 1, padding: '0 1rem' }}>
                                             {stat.source && (
                                                 <div style={{ 
                                                     fontSize: '1rem', 
                                                     color: 'var(--color-text-secondary)', 
                                                     opacity: 0.6, 
                                                     fontStyle: 'italic',
-                                                    maxWidth: '280px',
-                                                    margin: '0 auto' 
+                                                    marginTop: '1rem'
                                                 }}>
                                                     Source: {stat.source}
                                                 </div>
                                             )}
                                         </div>
+                                        <div style={{ position: 'absolute', bottom: '2rem', width: '100%', textAlign: 'center', zIndex: 1, padding: '0 1rem' }}>
+                                            
+                                        </div>
                                     </div>
-                                </motion.div>
+                        </motion.div>
                             );
                         })}
-                    </div>
+                </div>
 
-                    <motion.div
+                <motion.div
                         style={{ textAlign: 'center', position: 'absolute', bottom: '20%', width: '100%', zIndex: 10 }}
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                    >
+                    viewport={{ once: true }}
+                >
                         <button onClick={openModal} className="btn btn-primary btn-glow-hover" style={{ fontSize: '1.2rem', padding: '0.6rem 3rem', boxShadow: '0 0 20px rgba(0,0,0,0.5)' }}>
                             Book A Demo
-                        </button>
-                    </motion.div>
+                    </button>
+                </motion.div>
                 </div>
             </div>
         </section>

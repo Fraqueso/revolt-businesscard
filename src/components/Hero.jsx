@@ -92,8 +92,8 @@ export default function Hero() {
                                 Book A Demo
                             </button>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>
-                                <span style={{ width: '10px', height: '10px', background: '#22c55e', borderRadius: '50%', display: 'inline-block' }}></span>
-                                98% Human Accuracy
+                                <span style={{ width: '10px', height: '10px', background: '#22c55e', borderRadius: '50%', display: 'inline-block', flexShrink: 0 }}></span>
+                                Your Leads Go Cold in 5 Minutes. Revolt Calls Them in 60 Seconds.
                             </div>
                         </motion.div>
 

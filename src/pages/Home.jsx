@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import VSL from '../components/VSL';
 import ChallengeSection from '../components/ChallengeSection';
+import PainSection from '../components/PainSection';
 import AudioComparison from '../components/AudioComparison';
 import BuildProcess from '../components/BuildProcess';
 import ComparisonTable from '../components/ComparisonTable';
@@ -17,12 +18,13 @@ export default function Home() {
             <Hero />
             <VSL />
             <ChallengeSection />
+            <PainSection />
             <BuildProcess />
+            <PricingSection />
             <Stats />
             <ComparisonTable />
             <AudioComparison />
             <TechnicalFeatures />
-            <PricingSection />
             <RiskFreeSection />
         </>
     );

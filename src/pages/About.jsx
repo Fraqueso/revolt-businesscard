@@ -48,27 +48,46 @@ export default function About() {
 
                     <div className="why-revolt-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center' }}>
                         <div className="glass-card" style={{ padding: '0', overflow: 'hidden', aspectRatio: '16/9', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(255, 255, 255, 0.05)' }}>
-                            {/* Placeholder for Image */}
-                            <div style={{ color: 'rgba(255, 255, 255, 0.3)', textAlign: 'center' }}>
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '1rem' }}>
-                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                                    <polyline points="21 15 16 10 5 21"></polyline>
-                                </svg>
-                                <p>Insert Image Here</p>
-                            </div>
-                            {/* <img src="/path/to/your/image.jpg" alt="Why Revolt" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> */}
+                                <img 
+                                    src="/assets/f7c2059a-f683-4758-9a40-733b87d24124.png" 
+                                    alt="Why Revolt" 
+                                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                                />
                         </div>
 
                         <div className="editorial-content">
                             <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--color-text-secondary)', marginBottom: '1.2rem' }}>
-                                In a world where attention is the new currency, <span style={{ color: 'var(--color-text)', fontWeight: '500' }}>speed is the only differentiator that matters.</span> Traditional staffing models are breaking. They are crumbling under the pressure of 24/7 demand. Your customers don't wait for business hours—they wait for answers.
+                                <span style={{ color: 'var(--color-text)', fontWeight: '600', fontSize: '1.1rem' }}><strong style={{ color: '#d16d86' }}><em>Speed</em></strong> is the only differentiator left.</span>
                             </p>
-                            <p style={{ fontSize: '1.05rem', lineHeight: '1.7', color: 'var(--color-text-secondary)', marginBottom: '1.2rem' }}>
-                                Voice agents aren't just about automation. They're about <strong style={{ color: 'var(--color-text)' }}>consistency</strong>. A human has bad days. They get tired. They miss details. Revolt never sleeps. It never forgets. It treats your 1000th caller with the exact same enthusiasm as your first.
+                            <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--color-text-secondary)', marginBottom: '1.2rem' }}>
+                                Your customers aren't waiting for business hours. They're not waiting at all. They're calling whoever answers first. And if that's not you? <strong style={{ color: '#d16d86' }}><em>It's your competitor.</em></strong>
                             </p>
-                            <p style={{ fontSize: '1rem', lineHeight: '1.6', color: 'var(--color-text-secondary)' }}>
-                                But why Revolt specifically? Because we didn't just build a robot. We built a top-performer. We analyzed thousands of successful sales calls to engineer an AI that doesn't just "take messages"—it handles objections, builds rapport, and drives revenue. It's not just a voice agent; it's your best employee, cloned.
+                            <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--color-text-secondary)', marginBottom: '1.2rem' }}>
+                                Traditional staffing is broken. You hire. You train. They quit. You start over. <strong style={{ color: 'var(--color-text)' }}>$80k per rep. 3-6 months to ramp. 35% turnover.</strong> It's an expensive hamster wheel.
+                            </p>
+                            <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--color-text-secondary)', marginBottom: '1.2rem' }}>
+                                Generic AI isn't the answer either. Those robotic scripts? Prospects hang up in <strong style={{ color: '#d16d86' }}><em>3 seconds</em></strong>. You traded one problem for another.
+                            </p>
+                            <p style={{ fontSize: '1.1rem', fontWeight: '700', color: 'var(--color-text)', marginBottom: '1rem', marginTop: '1.5rem' }}>
+                                Here's the fix.
+                            </p>
+                            <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--color-text-secondary)', marginBottom: '1.2rem' }}>
+                                Revolt isn't a bot. It's a top performer—engineered from thousands of winning sales calls. Real calls. <strong style={{ color: '#d16d86' }}><em>Calls that closed.</em></strong>
+                            </p>
+                            <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--color-text-secondary)', marginBottom: '1.2rem' }}>
+                                We studied what makes the best reps convert. The objection handling. The rapport building. The subtle tone shifts. Then we built an AI that does exactly that.
+                            </p>
+                            <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--color-text-secondary)', marginBottom: '1.2rem' }}>
+                                Humans have bad days. They get tired. They miss details. They forget the script.
+                            </p>
+                            <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--color-text-secondary)', marginBottom: '1.2rem' }}>
+                                <strong style={{ color: 'var(--color-text)' }}>Revolt doesn't.</strong> It never sleeps. Never forgets. Never has a bad Monday. It gives your 1,000th caller the exact same energy as your first.
+                            </p>
+                            <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--color-text-secondary)', marginBottom: '1.2rem' }}>
+                                And here's the kicker—it's not a template. We train it on <strong style={{ color: '#d16d86' }}><em>YOUR</em></strong> recordings. <strong style={{ color: '#d16d86' }}><em>YOUR</em></strong> playbook. <strong style={{ color: '#d16d86' }}><em>YOUR</em></strong> voice.
+                            </p>
+                            <p style={{ fontSize: '1.05rem', fontWeight: '600', color: 'var(--color-text)', marginTop: '1rem' }}>
+                                It's not just a voice agent. It's your best employee, cloned. Running 24/7. On every line.
                             </p>
                         </div>
                     </div>
