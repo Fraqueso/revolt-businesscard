@@ -15,21 +15,44 @@ export default function PainSection() {
     // Fades OUT at 0.25 (when Ring 2 starts)
     const scale1 = useTransform(scrollYProgress, [0, 0.25], [0.6, 0.6]); // Start smaller (0.6)
     const opacity1 = useTransform(scrollYProgress, [0, 0.25, 0.3], [1, 1, 0]); // Start visible, fade out
-    const y1 = useTransform(scrollYProgress, [0, 0.25], ['2rem', '2rem']); // Move down to align visually
-
+    // Default desktop transform
+    const y1Desktop = useTransform(scrollYProgress, [0, 0.25], ['2rem', '2rem']); 
+    // Mobile transform - centers more aggressively (use 17.5vh since flex container is centered)
+    const y1Mobile = useTransform(scrollYProgress, [0, 0.25], ['17.5vh', '17.5vh']); 
+    
     // === Ring 2 ===
     // Scales from 0.8 to 1.5 (Bigger)
     // Fades IN at 0.25, Fades OUT at 0.5 (when Ring 3 starts)
     const scale2 = useTransform(scrollYProgress, [0.25, 0.4], [0.8, 1.5]);
     const opacity2 = useTransform(scrollYProgress, [0.25, 0.3, 0.45, 0.5], [0, 1, 1, 0]);
-    const y2 = useTransform(scrollYProgress, [0.25, 0.4], [-50, 0]);
+    // Default desktop transform
+    const y2Desktop = useTransform(scrollYProgress, [0.25, 0.4], [-50, 0]);
+    // Mobile transform - centers more aggressively (use 17.5vh since flex container is centered)
+    const y2Mobile = useTransform(scrollYProgress, [0.25, 0.4], ['17.5vh', '17.5vh']);
 
     // === Ring 3 ===
     // Scales from 0.8 to 3 (Massive)
-    // Fades IN at 0.5, Stays visible
+    // Fades IN at 0.5, Stays visible until content starts appearing
     const scale3 = useTransform(scrollYProgress, [0.5, 0.65], [0.8, 3]);
-    const opacity3 = useTransform(scrollYProgress, [0.5, 0.55], [0, 1]);
-    const y3 = useTransform(scrollYProgress, [0.5, 0.65], [-50, 0]);
+    // Fades out when content appears (0.7 - 0.85)
+    const opacity3 = useTransform(scrollYProgress, [0.5, 0.55, 0.7, 0.85], [0, 1, 1, 0]);
+    // Default desktop transform
+    const y3Desktop = useTransform(scrollYProgress, [0.5, 0.65, 0.85], [-50, 0, -300]);
+    // Mobile transform - lifts UP significantly at the end to clear way for text
+    const y3Mobile = useTransform(scrollYProgress, [0.5, 0.65, 0.85], ['17.5vh', '17.5vh', '-30vh']);
+
+    // Check if mobile
+    const [isMobile, setIsMobile] = React.useState(false);
+    React.useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    const y1 = isMobile ? y1Mobile : y1Desktop;
+    const y2 = isMobile ? y2Mobile : y2Desktop;
+    const y3 = isMobile ? y3Mobile : y3Desktop;
 
     // Content opacity/reveal for the final text
     const contentOpacity = useTransform(scrollYProgress, [0.7, 0.85], [0, 1]);
@@ -47,8 +70,8 @@ export default function PainSection() {
     );
     
     const bgOpacity = useTransform(scrollYProgress, 
-        [0, 0.5, 0.8, 0.95], 
-        [0.15, 0.3, 0.4, 0] // Fade in, stay strong, then smooth fade out
+        [0, 0.5, 0.65, 0.7, 0.85], 
+        [0, 0, 0.4, 0.4, 0] // Stay 0 until Ring 3 starts (0.65), then fade in, then fade out with text
     );
 
     return (
@@ -196,7 +219,7 @@ export default function PainSection() {
                         >
                             {/* Impact text */}
                             <h3 className="pain-impact-title">
-                                Every ring unanswered is <br className="mobile-break" /><span style={{ color: '#ff4d4d' }}>revenue lost</span>.
+                                Every <span style={{ color: '#ff4d4d' }}>ring</span> unanswered is <br className="mobile-break" /><span style={{ color: '#ff4d4d' }}>revenue lost</span>.
                             </h3>
 
                             <p className="pain-impact-text">

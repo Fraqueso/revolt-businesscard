@@ -88,12 +88,12 @@ export default function Hero() {
                             className="hero-cta"
                             style={{ backgroundColor: 'transparent' }}
                         >
-                            <button onClick={openModal} className="btn btn-primary hero-cta-btn btn-glow-hover">
+<button onClick={openModal} className="btn btn-primary hero-cta-btn btn-glow-hover">
                                 Book A Demo
-                            </button>
+</button>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>
                                 <span style={{ width: '10px', height: '10px', background: '#22c55e', borderRadius: '50%', display: 'inline-block', flexShrink: 0 }}></span>
-                                Your Leads Go Cold in 5 Minutes. Revolt Calls Them in 60 Seconds.
+                                current average dial time: 22.4 seconds
                             </div>
                         </motion.div>
 

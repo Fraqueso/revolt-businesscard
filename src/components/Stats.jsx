@@ -47,14 +47,14 @@ export default function Stats() {
                         style={{ 
                             textAlign: 'center', 
                             position: 'absolute', 
-                            top: '10%', 
+                            top: '15%', 
                             width: '100%', 
                             zIndex: 10,
                             pointerEvents: 'none'
                         }}
                 >
                         <h2 
-                            style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '1rem', textShadow: '0 4px 20px rgba(0,0,0,0.8)' }}
+                            style={{ fontSize: '2.25rem', fontWeight: '700', marginBottom: '1rem', textShadow: '0 4px 20px rgba(0,0,0,0.8)' }}
                         >
                         Speed-To-Lead Is <span style={{ color: '#ff4d4d' }}>Killing</span> Your Close Rate
                     </h2>
@@ -144,9 +144,9 @@ export default function Stats() {
                                     {stat.label}
                                 </p>
                                             <p style={{ fontSize: 'min(4vw, 1.5rem)', color: 'var(--color-text-secondary)', lineHeight: '1.6', marginBottom: '1rem', maxWidth: '800px', margin: '0 auto' }}>
-                                                {stat.subtext}
-                                            </p>
-                                            {stat.source && (
+                                    {stat.subtext}
+                                </p>
+                            {stat.source && (
                                                 <div style={{ 
                                                     fontSize: '1rem', 
                                                     color: 'var(--color-text-secondary)', 
@@ -154,10 +154,10 @@ export default function Stats() {
                                                     fontStyle: 'italic',
                                                     marginTop: '1rem'
                                                 }}>
-                                                    Source: {stat.source}
-                                                </div>
-                                            )}
-                                        </div>
+                                    Source: {stat.source}
+                                </div>
+                            )}
+                </div>
                                         <div style={{ position: 'absolute', bottom: '2rem', width: '100%', textAlign: 'center', zIndex: 1, padding: '0 1rem' }}>
                                             
                                         </div>
