@@ -8,6 +8,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Revolt</title>
+    <!-- Retell AI Widget Integration -->
+    <script
+      id="retell-widget"
+      src="https://dashboard.retellai.com/retell-widget.js"
+      data-public-key="public_key_36ec4cd49b403535cd473"
+      data-agent-id="agent_01e4cd6566aa3cbc34e1d3722f"
+      data-widget="chat" 
+      data-title="Chat with us"
+      data-color="#8b5cf6"
+      defer
+    ></script>
+    <script>
+      // Helper to reset chat session for testing/user convenience
+      window.resetRetellChat = () => {
+        // Clear all local storage keys that might be related to Retell
+        Object.keys(localStorage).forEach((key) => {
+          if (key.toLowerCase().includes('retell')) {
+            localStorage.removeItem(key);
+          }
+        });
+        location.reload();
+      };
+    </script>
     <style>
       :root {
         background-color: #030014;

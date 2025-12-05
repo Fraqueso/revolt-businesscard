@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Background from './components/Background';
 import VoltageField from './components/VoltageField';
+import ChatResetter from './components/ChatResetter';
 import Home from './pages/Home';
 import About from './pages/About';
 import Simulator from './pages/Simulator';
@@ -39,6 +40,7 @@ function AppContent() {
       <VoltageField />
       <Header />
       <ActionModal />
+      <ChatResetter />
       <Routes key={pageKey}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
