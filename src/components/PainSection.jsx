@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useModal } from '../context/ModalContext';
+import RingParticleEffect from './RingParticleEffect';
 
 export default function PainSection() {
     const { openModal } = useModal();
@@ -62,6 +63,8 @@ export default function PainSection() {
         <section ref={sectionRef} className="section-padding" style={{ position: 'relative', height: '300vh' }}>
             <div style={{ position: 'sticky', top: 0, height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
                 
+                <RingParticleEffect scrollYProgress={scrollYProgress} isMobile={isMobile} />
+
                 <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                     <div style={{ 
                         textAlign: 'center',
