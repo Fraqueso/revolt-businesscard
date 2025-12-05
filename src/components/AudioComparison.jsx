@@ -181,7 +181,7 @@ export default function AudioComparison() {
                         marginBottom: '2rem'
                     }}>
                         <span style={{ fontSize: '1.1rem', fontWeight: '600' }}>
-                            In blind A/B tests, <span className="text-gradient">87% of prospects</span> couldn't tell our agents from human sales reps.
+                            Can you tell the difference? <span className="text-gradient">Most people can...</span>
                         </span>
                     </div>
 
