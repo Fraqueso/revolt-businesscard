@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useModal } from '../context/ModalContext';
 import HourglassBackground from './HourglassBackground';
@@ -6,6 +6,15 @@ import HourglassBackground from './HourglassBackground';
 export default function Stats() {
     const { openModal } = useModal();
     const containerRef = useRef(null);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start start", "end end"]
@@ -50,16 +59,17 @@ export default function Stats() {
                         style={{ 
                             textAlign: 'center', 
                             position: 'absolute', 
-                            top: '15%', 
+                            top: isMobile ? '10%' : '15%', 
                             width: '100%', 
                             zIndex: 10,
                             pointerEvents: 'none',
                             y: headerY,
-                            opacity: headerOpacity
+                            opacity: headerOpacity,
+                            padding: '0 1rem'
                         }}
                 >
                         <h2 
-                            style={{ fontSize: '2.25rem', fontWeight: '700', marginBottom: '1rem', textShadow: '0 4px 20px rgba(0,0,0,0.8)' }}
+                            style={{ fontSize: isMobile ? '1.75rem' : '2.25rem', fontWeight: '700', marginBottom: '1rem', textShadow: '0 4px 20px rgba(0,0,0,0.8)' }}
                         >
                         Speed-To-Lead Is <span style={{ color: '#ff4d4d' }}>Killing</span> Your Close Rate
                     </h2>
@@ -106,7 +116,7 @@ export default function Stats() {
                                         opacity: finalOpacity,
                                         scale: finalScale,
                                         position: 'absolute',
-                                        top: '-5%', // Shift everything up
+                                        top: isMobile ? '5%' : '-5%', // Shift everything up, but less on mobile to avoid header overlap
                                         left: 0,
                                         width: '100%',
                                         height: '100%',
