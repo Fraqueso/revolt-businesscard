@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SimulatorCarousel from '../components/SimulatorCarousel';
 
 export default function Simulator() {
     const [leads, setLeads] = useState(100);
@@ -20,6 +21,10 @@ export default function Simulator() {
     return (
         <div className="page-content" style={{ paddingTop: '8rem', paddingBottom: '4rem' }}>
             <div className="container">
+                <div style={{ marginBottom: '6rem' }}>
+                    <SimulatorCarousel />
+                </div>
+
                 <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                     <h1 className="page-title">
                         Speed-to-Lead <span className="text-gradient">Impact Calculator</span>
