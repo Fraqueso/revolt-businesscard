@@ -80,8 +80,8 @@ export default function PainSection() {
                             fontWeight: '800', 
                             marginBottom: '2rem',
                             lineHeight: '1.1',
-                            fontFamily: 'monospace', 
-                            letterSpacing: '-0.05em',
+                            fontFamily: 'var(--font-sans)', // Changed from monospace to global sans
+                            letterSpacing: '-0.02em', // Adjusted letter spacing to match sans
                             position: 'relative',
                             width: '100%',
                             height: '150px', // Fixed height container

@@ -39,7 +39,17 @@ export async function submitToN8n(data) {
   // For now, we fall back to the direct URL if no API proxy is found.
   
   // const API_ENDPOINT = '/api/submit'; // UNCOMMENT THIS when you deploy the proxy
-  const API_ENDPOINT = import.meta.env.VITE_N8N_WEBHOOK_URL || 'https://connorenosi.app.n8n.cloud/webhook/local-host-website-to-trigger-call';
+  // const API_ENDPOINT = import.meta.env.VITE_N8N_WEBHOOK_URL || 'https://connorenosi.app.n8n.cloud/webhook/local-host-website-to-trigger-call';
+  
+  // Use correct webhook based on source
+  let API_ENDPOINT;
+  
+  if (data.source === 'action_modal_qualification') {
+    API_ENDPOINT = 'https://connorenosi.app.n8n.cloud/webhook/get-your-custom-agent-built';
+  } else {
+    // Default fallback for phone calls and other sources
+    API_ENDPOINT = import.meta.env.VITE_N8N_WEBHOOK_URL || 'https://connorenosi.app.n8n.cloud/webhook/local-host-website-to-trigger-call';
+  }
 
   // ... rest of formatting logic ...
   
