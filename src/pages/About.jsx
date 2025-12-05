@@ -48,21 +48,19 @@ export default function About() {
 
                     <div className="why-revolt-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center' }}>
                         <div style={{ position: 'relative', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                             <img 
-                                src="/assets/f7c2059a-f683-4758-9a40-733b87d24124.png" 
-                                alt="Why Revolt" 
-                                style={{ 
-                                    width: '100%', 
-                                    height: 'auto', 
-                                    objectFit: 'contain',
-                                    position: 'relative',
-                                    zIndex: 1,
-                                    maskImage: 'radial-gradient(circle at center, black 40%, transparent 100%)',
-                                    WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 100%)',
-                                    opacity: 0.9,
-                                    filter: 'contrast(1.1) saturate(1.1)' 
-                                }} 
-                            />
+                             <div className="glass-card" style={{ padding: '0', overflow: 'hidden', aspectRatio: '16/9', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(255, 255, 255, 0.05)' }}>
+                                <img 
+                                    src="/assets/f7c2059a-f683-4758-9a40-733b87d24124.png" 
+                                    alt="Why Revolt" 
+                                    style={{ 
+                                        width: '100%', 
+                                        height: 'auto', 
+                                        objectFit: 'contain',
+                                        position: 'relative',
+                                        zIndex: 1
+                                    }} 
+                                />
+                             </div>
                         </div>
 
                         <div className="editorial-content">
