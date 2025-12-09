@@ -4,11 +4,11 @@ import { useModal } from '../context/ModalContext';
 import { submitToN8n } from '../utils/api';
 
 const PERSONAS = [
-    { title: "Revolt B2B SaaS Cold Caller", color: "#3b82f6" },
-    { title: "Revolt Realtor in Los Angeles", color: "#10b981" },
-    { title: "Revolt Family Law Firm", color: "#8b5cf6" },
-    { title: "Revolt Home Handymen", color: "#f59e0b" },
-    { title: "Revolt Dental Office", color: "#ec4899" }
+    { title: "Revolt B2B SaaS Cold Caller", color: "#3b82f6", bg: "#dbeafe" },
+    { title: "Revolt Realtor in Los Angeles", color: "#10b981", bg: "#d1fae5" },
+    { title: "Revolt Family Law Firm", color: "#8b5cf6", bg: "#ede9fe" },
+    { title: "Revolt Home Handymen", color: "#f59e0b", bg: "#fef3c7" },
+    { title: "Revolt Dental Office", color: "#ec4899", bg: "#fce7f3" }
 ];
 
 export default function SimulatorCarousel() {
@@ -77,46 +77,40 @@ export default function SimulatorCarousel() {
         if (index === nextIndex) return 'right';
         if (index === prevIndex) return 'left';
         
-        // Return hidden state for non-adjacent cards to prevent glitches
-        return 'hidden'; 
+        return 'hidden';
     };
 
     const variants = {
         center: { 
             x: 0, 
+            y: 0,
             scale: 1, 
             zIndex: 10, 
             opacity: 1,
-            rotateY: 0,
-            filter: 'blur(0px)',
-            display: 'block'
+            rotateY: 0
         },
         left: { 
-            x: '-18%', 
+            x: '-15%', 
+            y: 0,
             scale: 0.9, 
             zIndex: 5, 
-            opacity: 0.6,
-            rotateY: 5,
-            filter: 'blur(1px)',
-            display: 'block'
+            opacity: 0.7,
+            rotateY: 5 
         },
         right: { 
-            x: '18%', 
+            x: '15%', 
+            y: 0,
             scale: 0.9, 
             zIndex: 5, 
-            opacity: 0.6,
-            rotateY: -5,
-            filter: 'blur(1px)',
-            display: 'block'
+            opacity: 0.7,
+            rotateY: -5
         },
         hidden: { 
             x: 0, 
+            y: 0,
             scale: 0.8, 
             zIndex: 0, 
-            opacity: 0,
-            rotateY: 0,
-            filter: 'blur(10px)',
-            display: 'none'
+            opacity: 0 
         }
     };
 
@@ -201,8 +195,7 @@ export default function SimulatorCarousel() {
                             transition={{
                                 x: { type: "spring", stiffness: 300, damping: 30 },
                                 opacity: { duration: 0.2 },
-                                scale: { duration: 0.2 },
-                                rotateY: { duration: 0.2 }
+                                scale: { duration: 0.2 }
                             }}
                             drag={isCenter ? "x" : false}
                             dragConstraints={{ left: 0, right: 0 }}
@@ -226,39 +219,22 @@ export default function SimulatorCarousel() {
                         >
                              {/* Card Container */}
                             <div style={{
-                                background: isCenter ? 'rgba(10, 5, 30, 0.95)' : 'rgba(10, 5, 30, 0.4)',
+                                background: persona.bg,
                                 borderRadius: '1.5rem',
                                 padding: '2.5rem',
-                                backdropFilter: 'blur(40px)',
-                                boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
+                                boxShadow: `0 20px 50px rgba(0,0,0,0.5), 0 0 30px ${persona.color}20`,
                                 position: 'relative',
                                 border: '1px solid rgba(255, 255, 255, 0.05)',
-                                overflow: 'hidden',
-                                height: '100%'
+                                overflow: 'hidden'
                             }}>
-                                 {/* Animated Border */}
-                                <div style={{
-                                    position: 'absolute',
-                                    inset: '-2px',
-                                    borderRadius: '1.6rem',
-                                    padding: '2px',
-                                    background: `linear-gradient(90deg, ${persona.color} 0%, white 50%, ${persona.color} 100%)`,
-                                    backgroundSize: '200% auto',
-                                    animation: 'sweep 3s linear infinite',
-                                    WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-                                    WebkitMaskComposite: 'xor',
-                                    maskComposite: 'exclude',
-                                    zIndex: -1,
-                                    opacity: 0.8,
-                                    pointerEvents: 'none'
-                                }} />
 
-                                <h3 style={{ 
-                                    fontSize: '1.5rem', 
-                                    fontWeight: '700', 
-                                    marginBottom: isCenter ? '1.5rem' : '0', 
+                                <h3 style={{
+                                    fontSize: '1.5rem',
+                                    fontWeight: '700',
+                                    marginBottom: '1.5rem',
                                     textAlign: 'center',
-                                    textShadow: '0 0 20px rgba(255, 255, 255, 0.5)',
+                                    color: '#1a1a1a',
+                                    textShadow: 'none',
                                     minHeight: '3.6rem',
                                     display: 'flex',
                                     alignItems: 'center',
@@ -267,21 +243,14 @@ export default function SimulatorCarousel() {
                                     {persona.title}
                                 </h3>
 
-                                <motion.div
-                                    animate={{ opacity: isCenter ? 1 : 0 }}
-                                    transition={{ duration: 0.2 }}
-                                    style={{ 
-                                        // Keep space occupied even when invisible to prevent height collapse
-                                        visibility: isCenter ? 'visible' : 'hidden' 
-                                    }}
-                                >
-                                    <form onSubmit={handleFormSubmit}>
+                                <form onSubmit={handleFormSubmit}>
                                     <div className="form-group" style={{ marginBottom: '1rem' }}>
-                                        <label className="form-label">First Name</label>
+                                        <label className="form-label" style={{ color: '#1a1a1a' }}>First Name</label>
                                         <input
                                             type="text"
                                             className="form-input"
                                             placeholder="Your Name"
+                                            style={{ color: '#1a1a1a', background: 'rgba(255, 255, 255, 0.8)', border: '1px solid rgba(0, 0, 0, 0.1)' }}
                                             value={name}
                                             onChange={(e) => setName(e.target.value)}
                                             tabIndex={isCenter ? 0 : -1}
@@ -289,11 +258,12 @@ export default function SimulatorCarousel() {
                                     </div>
 
                                     <div className="form-group" style={{ marginBottom: '1rem' }}>
-                                        <label className="form-label">Email <span style={{ color: 'var(--color-primary)' }}>*</span></label>
+                                        <label className="form-label" style={{ color: '#1a1a1a' }}>Email <span style={{ color: '#e53e3e' }}>*</span></label>
                                         <input
                                             type="email"
                                             className="form-input"
                                             placeholder="your@email.com"
+                                            style={{ color: '#1a1a1a', background: 'rgba(255, 255, 255, 0.8)', border: '1px solid rgba(0, 0, 0, 0.1)' }}
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
                                             required={isCenter}
@@ -302,11 +272,12 @@ export default function SimulatorCarousel() {
                                     </div>
 
                                     <div className="form-group">
-                                        <label className="form-label">Phone Number <span style={{ color: 'var(--color-primary)' }}>*</span></label>
+                                        <label className="form-label" style={{ color: '#1a1a1a' }}>Phone Number <span style={{ color: '#e53e3e' }}>*</span></label>
                                         <input
                                             type="tel"
                                             className="form-input"
                                             placeholder="(555) 123-4567"
+                                            style={{ color: '#1a1a1a', background: 'rgba(255, 255, 255, 0.8)', border: '1px solid rgba(0, 0, 0, 0.1)' }}
                                             value={phone}
                                             onChange={(e) => setPhone(e.target.value)}
                                             required={isCenter}
@@ -325,10 +296,10 @@ export default function SimulatorCarousel() {
                                             tabIndex={isCenter ? 0 : -1}
                                         />
                                         <div style={{ display: 'flex', flexDirection: 'column' }}>
-                                            <label htmlFor={`consent-${index}`} style={{ fontSize: '0.75rem', color: 'var(--color-text-secondary)', lineHeight: '1.2', whiteSpace: 'nowrap' }}>
+                                            <label htmlFor={`consent-${index}`} style={{ fontSize: '0.75rem', color: '#4a4a4a', lineHeight: '1.2', whiteSpace: 'nowrap' }}>
                                                 I agree to allow Revolt to call this phone number
                                             </label>
-                                            <p style={{ fontSize: '0.7rem', color: 'var(--color-text-secondary)', marginTop: '0.2rem', opacity: 0.8, whiteSpace: 'nowrap' }}>
+                                            <p style={{ fontSize: '0.7rem', color: '#666666', marginTop: '0.2rem', opacity: 0.8, whiteSpace: 'nowrap' }}>
                                                 We'll call you to demonstrate Revolt with a real call
                                             </p>
                                         </div>
@@ -353,8 +324,7 @@ export default function SimulatorCarousel() {
                                     >
                                         {isSubmitting ? 'Calling...' : 'Call Me Now'}
                                     </button>
-                                    </form>
-                                </motion.div>
+                                </form>
                             </div>
                         </motion.div>
                     );

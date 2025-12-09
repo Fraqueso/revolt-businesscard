@@ -41,7 +41,7 @@ export default function Header() {
                     {/* Navigation */}
                     <nav className="header-nav">
                         <Link to="/about" className="nav-link" onClick={() => handleNavClick('/about')}>About</Link>
-                        <Link to="/journey-map" className="nav-link" onClick={() => handleNavClick('/journey-map')}>Journey Map</Link>
+                        <Link to="/pricing" className="nav-link" onClick={() => handleNavClick('/pricing')}>Pricing</Link>
                         <Link to="/simulator" className="nav-link" onClick={() => handleNavClick('/simulator')}>Simulator</Link>
 
                         <button

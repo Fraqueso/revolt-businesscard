@@ -34,11 +34,11 @@ export default function Footer() {
                     <div>
                         <h4 style={{ fontSize: '1rem', fontWeight: '700', marginBottom: '1.5rem', color: 'white' }}>Product</h4>
                         <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                            {/* Removed Integrations, Pricing */}
-                            {['Features', 'Journey Map', 'Simulator'].map((item, i) => (
+                            {/* Removed Integrations */}
+                            {['Features', 'Pricing', 'Simulator'].map((item, i) => (
                                 <li key={i} style={{ marginBottom: '0.75rem' }}>
                                     <Link 
-                                        to={item === 'Journey Map' ? '/journey-map' : item === 'Simulator' ? '/simulator' : '/'} 
+                                        to={item === 'Pricing' ? '/pricing' : item === 'Simulator' ? '/simulator' : '/'} 
                                         onClick={handleLinkClick}
                                         style={{ color: 'var(--color-text-secondary)', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }} 
                                         className="footer-link"

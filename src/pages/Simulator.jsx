@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import SimulatorCarousel from '../components/SimulatorCarousel';
 
 export default function Simulator() {
@@ -18,10 +19,21 @@ export default function Simulator() {
         return revenue > MAX_REVENUE ? MAX_REVENUE : revenue;
     };
 
+    const fadeInUp = {
+        initial: { opacity: 0, y: 16 },
+        whileInView: { opacity: 1, y: 0 },
+        viewport: { once: true, margin: '-100px' },
+        transition: { duration: 0.6, ease: 'easeOut' }
+    };
+
     return (
         <div className="page-content" style={{ paddingTop: '8rem', paddingBottom: '4rem' }}>
             <div className="container">
-                <div style={{ marginBottom: '6rem' }}>
+                <motion.section {...fadeInUp} style={{ marginBottom: '6rem', textAlign: 'center' }}>
+                    <div style={{ display: 'inline-flex', gap: '0.5rem', alignItems: 'center', padding: '0.5rem 1rem', borderRadius: '999px', border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(255,255,255,0.04)', marginBottom: '1.5rem' }}>
+                        <span style={{ width: 10, height: 10, borderRadius: '50%', background: 'var(--color-primary)', boxShadow: '0 0 10px rgba(112, 66, 248, 0.7)' }} />
+                        <span style={{ letterSpacing: '0.05em', textTransform: 'uppercase', fontSize: '0.9rem', color: 'var(--color-text)' }}>Simulator</span>
+                    </div>
                     <h2 className="page-title" style={{ 
                         textAlign: 'center', 
                         marginBottom: '3rem' 
@@ -29,25 +41,28 @@ export default function Simulator() {
                         Simulate Revolt's <span className="text-gradient">Many Use Cases</span>
                     </h2>
                     <SimulatorCarousel />
-                </div>
+                </motion.section>
 
-                <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                <motion.section {...fadeInUp} style={{ textAlign: 'center', marginBottom: '4rem' }}>
                     <h1 className="page-title">
                         Speed-to-Lead <span className="text-gradient">Impact Calculator</span>
                     </h1>
                     <p style={{ color: 'var(--color-text-secondary)', maxWidth: '900px', margin: '0 auto', fontSize: '1.5rem', lineHeight: '1.4' }}>
                         See exactly how much revenue slow response times are costing you every single month.
                     </p>
-                </div>
+                </motion.section>
 
-                <div style={{
-                    maxWidth: '800px',
-                    margin: '0 auto',
-                    background: 'var(--color-bg-secondary)',
-                    border: '1px solid var(--color-border)',
-                    borderRadius: 'var(--radius-lg)',
-                    padding: 'clamp(1.5rem, 5vw, 3rem)' // Responsive padding
-                }}>
+                <motion.section
+                    {...fadeInUp}
+                    style={{
+                        maxWidth: '800px',
+                        margin: '0 auto',
+                        background: 'var(--color-bg-secondary)',
+                        border: '1px solid var(--color-border)',
+                        borderRadius: 'var(--radius-lg)',
+                        padding: 'clamp(1.5rem, 5vw, 3rem)' // Responsive padding
+                    }}
+                >
                     <div style={{ display: 'grid', gap: '2rem', marginBottom: '3rem' }}>
                         <div className="form-group">
                             <label className="form-label">Monthly Leads</label>
@@ -121,7 +136,7 @@ export default function Simulator() {
                             <small>*Results may vary</small>
                         </p>
                     </div>
-                </div>
+                </motion.section>
             </div>
         </div>
     );
