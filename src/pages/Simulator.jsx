@@ -22,6 +22,12 @@ export default function Simulator() {
         <div className="page-content" style={{ paddingTop: '8rem', paddingBottom: '4rem' }}>
             <div className="container">
                 <div style={{ marginBottom: '6rem' }}>
+                    <h2 className="page-title" style={{ 
+                        textAlign: 'center', 
+                        marginBottom: '3rem' 
+                    }}>
+                        Simulate Revolt's <span className="text-gradient">Many Use Cases</span>
+                    </h2>
                     <SimulatorCarousel />
                 </div>
 

@@ -77,40 +77,46 @@ export default function SimulatorCarousel() {
         if (index === nextIndex) return 'right';
         if (index === prevIndex) return 'left';
         
-        return 'hidden';
+        // Return hidden state for non-adjacent cards to prevent glitches
+        return 'hidden'; 
     };
 
     const variants = {
         center: { 
             x: 0, 
-            y: 0,
             scale: 1, 
             zIndex: 10, 
             opacity: 1,
-            rotateY: 0
+            rotateY: 0,
+            filter: 'blur(0px)',
+            display: 'block'
         },
         left: { 
-            x: '-15%', 
-            y: 0,
+            x: '-18%', 
             scale: 0.9, 
             zIndex: 5, 
-            opacity: 0.7,
-            rotateY: 5 
+            opacity: 0.6,
+            rotateY: 5,
+            filter: 'blur(1px)',
+            display: 'block'
         },
         right: { 
-            x: '15%', 
-            y: 0,
+            x: '18%', 
             scale: 0.9, 
             zIndex: 5, 
-            opacity: 0.7,
-            rotateY: -5
+            opacity: 0.6,
+            rotateY: -5,
+            filter: 'blur(1px)',
+            display: 'block'
         },
         hidden: { 
             x: 0, 
-            y: 0,
             scale: 0.8, 
             zIndex: 0, 
-            opacity: 0 
+            opacity: 0,
+            rotateY: 0,
+            filter: 'blur(10px)',
+            display: 'none'
         }
     };
 
@@ -195,7 +201,8 @@ export default function SimulatorCarousel() {
                             transition={{
                                 x: { type: "spring", stiffness: 300, damping: 30 },
                                 opacity: { duration: 0.2 },
-                                scale: { duration: 0.2 }
+                                scale: { duration: 0.2 },
+                                rotateY: { duration: 0.2 }
                             }}
                             drag={isCenter ? "x" : false}
                             dragConstraints={{ left: 0, right: 0 }}
@@ -219,14 +226,15 @@ export default function SimulatorCarousel() {
                         >
                              {/* Card Container */}
                             <div style={{
-                                background: 'rgba(10, 5, 30, 0.4)',
+                                background: isCenter ? 'rgba(10, 5, 30, 0.95)' : 'rgba(10, 5, 30, 0.4)',
                                 borderRadius: '1.5rem',
                                 padding: '2.5rem',
                                 backdropFilter: 'blur(40px)',
                                 boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
                                 position: 'relative',
                                 border: '1px solid rgba(255, 255, 255, 0.05)',
-                                overflow: 'hidden'
+                                overflow: 'hidden',
+                                height: '100%'
                             }}>
                                  {/* Animated Border */}
                                 <div style={{
@@ -248,7 +256,7 @@ export default function SimulatorCarousel() {
                                 <h3 style={{ 
                                     fontSize: '1.5rem', 
                                     fontWeight: '700', 
-                                    marginBottom: '1.5rem', 
+                                    marginBottom: isCenter ? '1.5rem' : '0', 
                                     textAlign: 'center',
                                     textShadow: '0 0 20px rgba(255, 255, 255, 0.5)',
                                     minHeight: '3.6rem',
@@ -259,7 +267,15 @@ export default function SimulatorCarousel() {
                                     {persona.title}
                                 </h3>
 
-                                <form onSubmit={handleFormSubmit}>
+                                <motion.div
+                                    animate={{ opacity: isCenter ? 1 : 0 }}
+                                    transition={{ duration: 0.2 }}
+                                    style={{ 
+                                        // Keep space occupied even when invisible to prevent height collapse
+                                        visibility: isCenter ? 'visible' : 'hidden' 
+                                    }}
+                                >
+                                    <form onSubmit={handleFormSubmit}>
                                     <div className="form-group" style={{ marginBottom: '1rem' }}>
                                         <label className="form-label">First Name</label>
                                         <input
@@ -337,7 +353,8 @@ export default function SimulatorCarousel() {
                                     >
                                         {isSubmitting ? 'Calling...' : 'Call Me Now'}
                                     </button>
-                                </form>
+                                    </form>
+                                </motion.div>
                             </div>
                         </motion.div>
                     );
